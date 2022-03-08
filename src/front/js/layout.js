@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
-import { Home } from "./pages/home";
+import { LandingPage } from "./pages/LandingPage";
 import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
@@ -17,6 +17,7 @@ import { GrowthGallery } from "./pages/GrowthGallery";
 import { Calendar } from "./pages/Calendar";
 import { GreenThumbGallery } from "./pages/GreenThumbGallery";
 import { Profile } from "./pages/Profile";
+import { Dashboard } from "./pages/Dashboard";
 
 //create your first component
 const Layout = () => {
@@ -30,19 +31,19 @@ const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
-						<Route exact path="/" component={Home} />
+						<Route exact path="/" component={LandingPage} />
+
+						<Route exact path="/createaccount" component={CreateAccount} />
+						<Route exact path="/dashboard" component={Dashboard} />
+						<Route exact path="/profile" component={Profile} />
+						<Route exact path="/favorites" component={Favorites} />
+						<Route exact path="/search" component={SearchPlantData} />
+						<Route exact path="/singleplant" component={SinglePlantView} />
+						<Route exact path="/growthgallery" component={GrowthGallery} />
+						<Route exact path="/calendar" component={Calendar} />
+						<Route exact path="/greenthumb" component={GreenThumbGallery} />
 						<Route exact path="/demo" component={Demo} />
 						<Route exact path="/single/:theid" component={Single} />
-
-						<Route exact path="/single/:theid" component={CreateAccount} />
-						<Route exact path="/single/:theid" component={Profile} />
-						<Route exact path="/single/:theid" component={Favorites} />
-						<Route exact path="/single/:theid" component={SearchPlantData} />
-						<Route exact path="/single/:theid" component={SinglePlantView} />
-						<Route exact path="/single/:theid" component={GrowthGallery} />
-						<Route exact path="/single/:theid" component={Calendar} />
-						<Route exact path="/single/:theid" component={GreenThumbGallery} />
-
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
