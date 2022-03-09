@@ -16,8 +16,9 @@ import { SinglePlantView } from "./pages/SinglePlantView";
 import { GrowthGallery } from "./pages/GrowthGallery";
 import { Calendar } from "./pages/Calendar";
 import { GreenThumbGallery } from "./pages/GreenThumbGallery";
-import { Profile } from "./pages/Profile";
+import { EditProfile } from "./pages/EditProfile";
 import { Dashboard } from "./pages/Dashboard";
+import { PlantUses } from "./pages/PlantUses";
 
 //create your first component
 const Layout = () => {
@@ -35,13 +36,14 @@ const Layout = () => {
 
 						<Route exact path="/createaccount" component={CreateAccount} />
 						<Route exact path="/dashboard" component={Dashboard} />
-						<Route exact path="/profile" component={Profile} />
+						<Route exact path="/editprofile" component={EditProfile} />
 						<Route exact path="/favorites" component={Favorites} />
 						<Route exact path="/search" component={SearchPlantData} />
 						<Route exact path="/singleplant" component={SinglePlantView} />
 						<Route exact path="/growthgallery" component={GrowthGallery} />
 						<Route exact path="/calendar" component={Calendar} />
-						<Route exact path="/greenthumb" component={GreenThumbGallery} />
+						<Route exact path="/greenthumbgallery" component={GreenThumbGallery} />
+						<Route exact path="/plantuses" component={PlantUses} />
 						<Route exact path="/demo" component={Demo} />
 						<Route exact path="/single/:theid" component={Single} />
 						<Route>

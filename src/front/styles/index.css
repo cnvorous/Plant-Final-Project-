@@ -1,3 +1,23 @@
-/* 
-    General Styles used on every website (Don't Repeat Yourself)
-*/
+
+.top-banner{
+    height: 150px;
+}
+
+.middle-banner{
+    height: 100px;
+    background-color: palegreen;
+    justify-content: space-around;
+}
+
+p{
+    font-size: 20px;
+}
+
+button{
+    margin: 15px;
+}
+
+.bottom-banner{
+    height: 250px;
+    background-color: palegreen;
+}

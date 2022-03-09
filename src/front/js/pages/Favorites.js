@@ -10,9 +10,12 @@ export const Favorites = props => {
 
 	return (
 		<div>
+			<p className="text-center">
+				Favorites Page
+			</p>
 
 			<Link to="/">
-				<span className="btn btn-primary btn-lg" href="#" role="button">
+				<span className="btn btn-primary btn-sm" href="#" role="button">
 					Back home
 				</span>
 			</Link>

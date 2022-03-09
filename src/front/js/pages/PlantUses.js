@@ -4,14 +4,15 @@ import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 
-export const Profile = props => {
+export const PlantUses = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 
 	return (
-		<div>
-	
-
+		<div className="jumbotron">
+			<p className="text-center">
+				Plant Uses
+				</p>
 			<Link to="/">
 				<span className="btn btn-primary btn-lg" href="#" role="button">
 					Back home
@@ -21,6 +22,6 @@ export const Profile = props => {
 	);
 };
 
-Profile.propTypes = {
+PlantUses.propTypes = {
 	match: PropTypes.object
 };
