@@ -19,6 +19,7 @@ import { GreenThumbGallery } from "./pages/GreenThumbGallery";
 import { EditProfile } from "./pages/EditProfile";
 import { Dashboard } from "./pages/Dashboard";
 import { PlantUses } from "./pages/PlantUses";
+import { LoginPage } from "./pages/LoginPage";
 
 //create your first component
 const Layout = () => {
@@ -35,6 +36,7 @@ const Layout = () => {
 						<Route exact path="/" component={LandingPage} />
 
 						<Route exact path="/createaccount" component={CreateAccount} />
+						<Route exact path="/loginpage" component={LoginPage} />
 						<Route exact path="/dashboard" component={Dashboard} />
 						<Route exact path="/editprofile" component={EditProfile} />
 						<Route exact path="/favorites" component={Favorites} />

@@ -7,7 +7,7 @@ export const LandingPage = () => {
 
 	return (
 		<div>
-			<div className="top-banner d-flex justify-content-between"> 
+			<div className="top-banner d-flex justify-content-between">
 				<div className="top-banner-box1">
 					Empty
 				</div>
@@ -28,13 +28,15 @@ export const LandingPage = () => {
 							<a href="/createaccount">Sign Up/ Create Account</a>
 						</span>
 						<button type="button" className="btn btn-warning btn-sm">
+						<a href="/loginpage">
 							Login:Email/Password
+						</a>
 						</button>
 					</div>
 				</div>
 			</div>
 
-			{/* <div class="dropdown-menu">
+			{/* <div className="dropdown-menu">
 					<form class="px-4 py-3">
 						<div class="form-group">
 							<label for="exampleDropdownFormEmail1">Email address</label>
