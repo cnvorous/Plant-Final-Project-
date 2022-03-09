@@ -11,8 +11,25 @@ export const LandingPage = () => {
 				<div className="top-banner-box1">
 					Empty
 				</div>
-				<div className="top-banner-box2"></div>
-				<div className="top-banner-box3"></div>
+				<div className="top-banner-box2">
+					<div className="text-center">
+						<i className="fa-solid fa-hand-holding-seedling">LOGO Symbol </i> {/*Icon not working */}
+					</div>
+					<div className="text-center">
+						Website name: Leaf it to Us (placeholder)
+					</div>
+				</div>
+				<div className="top-banner-box3 d-flex">
+					<div>
+						<i class="fas fa-user"></i>
+					</div>
+					<span>
+						<a href="/createaccount">Sign Up/ Create Account</a>
+					</span>
+					<button type="button" className="btn btn-warning">
+						Login:Email/Password
+					</button>
+				</div>
 			</div>
 
 			{/* <div class="dropdown-menu">
@@ -58,22 +75,24 @@ export const LandingPage = () => {
 			</div>
 
 			<div className="landing-body m-5">
-				<h1>About (website Name): </h1> {/*when i used br it broke code */}
+				<h1 className="transbox">About (website Name): </h1> {/*when i used br it broke code */}
 				<p></p>
-				<h4>Our site is dedicated to helping users find a streamline way of keeping your plants
+				<h4 className="transbox">Our site is dedicated to helping users find a streamline way of keeping your plants
 					not just healthy but thriving.
 				</h4>
 				<p></p>
-				<p className="landing-about">
+				<p className="transbox">
+					<i class="fas fa-raindrops"></i> {/* Icons not working */}
+					<i class="fa-solid fa-raindrops"></i>
 					We've all been gulity of showing our plants to much love and giving them more then what
 					they need With our site you will be able to effortlessly make sure your plant is watered
 					and fertilized at the most optimal time and using the correct measurements.
 				</p>
-				<p className="landing-about">
+				<p className="transbox">
 					You can track your plants growth progress and even share your prized plants in our community gallery.
 					Feel free to share you Green Thumb tips.
 				</p>
-				<p className="landing-about">
+				<p className="transbox">
 					Not sure where to start ... thats ok we have you covered.  Just <a href="/search">CLICK HERE</a>and search plant options
 					by size, sunlight exposure, seasons, hardiness and what plants can be used for other inhome
 					uses.

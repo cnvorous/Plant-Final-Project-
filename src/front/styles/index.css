@@ -1,23 +1,54 @@
-
-.top-banner{
-    height: 150px;
+.top-banner {
+  height: 200px;
+  border: 2px solid darkgreen;
+  background-image: url(https://thumbs.dreamstime.com/z/vector-light-grey-succulent-plant-texture-drawing-seamless-pattern-background-great-subtle-botanical-modern-backgrounds-fabric-90904464.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  z-index: -1;
+  opacity: 1;
+  background-color: #e7e0e0;
 }
 
-.middle-banner{
-    height: 100px;
-    background-color: palegreen;
-    justify-content: space-around;
+
+.top-banner-box3 {
+  margin-right: 10px;
+}
+.top-banner-box1 {
+  margin-left: 10px;
 }
 
-p{
-    font-size: 20px;
+.middle-banner {
+  height: 100px;
+  background-color: rgba(213, 248, 213, 0.521);
+  justify-content: space-around;
+  border: 2px solid darkgreen;
 }
 
-button{
-    margin: 15px;
+.landing-body {
+  background-image: url(https://thumbs.dreamstime.com/z/vector-light-grey-succulent-plant-texture-drawing-seamless-pattern-background-great-subtle-botanical-modern-backgrounds-fabric-90904464.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  z-index: -1;
+  opacity: 1;
+  background-color: #e7e0e0;
+}
+/* .transbox {   Not sure about this look at current time 
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px  rgb(72, 192, 112);
+  opacity: 0.9;
+} */
+
+p {
+  font-size: 20px;
 }
 
-.bottom-banner{
-    height: 250px;
-    background-color: palegreen;
+button {
+  margin: 15px;
+}
+
+.bottom-banner {
+  height: 250px;
+  background-color: rgba(213, 248, 213, 0.521);
+  border: 2px solid darkgreen;
 }
