@@ -7,7 +7,7 @@ export const LandingPage = () => {
 
 	return (
 		<div>
-			<div className="top-banner d-flex justify-content-between">
+			<div className="top-banner d-flex justify-content-between"> 
 				<div className="top-banner-box1">
 					Empty
 				</div>
@@ -19,16 +19,18 @@ export const LandingPage = () => {
 						Website name: Leaf it to Us (placeholder)
 					</div>
 				</div>
-				<div className="top-banner-box3 d-flex">
+				<div className="top-banner-box3 d-flex-row"> {/*can i not use d-flex here? */}
 					<div>
 						<i class="fas fa-user"></i>
 					</div>
-					<span>
-						<a href="/createaccount">Sign Up/ Create Account</a>
-					</span>
-					<button type="button" className="btn btn-warning">
-						Login:Email/Password
-					</button>
+					<div className="d-flex-column">
+						<span>
+							<a href="/createaccount">Sign Up/ Create Account</a>
+						</span>
+						<button type="button" className="btn btn-warning btn-sm">
+							Login:Email/Password
+						</button>
+					</div>
 				</div>
 			</div>
 
