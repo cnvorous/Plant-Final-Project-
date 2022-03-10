@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
+import { Link } from "react-router-dom";
 
 export const LandingPage = () => {
 	const { store, actions } = useContext(Context);
@@ -13,25 +14,27 @@ export const LandingPage = () => {
 				</div>
 				<div className="top-banner-box2">
 					<div className="text-center">
-						<i className="fa-solid fa-hand-holding-seedling">LOGO Symbol </i> {/*Icon not working */}
+						<i className="fas fa-seedling"></i> {/*Icon not working */}
 					</div>
 					<div className="text-center">
 						Website name: Leaf it to Us (placeholder)
 					</div>
 				</div>
-				<div className="top-banner-box3 d-flex-row"> {/*can i not use d-flex here? */}
+				<div className="top-banner-box3 d-flex">
 					<div>
-						<i class="fas fa-user"></i>
+						<i className="fas fa-user"></i>
 					</div>
-					<div className="d-flex-column">
-						<span>
-							<a href="/createaccount">Sign Up/ Create Account</a>
-						</span>
-						<button type="button" className="btn btn-warning btn-sm">
-						<a href="/loginpage">
-							Login:Email/Password
-						</a>
-						</button>
+					<div className="d-flex flex-column">
+						<Link to="/createaccount">
+							<span>
+								Sign Up/ Create Account
+							</span>
+						</Link>
+						<Link to="/loginpage">
+							<button type="button" className="button btn btn-warning btn-sm">
+								Login:Email/Password
+							</button>
+						</Link>
 					</div>
 				</div>
 			</div>
@@ -66,14 +69,14 @@ export const LandingPage = () => {
 				<button type="button" className="btn btn-warning">
 					Shareables
 				</button>
-				<div class="dropdown"> {/*I cant get toggle to drop and trying to make links broke code */}
-					<button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<div className="dropdown"> {/*I cant get toggle to drop and trying to make links broke code */}
+					<button className="btn btn-warning dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Natural uses for your plants
 					</button>
-					<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-						<button class="dropdown-item" type="button">Skin Care Remedies</button>{/* trying to make links broke code */}
-						<button class="dropdown-item" type="button">Natural Insect Repellent</button>
-						<button class="dropdown-item" type="button">Plants that can harm family/pets</button>
+					<div className="dropdown-menu" aria-labelledby="dropdownMenu2">
+						<button className="dropdown-item" type="button">Skin Care Remedies</button>{/* trying to make links broke code */}
+						<button className="dropdown-item" type="button">Natural Insect Repellent</button>
+						<button className="dropdown-item" type="button">Plants that can harm family/pets</button>
 					</div>
 				</div>
 			</div>
