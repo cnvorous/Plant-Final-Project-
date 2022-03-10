@@ -1,3 +1,7 @@
+.navbar{
+  height: 75px;
+}
+
 .top-banner {
   height: 200px;
   border: 2px solid darkgreen;
@@ -9,17 +13,26 @@
   background-color: #e7e0e0;
 }
 
-.button{
+.button1{
+  background-color: rgb(242, 248, 162);
+}
+.button2{
+  color: white;
+  background-color: darkgreen;
+}
+
+.button-weather{
+  color: darkblue;
   background-color: aqua;
 }
 
-
-.top-banner-box3 {
-  margin-right: 10px;
-}
 .top-banner-box1 {
   margin-left: 10px;
 }
+.top-banner-box3 {
+  margin-right: 10px;
+}
+
 
 .middle-banner {
   height: 100px;
@@ -36,12 +49,6 @@
   opacity: 1;
   background-color: #e7e0e0;
 }
-/* .transbox {   Not sure about this look at current time 
-  margin: 30px;
-  background-color: #ffffff;
-  border: 1px  rgb(72, 192, 112);
-  opacity: 0.9;
-} */
 
 p {
   font-size: 20px;

@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-light bg-warning">
+		<nav className="navbar navbar-light button1">
 			<div className="container">
 				<Link to="/demo">
-					<button className="btn btn-primary">Weather App</button>
+					<button className="button-weather btn btn-primary">Weather App</button>
 				</Link>
 				<div className="ml-auto">
 					<ul className="nav">
