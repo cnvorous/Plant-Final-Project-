@@ -10,7 +10,7 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { CreateAccount } from "./pages/CreateAccount";
-import { Favorites } from "./pages/Favorites";
+import { CreateFavorites } from "./pages/CreateFavorites";
 import { SearchPlantData } from "./pages/SearchPlantData";
 import { SinglePlantView } from "./pages/SinglePlantView";
 import { GrowthGallery } from "./pages/GrowthGallery";
@@ -19,6 +19,7 @@ import { GreenThumbGallery } from "./pages/GreenThumbGallery";
 import { EditProfile } from "./pages/EditProfile";
 import { Dashboard } from "./pages/Dashboard";
 import { PlantUses } from "./pages/PlantUses";
+import { ListFavorites } from "./pages/ListFavorites";
 
 //create your first component
 const Layout = () => {
@@ -33,11 +34,11 @@ const Layout = () => {
 					<Navbar />
 					<Switch>
 						<Route exact path="/" component={LandingPage} />
-
 						<Route exact path="/createaccount" component={CreateAccount} />
 						<Route exact path="/dashboard" component={Dashboard} />
 						<Route exact path="/editprofile" component={EditProfile} />
-						<Route exact path="/favorites" component={Favorites} />
+						<Route exact path="/createfavorites" component={CreateFavorites} />
+						<Route exact path="/listfavorites" component={ListFavorites} />
 						<Route exact path="/search" component={SearchPlantData} />
 						<Route exact path="/singleplant" component={SinglePlantView} />
 						<Route exact path="/growthgallery" component={GrowthGallery} />

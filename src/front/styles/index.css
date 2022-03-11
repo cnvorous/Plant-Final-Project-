@@ -1,9 +1,10 @@
-.navbar{
-  background:rgba(213, 248, 213, 0.521);
+.navbar {
+  background: rgba(213, 248, 213, 0.521);
   height: 75px;
   border: 2px solid darkgreen;
 }
 
+/* below is Landing Page Css*/
 .top-banner {
   height: 200px;
   border: 2px solid darkgreen;
@@ -15,15 +16,15 @@
   background-color: #e7e0e0;
 }
 
-.button1{
+.button1 {
   background-color: rgb(242, 248, 162);
 }
-.button2{
+.button2 {
   color: white;
   background-color: darkgreen;
 }
 
-.button-weather{
+.button-weather {
   color: darkblue;
   background-color: aqua;
 }
@@ -34,7 +35,6 @@
 .top-banner-box3 {
   margin-right: 10px;
 }
-
 
 .middle-banner {
   height: 100px;
@@ -64,4 +64,17 @@ button {
   height: 250px;
   background-color: rgba(213, 248, 213, 0.521);
   border: 2px solid darkgreen;
+}
+
+/* below is ListFavorites Css*/
+.fav-heading {
+  height: 100px;
+  color: darkgreen;
+  font-size: 40px;
+  margin: 10px;
+}
+
+.favs-list{
+  height: 600px;
+  background-color: aliceblue;
 }
