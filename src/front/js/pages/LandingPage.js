@@ -8,13 +8,13 @@ export const LandingPage = () => {
 
 	return (
 		<div>
-			<div className="top-banner d-flex justify-content-between">
+			<div className="top-banner d-flex">
 				<div className="top-banner-box1">
 					Empty
 				</div>
 				<div className="top-banner-box2 m-auto">
 					<div className="text-center">
-						<i className="fas fa-seedling fa-5x"></i>
+						<i className="fas fa-seedling fa-3x"></i>
 					</div>
 					<div className="text-center">
 						Leaf it to Us
