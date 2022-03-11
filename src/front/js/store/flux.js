@@ -17,8 +17,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+			getPlantData: () => {
+				fetch("https://plantlink.p.rapidapi.com/plantTypes", {
+					"method": "GET",
+					"headers": {
+						"Access-Control-Allow-Origin": "*",
+						//"authorization": "Basic Y252b3JvdXM6RnVuZXZlbnRzMzMjIw==",
+						"x-rapidapi-host": "plantlink.p.rapidapi.com",
+						"x-rapidapi-key": "5f370309abmsh52b2ef22b0e99a0p19db05jsn15130b55cf47"
+					}
+				})
+					.then(response => {
+						var data = response.json()
+						console.log(data);
+					})
+					.catch(err => {
+						console.error(err);
+					});
 			},
 
 			getMessage: () => {
