@@ -10,9 +10,10 @@ export const CreateAccount = props => {
 
 	return (
 		<div>
-			<p className="text-center">
-				CreateAccount Page
-			</p>
+			< div className="text-center">
+				Create you account log in and user profile
+
+			</div>
 
 			<Link to="/">
 				<span className="btn btn-primary btn-sm" href="#" role="button">
