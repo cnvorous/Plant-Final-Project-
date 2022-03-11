@@ -1,5 +1,7 @@
 .navbar{
+  background:rgba(213, 248, 213, 0.521);
   height: 75px;
+  border: 2px solid darkgreen;
 }
 
 .top-banner {

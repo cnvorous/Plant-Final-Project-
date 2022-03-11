@@ -30,11 +30,18 @@ export const LandingPage = () => {
 								Sign Up/ Create Account
 							</span>
 						</Link>
-						<Link to="/loginpage">
-							<button type="button" className="button2 btn btn-sm">
-								Login:Email/Password
-							</button>
-						</Link>
+						<div className="row">  {/* added row and input-sm, col-xs-3  didnt work */}
+							<div class="form-floating mb-3 col-xs-3">
+								<input type="email" class="form-control input-sm" id="floatingInput" placeholder="name@example.com" />
+								<label for="floatingInput">Login Email</label>
+							</div>
+						</div>
+						<div children="row">  {/* added row and input-sm, col-xs-3  didnt work */}
+							<div class="form-floating col-xs-3">
+								<input type="password" class="form-control input-sm" id="floatingPassword" placeholder="Password" />
+								<label for="floatingPassword">Password</label>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
