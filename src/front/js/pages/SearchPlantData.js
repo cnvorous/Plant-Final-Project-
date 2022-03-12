@@ -11,14 +11,9 @@ export const SearchPlantData = props => {
 	return (
 		<div>
 			<p className="text-center">
-				Plant Search
+				Plant Search will have search bar and then info will pull below div holding filter 
 			</p>
-		
-			<Link to="/">
-				<span className="btn btn-primary btn-sm" href="#" role="button">
-					Back home
-				</span>
-			</Link>
+	
 		</div>
 	);
 };
