@@ -82,16 +82,16 @@ export const LandingPage = () => {
 					not just healthy but thriving.
 				</h4>
 				<p></p>
-				<p><i class="fas fa-tint fa-2x"></i>
+				<p><i className="fas fa-tint fa-2x"></i>
 					We've all been gulity of showing our plants to much love and giving them more then what
 					they need With our site you will be able to effortlessly make sure your plant is watered
 					and fertilized at the most optimal time and using the correct measurements.
 				</p>
-				<p><i class="fas fa-chart-line fa-2x"></i>
+				<p><i className="fas fa-chart-line fa-2x"></i>
 					You can track your plants growth progress and even share your prized plants in our community gallery.
 					Feel free to share you Green Thumb tips.
 				</p>
-				<p><i class="fas fa-angle-double-right fa-2x"></i>
+				<p><i className="fas fa-angle-double-right fa-2x"></i>
 					Not sure where to start ... thats ok we have you covered.  Just <Link to="/search">CLICK HERE</Link> and search plant options
 					by size, sunlight exposure, seasons, hardiness and what plants can be used for other inhome
 					uses.
