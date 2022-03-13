@@ -1,10 +1,12 @@
+/********************* below is nav bar compontent Css*************************/
+
 .navbar {
   background: rgba(213, 248, 213, 0.521);
   height: 75px;
   border: 2px solid darkgreen;
 }
 
-/* below is Landing Page Css*/
+/********************* below is Landing Page Css*************************/
 .top-banner {
   height: 200px;
   border: 2px solid darkgreen;
@@ -66,12 +68,15 @@ button {
   border: 2px solid darkgreen;
 }
 
-/* below is ListFavorites Css*/
+/********** below is ListFavorites page Css**************/
 .fav-heading {
   height: 100px;
   color: darkgreen;
   font-size: 40px;
   margin: 10px;
+}
+.text-center {
+  font-size: 40px;
 }
 
 .favs-list {
@@ -79,13 +84,25 @@ button {
   background-color: aliceblue;
 }
 
-.text-center {
-  font-size: 40px;
-}
-
-/* below is {} Css*/
+/************* below is Dashboard Css***************/
 
 /* .text-center {     **commented out since already used above -needs diff name
   background-color: rgba(213, 248, 213, 0.521);
   height: 200px;
 } */
+
+/************* below is SearchPlantData page Css***************/
+
+.search-button{
+  background-color: rgb(241, 205, 114);
+}
+.search-button:hover{
+  background-color: rgba(241, 196, 82, 0.548);
+}
+
+ {
+  /**** this is not giving highlight effect on hoover checkbox
+  .col:hover input ~ .onclick{
+  background-color: yellow;
+}*/
+}
