@@ -3,6 +3,7 @@ import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import { Link } from "react-router-dom";
 
+
 export const LandingPage = () => {
 	const { store, actions } = useContext(Context);
 
@@ -26,7 +27,7 @@ export const LandingPage = () => {
 					</div>
 					<div className="d-flex flex-column m-auto">
 						<Link to="/createaccount">
-							<span>
+							<span className="create-link">
 								Sign Up/ Create Account
 							</span>
 						</Link>
