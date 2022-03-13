@@ -26,7 +26,7 @@
 
 .button-weather {
   color: darkblue;
-  background-color: green;
+  background-color: rgb(121, 239, 243);
 }
 
 .top-banner-box1 {
@@ -82,3 +82,5 @@ button {
 .text-center {
   font-size: 40px;
 }
+
+/* below is {} Css*/

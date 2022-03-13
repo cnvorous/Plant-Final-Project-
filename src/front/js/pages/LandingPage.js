@@ -47,7 +47,7 @@ export const LandingPage = () => {
 			</div>
 
 			<div className="middle-banner d-flex flex-row justify-content-around">
-				<Link to="/search"> {/*link should be PlantSearchData */}
+				<Link to="/searchplantdata">
 					<button type="button" className="button1 btn">
 						Discover Plant Varieties
 					</button>
