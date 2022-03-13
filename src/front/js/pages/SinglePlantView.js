@@ -10,6 +10,10 @@ export const SinglePlantView = props => {
 
 	return (
 		<div>
+
+			<p className="text-center">
+				Single Planet View Page
+			</p>
 		
 			<Link to="/">
 				<span className="btn btn-primary btn-lg" href="#" role="button">

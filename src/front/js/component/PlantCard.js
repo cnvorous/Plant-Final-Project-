@@ -1,13 +1,13 @@
 
-import React, { useState, /*useEffect*/ } from "react";
+import React from "react";
 //import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 //import XENA from "../../img/XENA.jpg";
-//import {Link} from "react-router-dom/Link";
+import {Link} from "react-router-dom/Link";
 
 export const PlantCard = props => {
    // changed from props // have to either use prop.item/key or use {}and call declared item from listing the <card/>tag
-   const [state, setState] = useState({}); //initialize state here
+  // const [state, setState] = useState({}); //initialize state here
 
    return (
       <div className="plant-card-container">
