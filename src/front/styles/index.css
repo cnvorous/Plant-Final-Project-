@@ -1,5 +1,4 @@
 /********************* below is nav bar compontent Css*************************/
-
 .navbar {
   background: rgba(213, 248, 213, 0.521);
   height: 75px;
@@ -8,6 +7,13 @@
 
 .nav-link:hover {
   color: rgb(105, 248, 10);
+}
+
+/********************* below is footer Css*************************/
+.footer{
+  background: rgba(213, 248, 213, 0.521);
+  height: 75px;
+  border: 2px solid darkgreen;
 }
 
 /********************* below is Landing Page Css*************************/

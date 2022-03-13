@@ -10,12 +10,11 @@ export const LandingPage = () => {
 	return (
 		<div>
 			<div className="top-banner d-flex">
-				<div className="top-banner-box1">
-					Empty
+				<div className="top-banner-box1"> {/*this div is meant to be empty */}
 				</div>
 				<div className="top-banner-box2 m-auto">
 					<div className="text-center">
-						<i className="fas fa-seedling fa-3x"></i>
+						<i className="fas fa-seedling fa-2x"></i>
 					</div>
 					<div className="text-center">
 						Leaf it to Us
@@ -23,7 +22,7 @@ export const LandingPage = () => {
 				</div>
 				<div className="top-banner-box3 d-flex">
 					<div className="m-auto">
-						<i className="fas fa-user fa-4x"></i>
+						<i className="fas fa-user fa-3x"></i>
 					</div>
 					<div className="d-flex flex-column m-auto">
 						<Link to="/createaccount">
