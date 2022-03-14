@@ -12,10 +12,10 @@ export const Dashboard = (props) => {
     <div className="dashboard-container">
       <div>
         <p className="text-center">Dashboard Profile Page</p>
+        <Link to="/editprofile">
+        <p className="text-center">Use this link to get to edit profile page</p>
+        </Link>
       </div>
-      {/* 
-  // i commented out 4:14pm Sat 3/12 since code was not allowing page to run
-      // other pages to put code in and see how other pages working.    */}
 
       <div>
         <div class="list-group">
