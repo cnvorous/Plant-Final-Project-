@@ -54,7 +54,7 @@ export const SearchPlantData = props => {
 			</div>
 
 			<div className="plant-results-body d-flex justify-content-evenly flex-wrap bg-primary bg-opacity-10 m-5 p-5"> {/*Question why does margin in bootstrap not pass 5 */}
-				{/*<div className="m-1"><PlantCard/></div>*/} {/*TAG is crashing code  */}
+				<div className="m-1"><PlantCard/></div>
 				<div className="m-1">2Box area to contain plant results card in 4 to a row**</div>
 				<div className="m-1">3Box area to contain plant results card in 4 to a row**</div>
 				<div className="m-1">4Box area to contain plant results card in 4 to a row**</div>
