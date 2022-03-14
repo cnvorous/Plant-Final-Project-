@@ -56,6 +56,10 @@
   margin-right: 10px;
 }
 
+.website-name{
+  font-size: 30px;
+}
+
 .middle-banner {
   height: 100px;
   background-color: rgba(213, 248, 213, 0.521);

@@ -36,17 +36,7 @@ export const CreateAccount = props => {
 					<span><input className="w-50 btn btn-primary" type="submit" value="Submit" /></span>
 				</div>
 
-
 			</div>
-
-
-
-
-			<Link to="/">
-				<span className="btn btn-primary btn-sm" href="#" role="button">
-					Back home
-				</span>
-			</Link>
 		</div>
 	);
 };

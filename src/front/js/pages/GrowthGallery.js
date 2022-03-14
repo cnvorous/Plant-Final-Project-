@@ -14,11 +14,6 @@ export const GrowthGallery = props => {
 				GrowthGallery Page 
 			</p>
 	
-			<Link to="/">
-				<span className="btn btn-primary btn-sm" href="#" role="button">
-					Back home
-				</span>
-			</Link>
 		</div>
 	);
 };
