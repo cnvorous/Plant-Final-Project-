@@ -20,7 +20,7 @@ import { EditProfile } from "./pages/EditProfile";
 import { Dashboard } from "./pages/Dashboard";
 import { PlantUses } from "./pages/PlantUses";
 import { ListFavorites } from "./pages/ListFavorites";
-import {PlantResults} from "./pages/PlantResults";
+//import {PlantResults} from "./pages/PlantResults";
 
 //create your first component
 const Layout = () => {
@@ -40,9 +40,9 @@ const Layout = () => {
 						<Route exact path="/editprofile" component={EditProfile} />
 						<Route exact path="/createfavorites" component={CreateFavorites} />
 						<Route exact path="/listfavorites" component={ListFavorites} />
-						<Route exact path="/search" component={SearchPlantData} />
-						<Route exact path="/plantResults" component={PlantResults} />
-						<Route exact path="/singleplant" component={SinglePlantView} />
+						<Route exact path="/searchplantdata" component={SearchPlantData} />
+						{/*<Route exact path="/plantResults" component={PlantResults} />*/}
+						<Route exact path="/singleplantview" component={SinglePlantView} />
 						<Route exact path="/growthgallery" component={GrowthGallery} />
 						<Route exact path="/calendar" component={Calendar} />
 						<Route exact path="/greenthumbgallery" component={GreenThumbGallery} />

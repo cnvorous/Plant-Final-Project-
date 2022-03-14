@@ -15,7 +15,7 @@ export const CreateFavorites = props => {
 
 			<Link to="/listfavorites">
 				<span>
-					List Favorites
+					This link will connect them with page to see the List they click on this current page.
 				</span>
 			</Link>
 		</div>

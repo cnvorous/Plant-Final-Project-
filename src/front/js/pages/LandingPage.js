@@ -3,18 +3,18 @@ import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import { Link } from "react-router-dom";
 
+
 export const LandingPage = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
 		<div>
 			<div className="top-banner d-flex">
-				<div className="top-banner-box1">
-					Empty
+				<div className="top-banner-box1"> {/*this div is meant to be empty */}
 				</div>
 				<div className="top-banner-box2 m-auto">
 					<div className="text-center">
-						<i className="fas fa-seedling fa-3x"></i>
+						<i className="fas fa-seedling fa-2x"></i>
 					</div>
 					<div className="text-center">
 						Leaf it to Us
@@ -22,11 +22,11 @@ export const LandingPage = () => {
 				</div>
 				<div className="top-banner-box3 d-flex">
 					<div className="m-auto">
-						<i className="fas fa-user fa-4x"></i>
+						<i className="fas fa-user fa-3x"></i>
 					</div>
 					<div className="d-flex flex-column m-auto">
 						<Link to="/createaccount">
-							<span>
+							<span className="create-link">
 								Sign Up/ Create Account
 							</span>
 						</Link>
@@ -47,7 +47,7 @@ export const LandingPage = () => {
 			</div>
 
 			<div className="middle-banner d-flex flex-row justify-content-around">
-				<Link to="/search"> {/*link should be PlantSearchData */}
+				<Link to="/searchplantdata">
 					<button type="button" className="button1 btn">
 						Discover Plant Varieties
 					</button>

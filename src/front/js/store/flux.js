@@ -13,9 +13,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			], 
+			login:[] // added for now- cv 3/12
 		},
 		actions: {
+			// added for now -cv 3/12
 			// Use getActions to call a function within a fuction
 			getPlantData: () => {
 				fetch("https://plantlink.p.rapidapi.com/plantTypes", {
@@ -35,6 +37,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.error(err);
 					});
 			},
+
+			//all code below was in template 
 
 			getMessage: () => {
 				// fetching data from the backend

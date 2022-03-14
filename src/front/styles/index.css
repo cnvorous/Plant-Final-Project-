@@ -1,10 +1,26 @@
+/********************* below is nav bar compontent Css*************************/
 .navbar {
   background: rgba(213, 248, 213, 0.521);
   height: 75px;
   border: 2px solid darkgreen;
 }
 
-/* below is Landing Page Css*/
+.nav-link:hover {
+  color: rgb(105, 248, 10);
+}
+
+/********************* below is footer Css*************************/
+.footer {
+  background: rgba(213, 248, 213, 0.521);
+  height: 75px;
+  border: 2px solid darkgreen;
+}
+
+/********************* below is Landing Page Css*************************/
+.create-link:hover {
+  color: rgba(243, 11, 11, 0.842);
+  background-color: rgba(245, 245, 220, 0.411);
+}
 .top-banner {
   height: 200px;
   border: 2px solid darkgreen;
@@ -17,7 +33,11 @@
 }
 
 .button1 {
-  background-color: rgb(242, 248, 162);
+  background-color: rgba(245, 236, 105, 0.726);
+}
+.button1:hover {
+  background-color: rgb(248, 207, 74);
+  font-weight: 400;
 }
 .button2 {
   color: white;
@@ -26,7 +46,7 @@
 
 .button-weather {
   color: darkblue;
-  background-color: green;
+  background-color: rgb(121, 239, 243);
 }
 
 .top-banner-box1 {
@@ -66,7 +86,7 @@ button {
   border: 2px solid darkgreen;
 }
 
-/* below is ListFavorites Css*/
+/********** below is ListFavorites page Css**************/
 .fav-heading {
   height: 100px;
   color: darkgreen;
@@ -79,8 +99,27 @@ button {
   background-color: aliceblue;
 }
 
-.text-center {
-  font-size: 40px;
+/************* below is Dashboard Css***************/
+
+/* .text-center {     **commented out since already used above -needs diff name
+  background-color: rgba(213, 248, 213, 0.521);
+  height: 200px;
+} */
+
+/************* below is SearchPlantData page Css***************/
+
+.search-button {
+  background-color: rgb(241, 205, 114);
+}
+.search-button:hover {
+  background-color: rgba(241, 196, 82, 0.548);
+}
+
+ {
+  /**** this is not giving highlight effect on hoover checkbox
+  .col:hover input ~ .onclick{
+  background-color: yellow;
+}*/
 }
 .profile {
   margin: 50px;
