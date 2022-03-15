@@ -104,10 +104,24 @@ button {
 
 /************* below is Dashboard Css***************/
 
-/* .text-center {     **commented out since already used above -needs diff name
-  background-color: rgba(213, 248, 213, 0.521);
-  height: 200px;
-} */
+ .dashboard-container {   
+  background: rgb(125, 189, 189);
+  height: 640px;
+} ;
+.bi-person-circle {
+  height: 150px;
+  position: relative;
+  margin-left: 5%;
+  top: -30px;
+}
+.UpdateUserInfo {
+  color: darkblue;
+  
+}
+.qr-code {
+  margin-left: 60%;
+  top: 10%;
+}
 
 /************* below is SearchPlantData page Css***************/
 
