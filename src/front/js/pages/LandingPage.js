@@ -1,11 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import { Link } from "react-router-dom";
 
-
 export const LandingPage = () => {
 	const { store, actions } = useContext(Context);
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+	const [profile, setProfile] = useState(store.profile);
+	// //useEffect(() => {
+	// 	if (store.profile.length !== 2) {
+	// 		setProfile(store.profile)
+	// 	}
+	// }, [store.profile]);
 
 	return (
 		<div>
@@ -25,23 +32,35 @@ export const LandingPage = () => {
 						<i className="fas fa-user fa-3x"></i>
 					</div>
 					<div className="d-flex flex-column m-auto">
-						<Link to="/createaccount">
-							<span className="create-link">
-								Sign Up/ Create Account
-							</span>
-						</Link>
-						<div className="row">  {/* added row and input-sm, col-xs-3  didnt work */}
-							<div class="form-floating mb-3 col-xs-3">
-								<input type="email" class="form-control input-sm" id="floatingInput" placeholder="name@example.com" />
-								<label for="floatingInput">Login Email</label>
-							</div>
-						</div>
-						<div children="row">  {/* added row and input-sm, col-xs-3  didnt work */}
-							<div class="form-floating col-xs-3">
-								<input type="password" class="form-control input-sm" id="floatingPassword" placeholder="Password" />
-								<label for="floatingPassword">Password</label>
-							</div>
-						</div>
+						{profile.length > 0 ? <div>{store.profile.map((item, index) => {
+							return (
+								<p>{item.email}</p>
+							)
+						})}</div> :
+							<div>
+								<Link to="/createaccount">
+									<span className="create-link">
+										Sign Up/ Create Account
+									</span>
+								</Link>
+								<div className="row">  {/* added row and input-sm, col-xs-3  didnt work */}
+									<div className="form-floating mb-3 col-xs-3">
+										<input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="form-control input-sm" id="floatingInput" placeholder="name@example.com" />
+										<label for="floatingInput">Login Email</label>
+									</div>
+								</div>
+								<div className="row">  {/* added row and input-sm, col-xs-3  didnt work */}
+									<div className="form-floating col-xs-3">
+										<input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
+											onKeyPress={(e) => {
+												if (e.keyCode == 13) {
+													actions.login(email, password)
+												}
+											}} className="form-control input-sm" id="floatingPassword" placeholder="Password" />
+										<label for="floatingPassword">Password</label>
+									</div>
+								</div>
+							</div>}
 					</div>
 				</div>
 			</div>

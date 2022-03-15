@@ -14,6 +14,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
+			profile:[], // for login
 			plantLibrary: [
 				{
 					scientificName: "Saintpaulia ionantha",
@@ -339,6 +340,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 		},
 		actions: {
+
+			login: (email, password)=> {
+				setStore({profile:[{"email":email, "password": password}]});  //the key is in red
+			},
+			logout: ()=>{
+				setStore({profile:[]});
+			},
+
 			// added for now -cv 3/12
 			// Use getActions to call a function within a fuction
 			getPlantData: () => {
