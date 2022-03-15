@@ -19,7 +19,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					scientificName: "Saintpaulia ionantha",
 					commonName: "African Violet",
 					size: "small",
-					leafType: "round or oval",
 					height: "short",
 					blooms: "yes",
 					seasonal: "can bloom throughout year",

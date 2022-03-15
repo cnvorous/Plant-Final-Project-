@@ -125,6 +125,14 @@ button {
   background-color: yellow;
 }*/
 }
+/************* below is PlantCard Compontent Css***************/
+.plant-card-img{
+  height:auto;
+  width: auto;
+  border: dotted red; 
+
+}
+/************* below is create user page Css***************/
 .profile {
   margin: 50px;
 }
