@@ -362,8 +362,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			],
 		},
-
 		actions: {
+			// added for now -cv 3/12
+			// Use getActions to call a function within a fuction
+			getPlantData: () => {
+				fetch("https://plantlink.p.rapidapi.com/plantTypes", {
+					"method": "GET",
+					"headers": {
+						"Access-Control-Allow-Origin": "*",
+						//"authorization": "Basic Y252b3JvdXM6RnVuZXZlbnRzMzMjIw==",
+						"x-rapidapi-host": "plantlink.p.rapidapi.com",
+						"x-rapidapi-key": "5f370309abmsh52b2ef22b0e99a0p19db05jsn15130b55cf47"
+					}
+				})
+					.then(response => {
+						var data = response.json()
+						console.log(data);
+					})
+					.catch(err => {
+						console.error(err);
+					});
+			},
+
+			//all code below was in template 
+
 			getMessage: () => {
 				// fetching data from the backend
 				fetch(process.env.BACKEND_URL + "/api/hello")
