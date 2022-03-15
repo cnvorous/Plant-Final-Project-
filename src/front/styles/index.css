@@ -56,7 +56,7 @@
   margin-right: 10px;
 }
 
-.website-name{
+.website-name {
   font-size: 30px;
 }
 
@@ -127,4 +127,8 @@ button {
 }
 .profile {
   margin: 50px;
+}
+
+.submitButton {
+  width: 100px;
 }
