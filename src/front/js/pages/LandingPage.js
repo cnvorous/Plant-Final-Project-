@@ -8,11 +8,13 @@ export const LandingPage = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [profile, setProfile] = useState(store.profile);
-	// //useEffect(() => {
-	// 	if (store.profile.length !== 2) {
-	// 		setProfile(store.profile)
-	// 	}
-	// }, [store.profile]);
+	useEffect(() => {
+		if (store.profile.length !== 2) {
+			setProfile(store.profile)
+		}
+	}, [store.profile]);
+	console.log("profile", profile);
+	console.log("store.profile", store.profile)
 
 	return (
 		<div>
@@ -27,16 +29,16 @@ export const LandingPage = () => {
 						<strong>Leaf it to Us</strong>
 					</div>
 				</div>
-				<div className="top-banner-box3 d-flex">
+				<div className="top-banner-box3 d-flex m-auto">
 					<div className="m-auto">
 						<i className="fas fa-user fa-3x"></i>
 					</div>
-					<div className="d-flex flex-column m-auto">
+					<div>
 						{profile.length > 0 ? <div>{store.profile.map((item, index) => {
 							return (
-								<p>{item.email}</p>
+								<span>{item.email}</span>
 							)
-						})}</div> :
+						})}</div> :    //need the colon for tenr. expression
 							<div>
 								<Link to="/createaccount">
 									<span className="create-link">
@@ -53,7 +55,7 @@ export const LandingPage = () => {
 									<div className="form-floating col-xs-3">
 										<input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
 											onKeyPress={(e) => {
-												if (e.keyCode == 13) {
+												if (e.key == "Enter") {
 													actions.login(email, password)
 												}
 											}} className="form-control input-sm" id="floatingPassword" placeholder="Password" />

@@ -49,12 +49,12 @@
   background-color: rgb(121, 239, 243);
 }
 
-.top-banner-box1 {
+/* .top-banner-box1 {
   margin-left: 10px;
-}
-.top-banner-box3 {
+} */
+/* .top-banner-box3 {
   margin-right: 10px;
-}
+} */
 
 .website-name {
   font-size: 30px;
@@ -119,18 +119,16 @@ button {
   background-color: rgba(241, 196, 82, 0.548);
 }
 
- {
-  /**** this is not giving highlight effect on hoover checkbox
+/**** this is not giving highlight effect on hoover checkbox
   .col:hover input ~ .onclick{
   background-color: yellow;
 }*/
-}
-/************* below is PlantCard Compontent Css***************/
-.plant-card-img{
-  height:auto;
-  width: auto;
-  border: dotted red; 
 
+/************* below is PlantCard Compontent Css***************/
+.plant-card-img {
+  height: auto;
+  width: auto;
+  border: dotted red;
 }
 /************* below is create user page Css***************/
 .profile {
