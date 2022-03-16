@@ -60,6 +60,11 @@ export const LandingPage = () => {
 										<label for="floatingPassword">Password</label>
 									</div>
 								</div>
+								<div>
+									<Link to="/forgotpassword">
+										<span className="text-center">Forgot Password??</span>
+									</Link>
+								</div>
 							</div>}
 					</div>
 				</div>

@@ -36,11 +36,6 @@ export const CreateAccount = props => {
 						<label>Check to receive SMS notifications</label>
 					</div>
 					<input className=" submitButton btn btn-primary" type="submit" value="Submit" />
-					<div>
-						<Link to="/forgetpassword">
-							<a className="text-center">forgetpassword??</a>
-						</Link>
-					</div>
 				</div>
 
 			</div>
