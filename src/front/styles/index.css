@@ -138,3 +138,17 @@ button {
 .submitButton {
   width: 100px;
 }
+/************* below is forgotpassword page css *****************/
+
+.sendButton {
+  width: 100px;
+}
+
+#temporaryPasswordMsg {
+  visibility: hidden;
+}
+/***********************below is edit profile page css ***************/
+
+#editProfile {
+  background-color: aquamarine;
+}

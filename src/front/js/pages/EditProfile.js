@@ -9,7 +9,10 @@ export const EditProfile = props => {
 	const params = useParams();
 
 	return (
-		<div>
+		<div id="editProfile">
+			<div className="text-center">
+				<i className='fas fa-user-circle'></i>
+			</div>
 			<p className="text-center">
 				Edit profile
 			</p>
@@ -34,8 +37,11 @@ export const EditProfile = props => {
 				<div className="col-6 mb-3">
 					<input className="w-75" type="text" placeholder="State/Zip code" name="fname" />
 				</div>
+				<div><input type="checkbox" />
+					<label>Check to receive SMS notifications</label>
+				</div>
 
-				<span><input className="w-50 btn btn-primary" type="submit" value="Submit" /></span>
+				<input className="submitButton btn btn-primary" type="submit" value="Submit" />
 
 				<Link to="/dashboard">
 					<p className="text-center">Use this link to get to Dashboard page</p>

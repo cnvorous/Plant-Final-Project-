@@ -11,9 +11,12 @@ export const GrowthGallery = props => {
 	return (
 		<div>
 			<p className="text-center">
-				GrowthGallery Page 
+				GrowthGallery Page
 			</p>
-	
+			<Link to="/greenthumbgallery">
+				<a className="nav-link">view and set timmer for your own growthgallery</a>
+			</Link>
+
 		</div>
 	);
 };
