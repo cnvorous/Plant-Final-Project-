@@ -126,11 +126,10 @@ button {
 }*/
 }
 /************* below is PlantCard Compontent Css***************/
-.plant-card-img{
-  height:auto;
+.plant-card-img {
+  height: auto;
   width: auto;
-  border: dotted red; 
-
+  border: dotted red;
 }
 /************* below is create user page Css***************/
 .profile {
@@ -139,4 +138,18 @@ button {
 
 .submitButton {
   width: 100px;
+}
+/************* below is forgotpassword page css *****************/
+
+.sendButton {
+  width: 100px;
+}
+
+#temporaryPasswordMsg {
+  visibility: hidden;
+}
+/***********************below is edit profile page css ***************/
+
+#editProfile {
+  background-color: aquamarine;
 }

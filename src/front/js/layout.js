@@ -20,7 +20,8 @@ import { EditProfile } from "./pages/EditProfile";
 import { Dashboard } from "./pages/Dashboard";
 import { PlantUses } from "./pages/PlantUses";
 import { ListFavorites } from "./pages/ListFavorites";
-import {ForgotPassword} from "./pages/ForgotPassword";
+import { ForgotPassword } from "./pages/ForgotPassword";
+import { PasswordReset } from "./pages/PasswordReset";
 //import {PlantResults} from "./pages/PlantResults";
 
 //create your first component
@@ -38,6 +39,7 @@ const Layout = () => {
 						<Route exact path="/" component={LandingPage} />
 						<Route exact path="/createaccount" component={CreateAccount} />
 						<Route exact path="/forgotpassword" component={ForgotPassword} />
+						<Route exact path="/passwordreset" component={PasswordReset} />
 						<Route exact path="/dashboard" component={Dashboard} />
 						<Route exact path="/editprofile" component={EditProfile} />
 						<Route exact path="/createfavorites" component={CreateFavorites} />

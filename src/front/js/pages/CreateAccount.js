@@ -11,6 +11,11 @@ export const CreateAccount = props => {
 	return (
 		<div>
 			<div className="text-center">
+				<i className='fas fa-user-circle'></i>
+			</div>
+
+
+			<div className="text-center">
 				Create you account log in and user profile
 
 				<div className="p-5 d-flex justify-content-spacebetween row">
@@ -36,6 +41,12 @@ export const CreateAccount = props => {
 						<label>Check to receive SMS notifications</label>
 					</div>
 					<input className=" submitButton btn btn-primary" type="submit" value="Submit" />
+					<div>
+						<Link to="/forgotPassword">
+							<a className="nav-link">Forgot my password??</a>
+						</Link>
+
+					</div>
 				</div>
 
 			</div>
