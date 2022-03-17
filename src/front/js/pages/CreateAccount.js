@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
+import { UploadImages } from "../component/UploadImages";
 
 export const CreateAccount = props => {
 	const { store, actions } = useContext(Context);
@@ -10,8 +11,9 @@ export const CreateAccount = props => {
 
 	return (
 		<div>
-			<div className="text-center">
+			<div className="text-center justify-content-center">
 				<i className='fas fa-user-circle'></i>
+				<UploadImages />
 			</div>
 
 

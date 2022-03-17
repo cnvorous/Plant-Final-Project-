@@ -152,3 +152,15 @@ button {
 #editProfile {
   background-color: aquamarine;
 }
+
+/**************************below is uploadimage page css ***********/
+
+.uploadProfileFile {
+  display: block;
+  width: 120px;
+  height: 30px;
+}
+
+.uploadPicInput {
+  display: none;
+}

@@ -7,6 +7,7 @@ import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
 
+
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { CreateAccount } from "./pages/CreateAccount";
@@ -53,6 +54,7 @@ const Layout = () => {
 						<Route exact path="/plantuses" component={PlantUses} />
 						<Route exact path="/demo" component={Demo} />
 						<Route exact path="/single/:theid" component={Single} />
+
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
