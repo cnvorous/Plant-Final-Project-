@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { LandingPage } from "./pages/LandingPage";
-import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
 
@@ -24,6 +23,7 @@ import { ListFavorites } from "./pages/ListFavorites";
 import { ForgotPassword } from "./pages/ForgotPassword";
 import { PasswordReset } from "./pages/PasswordReset";
 //import {PlantResults} from "./pages/PlantResults";
+import { WeatherPage } from "./pages/WeatherPage";
 
 //create your first component
 const Layout = () => {
@@ -39,6 +39,7 @@ const Layout = () => {
 					<Switch>
 						<Route exact path="/" component={LandingPage} />
 						<Route exact path="/createaccount" component={CreateAccount} />
+						<Route exact path="/weatherpage" component={WeatherPage} />
 						<Route exact path="/forgotpassword" component={ForgotPassword} />
 						<Route exact path="/passwordreset" component={PasswordReset} />
 						<Route exact path="/dashboard" component={Dashboard} />
@@ -52,7 +53,6 @@ const Layout = () => {
 						<Route exact path="/calendar" component={Calendar} />
 						<Route exact path="/greenthumbgallery" component={GreenThumbGallery} />
 						<Route exact path="/plantuses" component={PlantUses} />
-						<Route exact path="/demo" component={Demo} />
 						<Route exact path="/single/:theid" component={Single} />
 
 						<Route>

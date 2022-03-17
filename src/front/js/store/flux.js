@@ -338,6 +338,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				},
 
 			],
+			weatherInfo: {},
 		},
 		actions: {
 
@@ -368,18 +369,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.error(err);
 					});
 			},
-			getWeatherData: ()=>{
-				fetch("https://national-weather-service.p.rapidapi.com/zones/%22zipcode%22/%22State%22/forecast", {
+			getWeatherData: (zipcode) => {
+				fetch(`https://community-open-weather-map.p.rapidapi.com/forecast/daily?zip=${zipcode}%2Cus`, {
 					"method": "GET",
 					"headers": {
-						"x-rapidapi-host": "national-weather-service.p.rapidapi.com",
+						"x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
 						"x-rapidapi-key": "5f370309abmsh52b2ef22b0e99a0p19db05jsn15130b55cf47"
-		         }
+					}
 				})
-					.then(response => {
-						var data= response.json()
-					   console.log(data);
-				})
+					.then(response => response.json())
+					.then(data => setStore({ weatherInfo: data }))  //data is response from respjson
 					.catch(err => {
 						console.error(err);
 					});
