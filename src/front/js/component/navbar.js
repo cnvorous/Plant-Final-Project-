@@ -8,8 +8,8 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light">
 			<div className="container">
-				<Link to="/demo">
-					<button className="button-weather btn btn-primary">Weather App</button>
+				<Link to="/weatherpage">
+					<button className="button-weather btn btn-primary">Search Weather</button>
 				</Link>
 				<div className="ml-auto">
 					<ul className="nav">
