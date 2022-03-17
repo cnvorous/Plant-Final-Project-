@@ -14,11 +14,7 @@ export const GreenThumbGallery = props => {
 				GreenThumbGallery Page
 			</p>
 
-			<Link to="/">
-				<span className="btn btn-primary btn-sm" href="#" role="button">
-					Back home
-				</span>
-			</Link>
+
 		</div>
 	);
 };

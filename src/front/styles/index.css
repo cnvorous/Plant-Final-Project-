@@ -10,15 +10,15 @@
 }
 
 /********************* below is footer Css*************************/
-.footer{
+.footer {
   background: rgba(213, 248, 213, 0.521);
   height: 75px;
   border: 2px solid darkgreen;
 }
 
 /********************* below is Landing Page Css*************************/
-.create-link:hover{
-  color:rgba(243, 11, 11, 0.842);
+.create-link:hover {
+  color: rgba(243, 11, 11, 0.842);
   background-color: rgba(245, 245, 220, 0.411);
 }
 .top-banner {
@@ -54,6 +54,10 @@
 }
 .top-banner-box3 {
   margin-right: 10px;
+}
+
+.website-name{
+  font-size: 30px;
 }
 
 .middle-banner {
@@ -93,9 +97,6 @@ button {
   font-size: 40px;
   margin: 10px;
 }
-.text-center {
-  font-size: 40px;
-}
 
 .favs-list {
   height: 600px;
@@ -108,12 +109,13 @@ button {
   background: rgb(125, 189, 189);
   height: 640px;
 } ;
-.bi-person-circle {
+
+ .bi-person-circle {
   height: 150px;
   position: relative;
   margin-left: 5%;
   top: -30px;
-}
+ }
 .UpdateUserInfo {
   color: darkblue;
   
@@ -137,4 +139,7 @@ button {
   .col:hover input ~ .onclick{
   background-color: yellow;
 }*/
+}
+.profile {
+  margin: 50px;
 }

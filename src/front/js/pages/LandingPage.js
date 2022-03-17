@@ -14,10 +14,10 @@ export const LandingPage = () => {
 				</div>
 				<div className="top-banner-box2 m-auto">
 					<div className="text-center">
-						<i className="fas fa-seedling fa-2x"></i>
+						<i className="fas fa-seedling fa-5x m-3"></i>
 					</div>
-					<div className="text-center">
-						Leaf it to Us
+					<div className="text-center website-name">
+						<strong>Leaf it to Us</strong>
 					</div>
 				</div>
 				<div className="top-banner-box3 d-flex">

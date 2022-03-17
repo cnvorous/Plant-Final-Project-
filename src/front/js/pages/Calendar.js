@@ -14,11 +14,7 @@ export const Calendar = props => {
 				Calendar
 			</p>
 		
-			<Link to="/">
-				<span className="btn btn-primary btn-sm" href="#" role="button">
-					Back home
-				</span>
-			</Link>
+		
 		</div>
 	);
 };
