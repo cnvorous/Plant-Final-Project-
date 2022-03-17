@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
+import { UploadImages } from "../component/UploadImages";
 
 export const EditProfile = props => {
 	const { store, actions } = useContext(Context);
@@ -12,6 +13,7 @@ export const EditProfile = props => {
 		<div id="editProfile">
 			<div className="text-center">
 				<i className='fas fa-user-circle'></i>
+				<UploadImages />
 			</div>
 			<p className="text-center">
 				Edit profile
