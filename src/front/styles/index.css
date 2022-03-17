@@ -164,3 +164,8 @@ button {
 .uploadPicInput {
   display: none;
 }
+
+.uploadProfileFile {
+  justify-content: center;
+  margin: auto;
+}

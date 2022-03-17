@@ -12,7 +12,7 @@ export const CreateAccount = props => {
 	return (
 		<div>
 			<div className="text-center justify-content-center">
-				<i className='fas fa-user-circle'></i>
+				<i className=' fas fa-user-circle fa-5x'></i>
 				<UploadImages />
 			</div>
 

@@ -16,7 +16,7 @@ export function UploadImages() {
     return (
         <div>
             <button className="uploadProfileFile" onClick=
-                {() => document.getElementById('getFile').click()}>upload picture</button>
+                {() => document.getElementById('getFile').click()}>UploadPicture</button>
             <input type='file' id="getFile" className="uploadPicInput"></input>
         </div>
     );

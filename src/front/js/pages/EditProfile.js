@@ -12,7 +12,7 @@ export const EditProfile = props => {
 	return (
 		<div id="editProfile">
 			<div className="text-center">
-				<i className='fas fa-user-circle'></i>
+				<i className='fas fa-user-circle fa-5x'></i>
 				<UploadImages />
 			</div>
 			<p className="text-center">
