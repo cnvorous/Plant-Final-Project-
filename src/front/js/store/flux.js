@@ -14,8 +14,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
-			profile:[], // for login
-			plantLibrary: [
+			profile: [], // for login/landing page
+			plantLibrary: [  //database of plants for search since no proper API
 				{
 					scientificName: "Saintpaulia ionantha",
 					commonName: "African Violet",
@@ -341,11 +341,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 
-			login: (email, password)=> {
-				setStore({profile:[{"email":email, "password": password}]});  //the key is in red
+			login: (email, password) => {  //landing page
+				setStore({ profile: [{ "email": email, "password": password }] });  //the key is in red
 			},
-			logout: ()=>{
-				setStore({profile:[]});
+			logout: () => {       //landing page
+				setStore({ profile: [] });
 			},
 
 			// added for now -cv 3/12
@@ -368,30 +368,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.error(err);
 					});
 			},
-
-			//all code below was in template 
-
-			getMessage: () => {
-				// fetching data from the backend
-				fetch(process.env.BACKEND_URL + "/api/hello")
-					.then(resp => resp.json())
-					.then(data => setStore({ message: data.message }))
-					.catch(error => console.log("Error loading message from backend", error));
+			getWeatherData: ()=>{
+				fetch("https://national-weather-service.p.rapidapi.com/zones/%22zipcode%22/%22State%22/forecast", {
+					"method": "GET",
+					"headers": {
+						"x-rapidapi-host": "national-weather-service.p.rapidapi.com",
+						"x-rapidapi-key": "5f370309abmsh52b2ef22b0e99a0p19db05jsn15130b55cf47"
+		         }
+				})
+					.then(response => {
+						var data= response.json()
+					   console.log(data);
+				})
+					.catch(err => {
+						console.error(err);
+					});
 			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
-			}
 		}
 	};
 };

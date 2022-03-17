@@ -13,8 +13,6 @@ export const LandingPage = () => {
 			setProfile(store.profile)
 		}
 	}, [store.profile]);
-	console.log("profile", profile);
-	console.log("store.profile", store.profile)
 
 	return (
 		<div>
@@ -36,7 +34,7 @@ export const LandingPage = () => {
 					<div>
 						{profile.length > 0 ? <div>{store.profile.map((item, index) => {
 							return (
-								<span>{item.email}</span>
+								<span>Logged-in as:{item.email}</span>
 							)
 						})}</div> :    //need the colon for tenr. expression
 							<div>
