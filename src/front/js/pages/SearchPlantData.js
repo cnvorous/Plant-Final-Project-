@@ -6,7 +6,7 @@ import { PlantCard } from "../component/PlantCard";
 
 
 export const SearchPlantData = props => {
-	const { store, actions } = useContext(Context);
+	const { store, actions } = useContext(Context); //access items on flux page
 	const params = useParams();
 
 	return (
@@ -54,15 +54,16 @@ export const SearchPlantData = props => {
 			</div>
 
 			<div className="plant-results-body d-flex justify-content-evenly flex-wrap bg-primary bg-opacity-10 m-5 p-5"> {/*Question why does margin in bootstrap not pass 5 */}
-				<div className="m-1"><PlantCard/></div>
-				<div className="m-1">2Box area to contain plant results card in 4 to a row**</div>
-				<div className="m-1">3Box area to contain plant results card in 4 to a row**</div>
-				<div className="m-1">4Box area to contain plant results card in 4 to a row**</div>
-				<div className="m-1">5Box area to contain plant results card in 4 to a row**</div>
+				<div className="m-1"> {store.plantLibrary.map((plant, index) => {
+					return (
+						<PlantCard plants={plant} key={index} />  // always need key when mapping 
+					);
+				})}
+				</div>
 			</div>
 			<div className="tempdiv">
 				<Link to="/singleplantview">
-					Temp Link to take to Single Plant View 
+					Temp Link to take to Single Plant View
 				</Link>
 			</div>
 		</div>

@@ -1,11 +1,20 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import { Link } from "react-router-dom";
 
-
 export const LandingPage = () => {
 	const { store, actions } = useContext(Context);
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+	const [profile, setProfile] = useState(store.profile);
+	useEffect(() => {
+		if (store.profile.length !== 2) {
+			setProfile(store.profile)
+		}
+	}, [store.profile]);
+	console.log("profile", profile);
+	console.log("store.profile", store.profile)
 
 	return (
 		<div>
@@ -20,28 +29,45 @@ export const LandingPage = () => {
 						<strong>Leaf it to Us</strong>
 					</div>
 				</div>
-				<div className="top-banner-box3 d-flex">
+				<div className="top-banner-box3 d-flex m-auto">
 					<div className="m-auto">
 						<i className="fas fa-user fa-3x"></i>
 					</div>
-					<div className="d-flex flex-column m-auto">
-						<Link to="/createaccount">
-							<span className="create-link">
-								Sign Up/ Create Account
-							</span>
-						</Link>
-						<div className="row">  {/* added row and input-sm, col-xs-3  didnt work */}
-							<div class="form-floating mb-3 col-xs-3">
-								<input type="email" class="form-control input-sm" id="floatingInput" placeholder="name@example.com" />
-								<label for="floatingInput">Login Email</label>
-							</div>
-						</div>
-						<div children="row">  {/* added row and input-sm, col-xs-3  didnt work */}
-							<div class="form-floating col-xs-3">
-								<input type="password" class="form-control input-sm" id="floatingPassword" placeholder="Password" />
-								<label for="floatingPassword">Password</label>
-							</div>
-						</div>
+					<div>
+						{profile.length > 0 ? <div>{store.profile.map((item, index) => {
+							return (
+								<span>{item.email}</span>
+							)
+						})}</div> :    //need the colon for tenr. expression
+							<div>
+								<Link to="/createaccount">
+									<span className="create-link">
+										Sign Up/ Create Account
+									</span>
+								</Link>
+								<div className="row">  {/* added row and input-sm, col-xs-3  didnt work */}
+									<div className="form-floating mb-3 col-xs-3">
+										<input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="form-control input-sm" id="floatingInput" placeholder="name@example.com" />
+										<label for="floatingInput">Login Email</label>
+									</div>
+								</div>
+								<div className="row">  {/* added row and input-sm, col-xs-3  didnt work */}
+									<div className="form-floating col-xs-3">
+										<input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
+											onKeyPress={(e) => {
+												if (e.key == "Enter") {
+													actions.login(email, password)
+												}
+											}} className="form-control input-sm" id="floatingPassword" placeholder="Password" />
+										<label for="floatingPassword">Password</label>
+									</div>
+								</div>
+								<div>
+									<Link to="/forgotpassword">
+										<span className="text-center">Forgot Password??</span>
+									</Link>
+								</div>
+							</div>}
 					</div>
 				</div>
 			</div>

@@ -6,16 +6,13 @@ import { Context } from "../store/appContext";
 export const SinglePlantView = props => {
    //const { store, actions } = useContext(Context);
    //const params = useParams();
-   //const dataFromLink = props.location.state;
+   const dataFromComponent = props.location.state;   // state should =(props.plants)
+
 
    return (
       <div>
-         <p className="text-center">
-            Single Planet View Page
-         </p>
-
          <div className="single-plant-container">
-            <div className="top-row d-flex">
+            <div className="top-row d-flex justify-content-around">
                <div className="alarm">
                   <i class="far fa-bell">Set Reminder</i>
                </div>
@@ -30,35 +27,37 @@ export const SinglePlantView = props => {
             {/*<div></div> not sure if need to wrap table in its own div below */}
             <div className="row row-cols-3 middle-row">
                <div className="col">
-                  <h1 className="card-text ">{""}</h1> {/*props.location.state.name was from class*/}
+                  <h1 className="card-text ">{dataFromComponent.commonName}</h1> {/*props.location.state.name was from class*/}
                </div>
                <div className="col">
-                  <p className="card-text">Seasonal: {""}</p>{/*{dataFromLink.seasonal/ */}
+                  <p className="card-text">Seasonal: {dataFromComponent.seasonal}</p>{/*{dataFromLink.seasonal/ */}
                </div>
                <div className="col">
-                  <p className="card-text">watering: {""}</p>
+                  <p className="card-text">watering: {dataFromComponent.waterReq}</p>
                </div>
                <div className="col">
-                  <p className="card-text">Hardiness: {""}</p>
+                  <p className="card-text">Light Levels: {dataFromComponent.lightExposure}</p>
                </div>
                <div className="col">
-                  <p className="card-text">Height: {""}</p>
+                  <p className="card-text">Height: {dataFromComponent.height}</p>
                </div>
                <div className="col">
-                  <p className="card-text">Color: {""}</p>
+                  <p className="card-text">size: {dataFromComponent.size}</p>
                </div>
                <div className="col">
-                  <p className="card-text">Blooming: {""}</p>
+                  <p className="card-text">Blooming: {dataFromComponent.blooms}</p>
                </div>
                <div className="col">
-                  <p className="card-text">Sun Exposure: {""}</p>
+                  <p className="card-text">Temperature: {dataFromComponent.temperature}</p>
                </div>
                <div className="col">
-                  <p className="card-text">Fertilizer: {""}</p>
+                  <p className="card-text">Fertilizer: {dataFromComponent.fertilizerReq}</p>
                </div>
             </div>
             <div className="bottom-row">
-               <p>Description: {""}</p>
+               <p>Description: {dataFromComponent.plantDetails}</p>
+               <p>Plant Care: {dataFromComponent.plantCareTips}</p>
+               <p>Watering Tips: {dataFromComponent.waterTips}</p>
             </div>
          </div>
       </div>

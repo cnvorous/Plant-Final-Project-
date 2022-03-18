@@ -49,14 +49,14 @@
   background-color: rgb(121, 239, 243);
 }
 
-.top-banner-box1 {
+/* .top-banner-box1 {
   margin-left: 10px;
-}
-.top-banner-box3 {
+} */
+/* .top-banner-box3 {
   margin-right: 10px;
-}
+} */
 
-.website-name{
+.website-name {
   font-size: 30px;
 }
 
@@ -105,20 +105,21 @@ button {
 
 /************* below is Dashboard Css***************/
 
- .dashboard-container {   
+.dashboard-container {
   background: rgb(125, 189, 189);
   height: 640px;
-} ;
+}
 
- .bi-person-circle {
+.bi-person-circle {
   height: 150px;
   position: relative;
   margin-left: 5%;
-  top: -30px;
- }
+  top: 9px;
+}
 .UpdateUserInfo {
   color: darkblue;
-  
+  position: relative;
+  margin-inline-end: 80ch;
 }
 .qr-code {
   margin-left: 60%;
@@ -134,12 +135,36 @@ button {
   background-color: rgba(241, 196, 82, 0.548);
 }
 
- {
-  /**** this is not giving highlight effect on hoover checkbox
+/**** this is not giving highlight effect on hoover checkbox
   .col:hover input ~ .onclick{
   background-color: yellow;
 }*/
+
+/************* below is PlantCard Compontent Css***************/
+.plant-card-img {
+  height: auto;
+  width: auto;
+  border: dotted red;
 }
+/************* below is create user page Css***************/
 .profile {
   margin: 50px;
+}
+
+.submitButton {
+  width: 100px;
+}
+/************* below is forgotpassword page css *****************/
+
+.sendButton {
+  width: 100px;
+}
+
+#temporaryPasswordMsg {
+  visibility: hidden;
+}
+/***********************below is edit profile page css ***************/
+
+#editProfile {
+  background-color: aquamarine;
 }
