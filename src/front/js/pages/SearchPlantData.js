@@ -53,12 +53,14 @@ export const SearchPlantData = props => {
 
 			</div>
 
-			<div className="plant-results-body d-flex justify-content-evenly flex-wrap bg-primary bg-opacity-10 m-5 p-5"> {/*Question why does margin in bootstrap not pass 5 */}
-				<div className="m-1"> {store.plantLibrary.map((plant, index) => {
-					return (
-						<PlantCard plants={plant} key={index} />  // always need key when mapping 
-					);
-				})}
+
+			<div className="plant-results-body bg-primary bg-opacity-10 m-5 p-5"> {/*Question why does margin in bootstrap not pass 5 */}
+				<div className="plant-div d-sm-flex flex-wrap justify-content-sm-evenly">
+					{store.plantLibrary.map((plant, index) => {
+						return (
+							<PlantCard plants={plant} key={index} />  // always need key when mapping 
+						);
+					})}
 				</div>
 			</div>
 			<div className="tempdiv">

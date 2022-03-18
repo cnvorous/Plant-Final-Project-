@@ -108,10 +108,19 @@ button {
 /************* below is SearchPlantData page Css***************/
 
 .search-button {
-  background-color: rgb(241, 205, 114);
+  background-color: rgb(241, 207, 120);
 }
 .search-button:hover {
-  background-color: rgba(241, 196, 82, 0.548);
+  background-color: rgb(214, 159, 21);
+}
+
+
+.plant-search-container{
+  background-color: rgba(14, 69, 248, 0.103);
+}
+
+.plant-div{
+  border: 2px solid rgb(214, 26, 26);
 }
 
 /**** this is not giving highlight effect on hoover checkbox
@@ -120,11 +129,12 @@ button {
 }*/
 
 /************* below is PlantCard Compontent Css***************/
-.plant-card-img {
-  height: auto;
-  width: auto;
-  border: dotted red;
-}
+
+
+/* .plant-card-container{
+  height: 50px;
+  width: 25px;
+} */
 /************* below is create user page Css***************/
 .profile {
   margin: 50px;

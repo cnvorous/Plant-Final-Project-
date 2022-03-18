@@ -116,7 +116,7 @@ export const LandingPage = () => {
 					Feel free to share you Green Thumb tips.
 				</p>
 				<p><i className="fas fa-angle-double-right fa-2x"></i>
-					Not sure where to start ... thats ok we have you covered.  Just <Link to="/search">CLICK HERE</Link> and search plant options
+					Not sure where to start ... thats ok we have you covered.  Just <Link to="/searchplantdata">CLICK HERE</Link> and search plant options
 					by size, sunlight exposure, seasons, hardiness and what plants can be used for other inhome
 					uses.
 				</p>
