@@ -339,6 +339,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			],
 			weatherInfo: {},
+			favoritesList: []
 		},
 		actions: {
 
@@ -382,6 +383,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(err => {
 						console.error(err);
 					});
+			},
+			createNewFavoritesList: (newList) => {
+				setStore({ favoritesList: newList });
 			},
 
 		}
