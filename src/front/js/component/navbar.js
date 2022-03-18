@@ -9,7 +9,7 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light">
 			<div className="container">
 				<Link to="/weatherpage">
-					<button className="button-weather btn btn-primary">Search Weather</button>
+					<button className="btn weather-search-button">Search Weather</button>
 				</Link>
 				<div className="ml-auto">
 					<ul className="nav">
