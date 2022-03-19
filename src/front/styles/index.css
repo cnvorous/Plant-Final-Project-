@@ -219,3 +219,19 @@ button {
   font-size: 20px;
   color:rgb(5, 5, 5);
 }
+
+/***************************CreateFavs Page ******************/
+
+.fav-search-btn{
+  color:white;
+  background-color: blue;
+}
+
+.fav-search-btn:hover{
+  color:white;
+  background-color: rgb(19, 19, 88);
+}
+
+.fa-trash-alt:hover{
+  color:red;
+}
