@@ -18,7 +18,7 @@ export const CreateAccount = props => {
 	const [stateZipCodeValue, setStateZipCodeValue] = useState("");
 
 	const handleSubmit = () => {
-		profileArray.push({ email: emailValue, password: passwordValue, firstName: firstNameValue, lastName: lastNameValue, phone: phoneValue, stateZipCode: stateZipCodeValue });
+		actions.createAccount({ email: emailValue, password: passwordValue, firstName: firstNameValue, lastName: lastNameValue, phone: phoneValue, stateZipCode: stateZipCodeValue });
 
 	}
 
@@ -58,12 +58,9 @@ export const CreateAccount = props => {
 					</div>
 					<input className=" submitButton btn btn-primary" onClick={() => {
 						handleSubmit();
-
+						console.log(store.account)
 					}} type="submit" value="Submit" />
-					<input className=" submitButton btn btn-primary" onClick={() => {
-						console.log("this is the array on the flux:", store.profile)
 
-					}} type="submit" value="show on console" />
 					<div>
 						<Link to="/forgotPassword">
 							<a className="nav-link">Forgot my password??</a>

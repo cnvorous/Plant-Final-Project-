@@ -1,3 +1,5 @@
+import { array } from "prop-types";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -15,6 +17,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			],
 			profile: [], // for login/landing page
+			account: [],
 			plantLibrary: [  //database of plants for search since no proper API
 				{
 					scientificName: "Saintpaulia ionantha",
@@ -343,6 +346,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 
+			////creataccount /////
+			createAccount: (array) => {
+				setStore({ account: array });
+			},
+
 			login: (email, password) => {  //landing page
 				setStore({ profile: [{ "email": email, "password": password }] });  //the key is in red
 			},
@@ -388,7 +396,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ favoritesList: newList });
 			},
 
-			deleteFavsList:(id)=>{
+			deleteFavsList: (id) => {
 				setStore(setFavList(""));
 			},
 
