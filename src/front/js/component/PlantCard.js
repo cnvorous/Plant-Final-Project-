@@ -16,7 +16,7 @@ export const PlantCard = (props) => { {/*{plantData}this props will need to chan
 
          <div className="card plant-card border-primary" style={{ width: "15rem" }}>
             <div className="card-header text-end">
-               <button className="heart-btn"
+               <button className="heart-btn btn-sm"
                   onClick={() => actions.FillSavedFavoriteHeart(props)}>  {/*{plantData}this props will need to change */}
                   <i className="far fa-heart heart">
                      <div className="nav-item dropdown">

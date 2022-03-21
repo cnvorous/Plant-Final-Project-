@@ -412,6 +412,35 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				setStore({ favoritesList: newFavoritesList });
 			},
+           
+			plantSearchBarResults: (results)=>{
+				clearPlantSearchResults()
+				for (const plant of results){
+					const resultItem = document.createElement("li")
+					resultItem.classList.add('result-item')
+					const text = document.createTextNode(plant.name)
+					resultItem.appendChild(text)
+					list.appendChild(resultItem)
+				}
+				if(results.length ===0){
+					noSearchResults()
+				}
+			},
+
+			clearPlantSearchResults: ()=>{
+					while(list.firstchild){
+						list.removeChild(list.firstchild)
+					}
+			},
+
+			noSearchResults:()=>{
+				const error = document.createElement('li')
+				error.classList.add('error-message')
+				const text = document.createTextNode('No results found. Sorry!')
+				error.appendChild(text)
+				list.appendChild(error)
+			},
+
 		}
 	};
 };

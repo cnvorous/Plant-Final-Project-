@@ -9,12 +9,39 @@ export const SearchPlantData = props => {
 	const { store, actions } = useContext(Context); //access items on flux page
 	const params = useParams();
 
+
+	//const plantLibrary=[];
+	// const plantCardTemplate= document.querySelector("[plant-card-template]")
+	//  const searchInput=  document.querySelector("[data-search]");
+
+	// searchInput.addEventListener("click",(e)=>{
+	// 	let value = e.target.value
+	// 	if(value && value.trim().length > 0){
+	// 		value=value.trim().toLowerCase()
+	// 			actions.plantSearchBarResults(plantLibrary.filter(plant =>{
+   // 					return plant.name.includes(value)
+	// 					}))
+	// 	}else{
+	// 		console.log("Error")
+	//			actions.clearPlantSearchResults()
+	// 	}
+	// });
+
+	// const clearButton=document.querySelector("[clear-btn]");
+	// clearButton.addEventListener("click",()=>{
+	//	actions.clearPlantSearchResults()
+	// });
+
+
+	
 	return (
 		<div className="plant-search-container">
 
 			<div className="input-group mb-3 w-50 p-3 mx-auto mt-5">{/*NEED: seems like mt cant go higher then mt-5 */}
 				<span className="search-button input-group-text" id="inputGroup-sizing-default">Plant Search</span>
-				<input type="text" placeholder="Type in plant name OR click enter to search..." class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
+				<input type="search" id="search" placeholder="Type in plant name OR click enter to search..." className="form-control data-search" 
+					aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
+					<button className="clear-btn">Clear Results</button>
 			</div>
 			<p className="text-success text-center mb-4">Filtering Options</p> {/* NEED: using h4 isnt working  */}
 
@@ -75,6 +102,7 @@ export const SearchPlantData = props => {
 
 
 			<div className="plant-results-body bg-primary bg-opacity-10 m-5 p-5"> {/*Question why does margin in bootstrap not pass 5 */}
+				{/* <template className="plant-card-template"> */}
 				<div className="plant-div d-sm-flex flex-wrap justify-content-sm-evenly">
 					{store.plantLibrary.map((plant, index) => {
 						return (
@@ -97,6 +125,7 @@ export const SearchPlantData = props => {
 						);
 					})}
 				</div>
+				{/* </template> */}
 			</div>
 			<div className="tempdiv">
 				<Link to="/singleplantview">

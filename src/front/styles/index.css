@@ -107,11 +107,29 @@ button {
 
 /************* below is SearchPlantData page Css***************/
 
+.hide{
+  display: none;
+}
+
 .search-button {
   background-color: rgb(241, 207, 120);
 }
 .search-button:hover {
   background-color: rgb(214, 159, 21);
+}
+
+.clear-btn{
+  color: white;
+  background: blue;
+  margin-top: 10px;
+  height: 50px;
+}
+
+.clear-btn:hover{
+  color: white;
+  background: rgba(241, 6, 190, 0.74);
+  margin-top: 10px;
+  height: 50px;
 }
 
 .filter-options{
@@ -124,6 +142,10 @@ button {
 
 .plant-div{
   border: 2px solid rgb(214, 26, 26);
+}
+
+.heart:hover{
+color:red;
 }
 
 /**** this is not giving highlight effect on hoover checkbox
