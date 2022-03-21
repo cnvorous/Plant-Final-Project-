@@ -8,7 +8,8 @@ import { ListFavorites } from "../pages/ListFavorites";
 import { Context } from "../store/appContext";
 
 
-export const PlantCard = (props) => {  {/*({plant}) i think is needed as props */}
+export const PlantCard = (props) => {
+   {/*({plant}) i think is needed as props */ }
    const { store, actions } = useContext(Context);
    // changed from props // have to either use prop.item/key or use {}and call declared item from listing the <card/>tag
    // const [state, setState] = useState({}); //initialize state here
@@ -18,24 +19,24 @@ export const PlantCard = (props) => {  {/*({plant}) i think is needed as props *
 
          <div className="card plant-card border-primary" style={{ width: "15rem" }}>
             <div className="card-header text-end">
-                <button className="heart-btn"
-                onClick={()=>actions.FillSavedFavoriteHeart(props)}>  
-               <i className="far fa-heart heart"> 
-                  <div className="nav-item dropdown">
-                     <a className="nav-link  dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Send to which favs list:
-                     </a>
-                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        {store.favoritesList.map((fav, index) => {
-                           return(
-                           <li key={index}>
-                              <Link to="/createfavorites">{fav.name}</Link>
-                           </li>);
-                        })};
-                     </ul>
-                  </div>
-               </i>
-                </button> 
+               <button className="heart-btn"
+                  onClick={() => actions.FillSavedFavoriteHeart(props)}>
+                  <i className="far fa-heart heart">
+                     <div className="nav-item dropdown">
+                        <a className="nav-link  dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           Send to which favs list:
+                        </a>
+                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                           {store.favoritesList.map((fav, index) => {
+                              return (
+                                 <li key={index}>
+                                    <Link to="/createfavorites">{fav.name}</Link>
+                                 </li>);
+                           })};
+                        </ul>
+                     </div>
+                  </i>
+               </button>
             </div>
             <img src={props.plants.plantImage} className="card-img-top plant-card-img" alt="..." />
             <div className="card-body">
