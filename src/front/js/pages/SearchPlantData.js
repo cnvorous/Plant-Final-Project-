@@ -3,45 +3,62 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { PlantCard } from "../component/PlantCard";
+import queryString from "query-string";
 
 
 export const SearchPlantData = props => {
 	const { store, actions } = useContext(Context); //access items on flux page
 	const params = useParams();
+	const [input, setInput] = useState("");
+
+	const [plantArray, setPlantArray] = useState(store.plantLibrary);
+
+	useEffect(() => {
+		const qs = queryString.parse(location.hash);
+		searchFunction(qs.keyword);
+	}, [store.plantLibrary]);
+
+	const searchFunction = keyword => {
+		let filteredArray = store.plantLibrary.filter(item => {
+			if (keyword == "" || keyword == undefined) {
+				return item;
+			} else if (item.commonName.toLowerCase().includes(keyword.toLowerCase())) {
+				return item;
+			}
+		});
+		setPlantArray(filteredArray);
+	};
+
+	const searchHash = event => {
+		searchFunction(event);
+		if (event == "") {
+			setInput("");
+			setPlantArray(store.plantLibrary);
+		}
+		location.hash = `keyword=${event}`;
+	};
 
 
-	//const plantLibrary=[];
-	// const plantCardTemplate= document.querySelector("[plant-card-template]")
-	//  const searchInput=  document.querySelector("[data-search]");
 
-	// searchInput.addEventListener("click",(e)=>{
-	// 	let value = e.target.value
-	// 	if(value && value.trim().length > 0){
-	// 		value=value.trim().toLowerCase()
-	// 			actions.plantSearchBarResults(plantLibrary.filter(plant =>{
-   // 					return plant.name.includes(value)
-	// 					}))
-	// 	}else{
-	// 		console.log("Error")
-	//			actions.clearPlantSearchResults()
-	// 	}
-	// });
-
-	// const clearButton=document.querySelector("[clear-btn]");
-	// clearButton.addEventListener("click",()=>{
-	//	actions.clearPlantSearchResults()
-	// });
-
-
-	
 	return (
 		<div className="plant-search-container">
 
 			<div className="input-group mb-3 w-50 p-3 mx-auto mt-5">{/*NEED: seems like mt cant go higher then mt-5 */}
 				<span className="search-button input-group-text" id="inputGroup-sizing-default">Plant Search</span>
-				<input type="search" id="search" placeholder="Type in plant name OR click enter to search..." className="form-control data-search" 
-					aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
-					<button className="clear-btn">Clear Results</button>
+				<input type="search" id="search" placeholder="Type in plant name OR click enter to search..."
+					className="form-control data-search"
+					aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+					onChange={(e) => {
+						setInput(e.target.value)
+						//searchHash(input)
+					}}
+					onKeyUp={() => {
+						searchHash(input)
+					}} />
+				<button className="clear-btn"
+					onClick={(e) => setInput("")}>
+					Clear Results
+				</button>
 			</div>
 			<p className="text-success text-center mb-4">Filtering Options</p> {/* NEED: using h4 isnt working  */}
 
@@ -104,7 +121,7 @@ export const SearchPlantData = props => {
 			<div className="plant-results-body bg-primary bg-opacity-10 m-5 p-5"> {/*Question why does margin in bootstrap not pass 5 */}
 				{/* <template className="plant-card-template"> */}
 				<div className="plant-div d-sm-flex flex-wrap justify-content-sm-evenly">
-					{store.plantLibrary.map((plant, index) => {
+					{plantArray.map((plant, index) => {
 						return (
 							<PlantCard key={index} plants={plant} />
 
