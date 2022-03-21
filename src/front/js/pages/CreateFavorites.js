@@ -7,51 +7,83 @@ import { CloseModal } from "../component/CloseModal";
 export const CreateFavorites = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
-	const [favList, setFavList] = useState("");
-	const [state, setState] = useState({ showModal: false, id: null });
+	const [favItem, setFavItem] = useState("");
+	const [favList, setFavList] = useState([]);
+	const saveList = (e) => {
+		if (e.KeyCode == 13) {
+			setFavList([...favList, favItem]);
+			setFavItem("");
+		}
+	};
+
+	// const saveList=(e)=>{
+	// 	if(e.KeyCode==13){
+	// 		let favs =[...favList];
+	// 		let newFavs= favs.concat({
+	// 			label: favItem,
+	// 			done: false,
+	// 		});
+	// 		setFavList(newFavs);
+	// 		updateList(newFavs);
+	// 		setFavItem("");
+	// 	};
+
+	const removeList = (index) => {
+		setFavList(favList.filter((taskToRemove, i)=>i !=index));
+	};
+
+	// const removeList = (index) => {
+   //const removeListArr=favList.filter((taskToRemove, i)=>i !=index);
+	// 	setFavList(removeListArr);
+	//		updateList(removeListArr);
+	// };
 
 
 	return (
-		<div>
-			<div className="input-group m-3">
-				<input className="form-control favorites-input" id="inputGroup-sizing-sm" type="text" value={favList} onChange={(e) => setFavList(e.target.value)} placeholder="Create Favorites List" aria-label="default input example" />
-				<button className="btn fav-search-btn" onClick={() => {
-					let list = [...store.favoritesList, { name: favList, favorites: [] }]
+		<div className="create-favs-container">
+			<h5>Favorite Plants </h5>
+			<div className="favs-bar d-flex">
+				<input className="favorites-input" type="text"
+				placeholder="Create Favorites List" aria-label="default input example"
+					onChange={(e)=>setFavItem(e.target.value)}
+					value={favItem} 
+					onKeyUp={(e)=>saveList(e)}/>
+				<button className="btn fav-search-btn"
+				 onClick={() => {
+					let list = [...store.favoritesList, 
+						{ name: favItem, favorites: [] }]
 					actions.createNewFavoritesList(list);
-					setFavList("");
+					setFavItem("");
 				}}>Add New List
 				</button>
 			</div>
-			<div>
-				<ul>
-					{store.favoritesList.length > 0 && store.favoritesList.map((list, index) => {
-						return (
-							<li key={index}>
-								<span>{list.name}
-									<button className="btn"
-										onClick={() => { props.onDelete(); }}>
-										<i className="far fa-trash-alt"
-											onDelete={() => setState({ showModal: true, id: list.id })}>
-										</i>
-									</button>
-								</span>
-							</li>
-						);
-					})}
-				</ul>
+			<ul className="favs-ul">
+				{store.favoritesList.length > 0 && store.favoritesList.map((list, index) => {
+					return (
+						<li className="fav-list-item" key={index}>
+							{list.name}
+							<span className="delete-icon"
+								onClick={(e)=>removeList(index)}>
+									{""}
+								<i className="far fa-trash-alt"></i>
+							</span>
+						</li>
+					);
+				})}
+			</ul>
+			<div className="favs-counter text-center">
+				<em>
+					{favList.length == 0 ? "No current favorites list" : `${favList.length}favorites list`}
+				</em>
 			</div>
-
 			<Link to="/listfavorites">
 				<span>
 					This link will connect them with page to see the List they click on this current page.
 				</span>
 			</Link>
-			<CloseModal show={state.showModal}
-				onClose={() => setState({ showModal: false })}
-				id={state.id}
-			/>
-			{""}
+
 		</div>
+
 	);
 };
 

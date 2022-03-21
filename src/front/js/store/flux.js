@@ -396,9 +396,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ favoritesList: newList });
 			},
 
-			deleteFavsList: (id) => {
-				setStore(setFavList(""));
-			},
+
+			// deleteFavsList: (id) => {
+			// 	setStore(setFavList(""));
+			// },
 
 		}
 	};

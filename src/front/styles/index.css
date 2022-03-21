@@ -225,6 +225,7 @@ button {
 .fav-search-btn{
   color:white;
   background-color: blue;
+  height: 30px;
 }
 
 .fav-search-btn:hover{
@@ -234,4 +235,56 @@ button {
 
 .fa-trash-alt:hover{
   color:red;
+  cursor: grab;
+}
+
+.create-favs-container{
+  background-color: rgb(153, 247, 153);
+  height: 600px;
+  width: 700px;
+  margin-top: 50px; 
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 5%;
+}
+
+.favorites-input{
+  height: 30px;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.favs-ul{
+  color:rgb(36, 136, 44);
+  margin: 10px 25px;
+  font-size: 25px;
+}
+
+h5{
+  text-align: center;
+  font-family: fantasy;
+  font-size: 30px;
+  color:rgb(36, 136, 44)
+}
+.fav-list-item{
+  height: 40px;
+  text-indent: 10px;
+  border-style:hidden;
+  margin-top: 5px;
+}
+
+.fav-list-item:hover{
+  color: white;
+  background-color: rgba(103, 204, 103, 0.048);
+  font-weight: 600;
+}
+
+em{
+  color:white;
+}
+.favs-counter{
+  margin-top: 300px;
 }
