@@ -342,7 +342,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			],
 			weatherInfo: {},
-			favoritesList: []
+			favoritesList: [
+				{name: "Plants to Buy"},
+				{name: "Summer Plants"},
+				{name: "Plants to water weekly"},
+			]
 		},
 		actions: {
 
