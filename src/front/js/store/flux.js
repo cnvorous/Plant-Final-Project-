@@ -343,9 +343,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			weatherInfo: {},
 			favoritesList: [
-				{name: "Plants to Buy"},
-				{name: "Summer Plants"},
-				{name: "Plants to water weekly"},
+				{ name: "Plants to Buy" },
+				{ name: "Summer Plants" },
+				{ name: "Plants to water weekly" },
 			]
 		},
 		actions: {
@@ -398,6 +398,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			createNewFavoritesList: (newList) => {
 				setStore({ favoritesList: newList });
+			},
+
+			FillSavedFavoriteHeart: (fav, index) => {
+				const newFavoritesList = getStore().favoritesList; {/*gives local copy of favs to pushinto  */ }
+				newFavoritesList.push(fav)
+
+				setStore({ favoritesList: newFavoritesList });
+
+				// const demo= store.demo.map((elm,i)={
+				//     if (i===index) elm.background=color;
+				// 	 return elm;
+
+				// 	 setStore({demo:demo});
+				// });
 			},
 
 

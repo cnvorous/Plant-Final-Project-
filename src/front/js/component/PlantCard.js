@@ -8,7 +8,7 @@ import { ListFavorites } from "../pages/ListFavorites";
 import { Context } from "../store/appContext";
 
 
-export const PlantCard = props => {
+export const PlantCard = (props) => {  {/*({plant}) i think is needed as props */}
    const { store, actions } = useContext(Context);
    // changed from props // have to either use prop.item/key or use {}and call declared item from listing the <card/>tag
    // const [state, setState] = useState({}); //initialize state here
@@ -18,7 +18,9 @@ export const PlantCard = props => {
 
          <div className="card plant-card border-primary" style={{ width: "15rem" }}>
             <div className="card-header text-end">
-               <i className="far fa-heart heart">
+                <button className="heart-btn"
+                onClick={()=>actions.FillSavedFavoriteHeart(props)}>  
+               <i className="far fa-heart heart"> 
                   <div className="nav-item dropdown">
                      <a className="nav-link  dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Send to which favs list:
@@ -33,6 +35,7 @@ export const PlantCard = props => {
                      </ul>
                   </div>
                </i>
+                </button> 
             </div>
             <img src={props.plants.plantImage} className="card-img-top plant-card-img" alt="..." />
             <div className="card-body">
@@ -59,6 +62,7 @@ export const PlantCard = props => {
 /*** Define the data-types for your component's properties **/
 PlantCard.propTypes = {
    plants: PropTypes.object,
+   plant: PropTypes.string,
    // history: PropTypes.object, // was already in template
    // onDelete: PropTypes.func // was already in template
 };
