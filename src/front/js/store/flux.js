@@ -346,8 +346,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{ name: "Plants to Buy" },
 				{ name: "Summer Plants" },
 				{ name: "Plants to water weekly" },
-			]
+			],
+			favoritePlants:[
+				{name: "test"}
+			],
 		},
+		
 		actions: {
 
 			////creataccount /////
@@ -362,8 +366,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ profile: [] });
 			},
 
-			// added for now -cv 3/12
-			// Use getActions to call a function within a fuction
+			// plantData:(plantName)=>{
+			// 	setStore({plantLibrary:[{"plantName": plantName}]});
+			// },
+
 			getPlantData: () => {
 				fetch("https://plantlink.p.rapidapi.com/plantTypes", {
 					"method": "GET",
@@ -405,22 +411,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 				newFavoritesList.push(fav)
 
 				setStore({ favoritesList: newFavoritesList });
+			},
+		}
+	};
+};
 
-				// const demo= store.demo.map((elm,i)={
+		// const demo= store.demo.map((elm,i)={
 				//     if (i===index) elm.background=color;
 				// 	 return elm;
 
 				// 	 setStore({demo:demo});
 				// });
-			},
-
 
 			// deleteFavsList: (id) => {
 			// 	setStore(setFavList(""));
 			// },
-
-		}
-	};
-};
-
 export default getState;
