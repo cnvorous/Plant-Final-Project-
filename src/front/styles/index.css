@@ -114,6 +114,9 @@ button {
   background-color: rgb(214, 159, 21);
 }
 
+.filter-options{
+  text-decoration:underline;
+}
 
 .plant-search-container{
   background-color: rgba(14, 69, 248, 0.103);

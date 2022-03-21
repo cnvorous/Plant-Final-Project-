@@ -22,31 +22,51 @@ export const SearchPlantData = props => {
 
 				<div className="row row-cols-6">
 					<div className="col"></div>{/*empty space on purpose*/}
-					<div className="col">
-						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Size of Plant Base</label>
+					<div className="col d-flex flex-column">
+						<label className="filter-options">Size of Plant Base:</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Small</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Medium</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Large</label>
 					</div>
-					<div className="col">
-						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Plant Height</label>
+					<div className="col d-flex flex-column">
+						<label className="filter-options">Water Dependency:</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Low (montly)</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Moderate (weekly)</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />High(every few days)</label>
 					</div>
-					<div className="col">
-						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Less Water Dependent</label>
+					<div className="col d-flex flex-column">
+						<label className="filter-options">Sun Exposure:</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Indirect Light</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Direct Light</label>
 					</div>
-					<div className="col">
-						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Seasonal</label>
+					<div className="col d-flex flex-column">
+						<label className="filter-options">Growth Season:</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Spring/Summer</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Fall/Winter</label>
 					</div>
 					<div className="col"></div> {/*empty space on purpose*/}
 					<div className="col"></div>{/*empty space on purpose*/}
-					<div className="col"> {/*-opacity-25 */}
-						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Blooming</label>
+					<div className="col d-flex flex-column mt-3"> {/*-opacity-25 */}
+						<label className="filter-options">Blooming</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Yes</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />No</label>
 					</div>
-					<div className="col">
-						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Hardiness</label>
+					<div className="col d-flex flex-column mt-3">
+						<label className="filter-options">Fertilization Dependency</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Weekly</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Monthly</label>
 					</div>
-					<div className="col">
-						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Fertilization</label>
+					<div className="col d-flex flex-column mt-3">
+						<label className="filter-options">Plant Height</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Small</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Medium</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Large</label>
 					</div>
-					<div className="col">
-						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Color</label>
+					<div className="col d-flex flex-column mt-3">
+						<label className="filter-options">Toxicity</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Harmful to Children</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Harmful to Pets</label>
+						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Safe for Humans & Pets</label>
 					</div>
 					<div className="col"></div>{/*empty space on purpose*/}
 				</div>
@@ -58,22 +78,22 @@ export const SearchPlantData = props => {
 				<div className="plant-div d-sm-flex flex-wrap justify-content-sm-evenly">
 					{store.plantLibrary.map((plant, index) => {
 						return (
-							<PlantCard key={index} plants={plant}/>       
+							<PlantCard key={index} plants={plant} />
 
-								// plantData={{
-								// 	index:index,
-								// 	name: plant.commonName,
-								// 	prop2: `Size:`,
-								// 	prop3: `Blooms:`,
-								// 	prop4: `Water Dependency: `,
-								// 	prop5: `Light Exposure: `,
-								// 	prop6: `Plant Image:`,
-								// 	value2: plant.size,
-								// 	value3: plant.blooms,
-								// 	value4: plant.waterReq,
-								// 	value5: plant.lightExposure,
-								// 	value6: plant.plantImage
-								// }}   // always need key when mapping 
+							// plantData={{
+							// 	index:index,
+							// 	name: plant.commonName,
+							// 	prop2: `Size:`,
+							// 	prop3: `Blooms:`,
+							// 	prop4: `Water Dependency: `,
+							// 	prop5: `Light Exposure: `,
+							// 	prop6: `Plant Image:`,
+							// 	value2: plant.size,
+							// 	value3: plant.blooms,
+							// 	value4: plant.waterReq,
+							// 	value5: plant.lightExposure,
+							// 	value6: plant.plantImage
+							// }}   // always need key when mapping 
 						);
 					})}
 				</div>
