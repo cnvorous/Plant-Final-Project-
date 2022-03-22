@@ -9,12 +9,31 @@ export const CreateFavorites = props => {
 	const params = useParams();
 	const [favItem, setFavItem] = useState("");
 	const [favList, setFavList] = useState([]);
+	// const [removeFavItem, setRemoveFavItem] =useState(favList)
+
 	const saveList = (e) => {
 		if (e.KeyCode == 13) {
 			setFavList([...favList, favItem]);
 			setFavItem("");
 		}
 	};
+
+	// const removeItem =(e)=>{
+	// 	const name = e.target.value.name
+	// 	setRemoveFavItem(removeFavItem.filter(item => item.name !== name));
+	//  };
+	
+
+	const removeList = (index) => {
+		setFavList(favList.filter((taskToRemove, i)=>i !=index));
+	};
+
+		// const removeList = (index) => {
+   //const removeListArr=favList.filter((taskToRemove, i)=>i !=index);
+	// 	setFavList(removeListArr);
+	//		updateList(removeListArr);
+	// };
+
 
 	// const saveList=(e)=>{
 	// 	if(e.KeyCode==13){
@@ -27,16 +46,6 @@ export const CreateFavorites = props => {
 	// 		updateList(newFavs);
 	// 		setFavItem("");
 	// 	};
-
-	const removeList = (index) => {
-		setFavList(favList.filter((taskToRemove, i)=>i !=index));
-	};
-
-	// const removeList = (index) => {
-   //const removeListArr=favList.filter((taskToRemove, i)=>i !=index);
-	// 	setFavList(removeListArr);
-	//		updateList(removeListArr);
-	// };
 
 
 	return (
@@ -63,8 +72,8 @@ export const CreateFavorites = props => {
 						<li className="fav-list-item" key={index}>
 							{list.name}
 							<span className="delete-icon"
-								onClick={(e)=>removeList(index)}>
-									{""}
+								 onClick={(e)=>removeList(index)} >  {/*name={item.name} onClick={(e)=>removeList}*/}
+								 {""} 
 								<i className="far fa-trash-alt"></i>
 							</span>
 						</li>

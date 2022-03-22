@@ -8,7 +8,7 @@ import { ListFavorites } from "../pages/ListFavorites";
 import { Context } from "../store/appContext";
 
 
-export const PlantCard = (props) => { {/*{plantData}this props will need to change */}
+export const PlantCard = (props) => {
    const { store, actions } = useContext(Context);
 
    return (
@@ -17,7 +17,7 @@ export const PlantCard = (props) => { {/*{plantData}this props will need to chan
          <div className="card plant-card border-primary" style={{ width: "15rem" }}>
             <div className="card-header text-end">
                <button className="heart-btn btn-sm"
-                  onClick={() => actions.FillSavedFavoriteHeart(props)}>  {/*{plantData}this props will need to change */}
+                  onClick={() => actions.FillSavedFavoriteHeart(props.plants)}>
                   <i className="far fa-heart heart">
                      <div className="nav-item dropdown">
                         <a className="nav-link  dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -37,7 +37,7 @@ export const PlantCard = (props) => { {/*{plantData}this props will need to chan
             </div>
             <img src={props.plants.plantImage} className="card-img-top plant-card-img" alt="..." />
             <div className="card-body">
-               <h5 className="card-title">Name:{props.plants.commonName}</h5> {/**{props.plants.name} */}
+               <h5 className="card-title">Name:{props.plants.commonName}</h5> 
                <p className="card-text">Size:{props.plants.size}</p>
                <p className="card-text">Blooms:{props.plants.blooms}</p>
                <p className="card-text">Water Dependency:{props.plants.waterReq}</p>
@@ -48,19 +48,6 @@ export const PlantCard = (props) => { {/*{plantData}this props will need to chan
                   </span>
                </Link>
             </div>
-                     {/* <img src={plantData.value6} className="card-img-top plant-card-img" alt="..." />
-                     <div className="card-body">
-                        <h5 className="card-title">Name:{plantData.commonName}</h5> 
-                        <p className="card-text">Size:{plantData.prop2}{plantData.value2}</p>
-                        <p className="card-text">Blooms:{plantData.prop3}{plantData.value3}</p>
-                        <p className="card-text">Water Dependency:{plantData.prop4}{plantData.value4}</p>
-                        <p className="card-text">Light Exposure:{plantData.plants.prop5}{plantData.value5}</p>
-                        <Link to={{ pathname: "/singleplantview"+ plantData.commonName, state: plantData }}> 
-                           <span className="button1 btn btn-primary btn-md" role="button">
-                              Plant Details
-                           </span>
-                        </Link>
-                     </div> */}
             <div className="card-footer text-muted">
                Send Card via Email or Text
             </div>

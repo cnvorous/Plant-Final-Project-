@@ -124,21 +124,6 @@ export const SearchPlantData = props => {
 					{plantArray.map((plant, index) => {
 						return (
 							<PlantCard key={index} plants={plant} />
-
-							// plantData={{
-							// 	index:index,
-							// 	name: plant.commonName,
-							// 	prop2: `Size:`,
-							// 	prop3: `Blooms:`,
-							// 	prop4: `Water Dependency: `,
-							// 	prop5: `Light Exposure: `,
-							// 	prop6: `Plant Image:`,
-							// 	value2: plant.size,
-							// 	value3: plant.blooms,
-							// 	value4: plant.waterReq,
-							// 	value5: plant.lightExposure,
-							// 	value6: plant.plantImage
-							// }}   // always need key when mapping 
 						);
 					})}
 				</div>
