@@ -45,7 +45,7 @@ const Layout = () => {
 						<Route exact path="/dashboard" component={Dashboard} />
 						<Route exact path="/editprofile" component={EditProfile} />
 						<Route exact path="/createfavorites" component={CreateFavorites} />
-						<Route exact path="/listfavorites" component={ListFavorites} />
+						<Route exact path="/listfavorites/:listname" component={ListFavorites} />
 						<Route exact path="/searchplantdata" component={SearchPlantData} />
 						{/*<Route exact path="/plantResults" component={PlantResults} />*/}
 						<Route exact path="/singleplantview" component={SinglePlantView} />

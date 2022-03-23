@@ -50,7 +50,7 @@ export const CreateFavorites = props => {
 				{favList.length > 0 && favList.map((list, index) => {
 					return (
 						<li className="fav-list-item" key={index}>
-							<Link to="/listfavorites">
+							<Link to={`/listfavorites/${list.name}`}>
 								{list.name}
 							</Link>
 							<span className="delete-icon"

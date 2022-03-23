@@ -343,11 +343,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			weatherInfo: {},
 			favoritesList: [],
-			favoritePlants:[
-				{name: "test"}
+			favoritePlants: [
+				{ name: "test" }
 			],
 		},
-		
+
 		actions: {
 
 			////creataccount /////
@@ -408,20 +408,31 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				setStore({ favoritesList: newFavoritesList });
 			},
-    
+
+			addFavoritePlantItem: (listName, plant) => {
+				const selectedList = getStore().favoritesList.map((item, index) => {
+					if (item.name == listName) {
+						item.favorites = [...item.favorites, plant]
+					}
+					return item
+				})
+				console.log(selectedList);
+				setStore({ favoritesList: selectedList});
+			},
+
 
 		}
 	};
 };
 
-		// const demo= store.demo.map((elm,i)={
-				//     if (i===index) elm.background=color;
-				// 	 return elm;
+// const demo= store.demo.map((elm,i)={
+//     if (i===index) elm.background=color;
+// 	 return elm;
 
-				// 	 setStore({demo:demo});
-				// });
+// 	 setStore({demo:demo});
+// });
 
-			// deleteFavsList: (id) => {
-			// 	setStore(setFavList(""));
-			// },
+// deleteFavsList: (id) => {
+// 	setStore(setFavList(""));
+// },
 export default getState;
