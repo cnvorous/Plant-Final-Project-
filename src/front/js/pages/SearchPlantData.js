@@ -45,7 +45,7 @@ export const SearchPlantData = props => {
 
 			<div className="input-group mb-3 w-50 p-3 mx-auto mt-5">{/*NEED: seems like mt cant go higher then mt-5 */}
 				<span className="search-button input-group-text" id="inputGroup-sizing-default">Plant Search</span>
-				<input type="search" id="search" placeholder="Type in plant name OR click enter to search..."
+				<input type="search" id="search" value={input} placeholder="Type in plant name OR click enter to search..."
 					className="form-control data-search"
 					aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
 					onChange={(e) => {
@@ -56,7 +56,7 @@ export const SearchPlantData = props => {
 						searchHash(input)
 					}} />
 				<button className="clear-btn"
-					onClick={(e) => setInput("")}>
+					onClick={() => searchHash("")}>
 					Clear Results
 				</button>
 			</div>
@@ -123,7 +123,7 @@ export const SearchPlantData = props => {
 				<div className="plant-div d-sm-flex flex-wrap justify-content-sm-evenly">
 					{plantArray.map((plant, index) => {
 						return (
-							<PlantCard key={index} plants={plant} />
+							<PlantCard plants={plant} key={index}  />
 						);
 					})}
 				</div>

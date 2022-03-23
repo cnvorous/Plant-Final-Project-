@@ -8,72 +8,53 @@ export const CreateFavorites = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	const [favItem, setFavItem] = useState("");
-	const [favList, setFavList] = useState([]);
-	// const [removeFavItem, setRemoveFavItem] =useState(favList)
+	const [favList, setFavList] = useState(store.favoritesList);
 
 	const saveList = (e) => {
-		if (e.KeyCode == 13) {
-			setFavList([...favList, favItem]);
+		console.log(e);
+		if (e.keyCode == 13) {
+			let list = [...favList,
+			{ name: favItem, favorites: [] }]
+			actions.createNewFavoritesList(list);
 			setFavItem("");
+			setFavList(list);
 		}
 	};
 
-	// const removeItem =(e)=>{
-	// 	const name = e.target.value.name
-	// 	setRemoveFavItem(removeFavItem.filter(item => item.name !== name));
-	//  };
-	
 
 	const removeList = (index) => {
-		setFavList(favList.filter((taskToRemove, i)=>i !=index));
+		let list = favList.filter((item, i) => i != index) //gives a new array 
+		actions.createNewFavoritesList(list);
+		setFavList(list);
 	};
-
-		// const removeList = (index) => {
-   //const removeListArr=favList.filter((taskToRemove, i)=>i !=index);
-	// 	setFavList(removeListArr);
-	//		updateList(removeListArr);
-	// };
-
-
-	// const saveList=(e)=>{
-	// 	if(e.KeyCode==13){
-	// 		let favs =[...favList];
-	// 		let newFavs= favs.concat({
-	// 			label: favItem,
-	// 			done: false,
-	// 		});
-	// 		setFavList(newFavs);
-	// 		updateList(newFavs);
-	// 		setFavItem("");
-	// 	};
-
 
 	return (
 		<div className="create-favs-container">
 			<h5>Favorite Plants </h5>
 			<div className="favs-bar d-flex">
 				<input className="favorites-input" type="text"
-				placeholder="Create Favorites List" aria-label="default input example"
-					onChange={(e)=>setFavItem(e.target.value)}
-					value={favItem} 
-					onKeyUp={(e)=>saveList(e)}/>
+					placeholder="Create Favorites List" aria-label="default input example"
+					onChange={(e) => setFavItem(e.target.value)}
+					value={favItem}
+					onKeyUp={(e) => saveList(e)} />
 				<button className="btn fav-search-btn"
-				 onClick={() => {
-					let list = [...store.favoritesList, 
+					onClick={() => {
+						let list = [...favList,
 						{ name: favItem, favorites: [] }]
-					actions.createNewFavoritesList(list);
-					setFavItem("");
-				}}>Add New List
+						actions.createNewFavoritesList(list);
+						setFavItem("");
+						setFavList(list);
+					}}>Add New List
 				</button>
 			</div>
 			<ul className="favs-ul">
-				{store.favoritesList.length > 0 && store.favoritesList.map((list, index) => {
+				{favList.length > 0 && favList.map((list, index) => {
 					return (
 						<li className="fav-list-item" key={index}>
 							{list.name}
 							<span className="delete-icon"
-								 onClick={(e)=>removeList(index)} >  {/*name={item.name} onClick={(e)=>removeList}*/}
-								 {""} 
+								onClick={() => removeList(index)} >  {/*name={item.name} onClick={(e)=>removeList}*/}
+								{""}
 								<i className="far fa-trash-alt"></i>
 							</span>
 						</li>

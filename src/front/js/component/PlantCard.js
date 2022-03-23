@@ -60,7 +60,6 @@ export const PlantCard = (props) => {
 /*** Define the data-types for your component's properties **/
 PlantCard.propTypes = {
    plants: PropTypes.object,
-   plant: PropTypes.string,
    // history: PropTypes.object, // was already in template
    // onDelete: PropTypes.func // was already in template
 };
