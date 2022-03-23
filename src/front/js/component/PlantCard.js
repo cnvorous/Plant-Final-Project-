@@ -6,10 +6,12 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { ListFavorites } from "../pages/ListFavorites";
 import { Context } from "../store/appContext";
+import { unstable_renderSubtreeIntoContainer } from "react-dom/cjs/react-dom.development";
 
 
 export const PlantCard = (props) => {
    const { store, actions } = useContext(Context);
+   //const [favList, setFavList] = useState(store.favoritesList);
 
    return (
       <div className="plant-card-container mb-3">
@@ -26,9 +28,15 @@ export const PlantCard = (props) => {
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                            {store.favoritesList.map((fav, index) => {
                               return (
-                                 <li key={index}>
-                                    <Link to="/createfavorites">{fav.name}</Link>
-                                 </li>);
+                                 <li key={index}
+                                    onClick={() =>{(e.target.value)
+                                     return (
+                                        <PlantCard/>
+                                     );
+                                    }}
+                                    >
+                                   {fav.name}
+                                 </li>)
                            })};
                         </ul>
                      </div>

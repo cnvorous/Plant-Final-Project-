@@ -21,7 +21,6 @@ export const CreateFavorites = props => {
 		}
 	};
 
-
 	const removeList = (index) => {
 		let list = favList.filter((item, i) => i != index) //gives a new array 
 		actions.createNewFavoritesList(list);
@@ -51,9 +50,11 @@ export const CreateFavorites = props => {
 				{favList.length > 0 && favList.map((list, index) => {
 					return (
 						<li className="fav-list-item" key={index}>
+							<Link to="/listfavorites">
 							{list.name}
+							</Link>
 							<span className="delete-icon"
-								onClick={() => removeList(index)} >  {/*name={item.name} onClick={(e)=>removeList}*/}
+								onClick={() => removeList(index)} > 
 								{""}
 								<i className="far fa-trash-alt"></i>
 							</span>
