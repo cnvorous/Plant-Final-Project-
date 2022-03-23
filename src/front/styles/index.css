@@ -268,7 +268,7 @@ button {
 
 .create-favs-container {
   background-color: rgb(153, 247, 153);
-  height: 600px;
+  height: 700px;
   width: 700px;
   margin-top: 50px;
   display: block;
@@ -314,5 +314,5 @@ em {
   color: white;
 }
 .favs-counter {
-  margin-top: 300px;
+  margin-top: 100px;
 }

@@ -28,38 +28,44 @@ export const PlantCard = (props) => {
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                            {store.favoritesList.map((fav, index) => {
                               return (
-                                 <li key={index}
-                                    onClick={() =>{(e.target.value)
-                                     return (
-                                        <PlantCard/>
-                                     );
-                                    }}
-                                    >
-                                   {fav.name}
-                                 </li>)
+                                 <li key={index}  
+                                 onClick={() => {
+                                                   (e.target.value)
+                                               {plantArray.map((plant, index) => {
+                                                   return (
+                                                     <PlantCard plants={plant} key={index} />
+                                                   );
+                                                   })
+                                                }
+                                       
+                                              }
+                                       }
+                                >
+                           {fav.name}
+                        </li>)
                            })};
-                        </ul>
-                     </div>
-                  </i>
-               </button>
-            </div>
-            <img src={props.plants.plantImage} className="card-img-top plant-card-img" alt="..." />
-            <div className="card-body">
-               <h5 className="card-title">Name:{props.plants.commonName}</h5> 
-               <p className="card-text">Size:{props.plants.size}</p>
-               <p className="card-text">Blooms:{props.plants.blooms}</p>
-               <p className="card-text">Water Dependency:{props.plants.waterReq}</p>
-               <p className="card-text">Light Exposure:{props.plants.lightExposure}</p>
-               <Link to={{ pathname: "/singleplantview", state: props.plants }}> {/* passing props plant from plant card to single view*/}
-                  <span className="button1 btn btn-primary btn-md" role="button">
-                     Plant Details
-                  </span>
-               </Link>
-            </div>
-            <div className="card-footer text-muted">
-               Send Card via Email or Text
-            </div>
+                     </ul>
+                  </div>
+               </i>
+            </button>
          </div>
+         <img src={props.plants.plantImage} className="card-img-top plant-card-img" alt="..." />
+         <div className="card-body">
+            <h5 className="card-title">Name:{props.plants.commonName}</h5>
+            <p className="card-text">Size:{props.plants.size}</p>
+            <p className="card-text">Blooms:{props.plants.blooms}</p>
+            <p className="card-text">Water Dependency:{props.plants.waterReq}</p>
+            <p className="card-text">Light Exposure:{props.plants.lightExposure}</p>
+            <Link to={{ pathname: "/singleplantview", state: props.plants }}> {/* passing props plant from plant card to single view*/}
+               <span className="button1 btn btn-primary btn-md" role="button">
+                  Plant Details
+               </span>
+            </Link>
+         </div>
+         <div className="card-footer text-muted">
+            Send Card via Email or Text
+         </div>
+      </div>
 
       </div >
    );

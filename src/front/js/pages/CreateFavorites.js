@@ -51,10 +51,10 @@ export const CreateFavorites = props => {
 					return (
 						<li className="fav-list-item" key={index}>
 							<Link to="/listfavorites">
-							{list.name}
+								{list.name}
 							</Link>
 							<span className="delete-icon"
-								onClick={() => removeList(index)} > 
+								onClick={() => removeList(index)} >
 								{""}
 								<i className="far fa-trash-alt"></i>
 							</span>
@@ -67,6 +67,9 @@ export const CreateFavorites = props => {
 					{favList.length == 0 ? "No current favorites list" : `${favList.length}favorites list`}
 				</em>
 			</div>
+			<button>
+				<Link to="/searchplantdata">Search More Plants favorites</Link>
+			</button>
 			<Link to="/listfavorites">
 				<span>
 					This link will connect them with page to see the List they click on this current page.
