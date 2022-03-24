@@ -30,7 +30,6 @@ const Layout = () => {
   // you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
   const basename = process.env.BASENAME || "";
 
-<<<<<<< HEAD
   return (
     <div>
       <BrowserRouter basename={basename}>
@@ -45,7 +44,7 @@ const Layout = () => {
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/editprofile" component={EditProfile} />
             <Route exact path="/createfavorites" component={CreateFavorites} />
-            <Route exact path="/listfavorites" component={ListFavorites} />
+            <Route exact path="/listfavorites/:listname" component={ListFavorites} />
             <Route exact path="/searchplantdata" component={SearchPlantData} />
             {/*<Route exact path="/plantResults" component={PlantResults} />*/}
             <Route exact path="/singleplantview" component={SinglePlantView} />
@@ -58,7 +57,6 @@ const Layout = () => {
             />
             <Route exact path="/plantuses" component={PlantUses} />
             <Route exact path="/single/:theid" component={Single} />
-=======
 	return (
 		<div>
 			<BrowserRouter basename={basename}>
@@ -82,7 +80,6 @@ const Layout = () => {
 						<Route exact path="/greenthumbgallery" component={GreenThumbGallery} />
 						<Route exact path="/plantuses" component={PlantUses} />
 						<Route exact path="/single/:theid" component={Single} />
->>>>>>> d0b02207424be23c232e560562486f4eb393ba28
 
             <Route>
               <h1>Not found!</h1>

@@ -136,27 +136,6 @@ button {
   background-color: rgb(214, 159, 21);
 }
 
-<<<<<<< HEAD
-=======
-.clear-btn {
-  color: white;
-  background: blue;
-  margin-top: 10px;
-  height: 50px;
-}
-
-.clear-btn:hover {
-  color: white;
-  background: rgba(241, 6, 190, 0.74);
-  margin-top: 10px;
-  height: 50px;
-}
-
-.filter-options {
-  text-decoration: underline;
-}
-
->>>>>>> d0b02207424be23c232e560562486f4eb393ba28
 .plant-search-container {
   background-color: rgba(14, 69, 248, 0.103);
 }
@@ -284,7 +263,6 @@ button {
 
 .fa-trash-alt:hover {
   color: red;
-<<<<<<< HEAD
 }
 /***************Calendar Page************/
 .widget-container {
@@ -338,7 +316,6 @@ button {
 
 .option {
   margin-top: 10px;
-=======
   cursor: grab;
 }
 
@@ -391,5 +368,4 @@ em {
 }
 .favs-counter {
   margin-top: 100px;
->>>>>>> d0b02207424be23c232e560562486f4eb393ba28
 }
