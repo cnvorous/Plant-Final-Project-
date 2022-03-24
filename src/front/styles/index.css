@@ -369,3 +369,12 @@ em {
 .favs-counter {
   margin-top: 100px;
 }
+
+.fa-camera {
+  font-size: 32px;
+  margin-left: 5%;
+}
+
+.bg-plant {
+  background-image: url(https://thumbs.dreamstime.com/z/vector-light-grey-succulent-plant-texture-drawing-seamless-pattern-background-great-subtle-botanical-modern-backgrounds-fabric-90904464.jpg);
+}

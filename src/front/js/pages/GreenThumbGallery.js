@@ -10,10 +10,19 @@ export const GreenThumbGallery = props => {
 
 	return (
 		<div>
+			<div className="row">
+				<div className="col-6 text-center"  >
+					<h1>GreenThumbGallery</h1>
+				</div>
+				<div className="col-6 mt-3">
+					<input className="w-50" placeholder="upload pic of plant" />
+					<i className="fa fa-camera"></i>
+				</div>
+
+			</div>
 			<p className="text-center">
 				GreenThumbGallery Page
 			</p>
-
 
 		</div>
 	);
