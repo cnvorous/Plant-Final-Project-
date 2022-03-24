@@ -30,33 +30,6 @@ const Layout = () => {
   // you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
   const basename = process.env.BASENAME || "";
 
-  return (
-    <div>
-      <BrowserRouter basename={basename}>
-        <ScrollToTop>
-          <Navbar />
-          <Switch>
-            <Route exact path="/" component={LandingPage} />
-            <Route exact path="/createaccount" component={CreateAccount} />
-            <Route exact path="/weatherpage" component={WeatherPage} />
-            <Route exact path="/forgotpassword" component={ForgotPassword} />
-            <Route exact path="/passwordreset" component={PasswordReset} />
-            <Route exact path="/dashboard" component={Dashboard} />
-            <Route exact path="/editprofile" component={EditProfile} />
-            <Route exact path="/createfavorites" component={CreateFavorites} />
-            <Route exact path="/listfavorites/:listname" component={ListFavorites} />
-            <Route exact path="/searchplantdata" component={SearchPlantData} />
-            {/*<Route exact path="/plantResults" component={PlantResults} />*/}
-            <Route exact path="/singleplantview" component={SinglePlantView} />
-            <Route exact path="/growthgallery" component={GrowthGallery} />
-            <Route exact path="/calendar" component={CalendarOverview} />
-            <Route
-              exact
-              path="/greenthumbgallery"
-              component={GreenThumbGallery}
-            />
-            <Route exact path="/plantuses" component={PlantUses} />
-            <Route exact path="/single/:theid" component={Single} />
 	return (
 		<div>
 			<BrowserRouter basename={basename}>
@@ -76,7 +49,7 @@ const Layout = () => {
 						{/*<Route exact path="/plantResults" component={PlantResults} />*/}
 						<Route exact path="/singleplantview" component={SinglePlantView} />
 						<Route exact path="/growthgallery" component={GrowthGallery} />
-						<Route exact path="/calendar" component={Calendar} />
+						<Route exact path="/calendar" component={CalendarOverview} />
 						<Route exact path="/greenthumbgallery" component={GreenThumbGallery} />
 						<Route exact path="/plantuses" component={PlantUses} />
 						<Route exact path="/single/:theid" component={Single} />

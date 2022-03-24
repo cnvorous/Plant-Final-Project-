@@ -74,9 +74,25 @@ export const GrowthGallery = props => {
 				</h1>
 			</div>
 
+			<div>
+				<h2 className="text-center">African Violet</h2>
+				<div className="d-flex justify-content-evenly" >
+					{lavender.map((item, index) => {
+						return (
+							<div className="card" style={{ width: "18rem" }}>
+								<img src={item} className="card-img-top h-75" alt="..." />
+								<div className="card-body">
+									<h5 className="card-title">Stage {index + 1}</h5>
+								</div>
+							</div>
+						)
+					})}
+				</div>
 
+
+
+			</div>
 		</div>
-
 	);
 };
 
