@@ -125,6 +125,10 @@ button {
 
 /************* below is SearchPlantData page Css***************/
 
+.hide {
+  display: none;
+}
+
 .search-button {
   background-color: rgb(241, 207, 120);
 }
@@ -132,6 +136,27 @@ button {
   background-color: rgb(214, 159, 21);
 }
 
+<<<<<<< HEAD
+=======
+.clear-btn {
+  color: white;
+  background: blue;
+  margin-top: 10px;
+  height: 50px;
+}
+
+.clear-btn:hover {
+  color: white;
+  background: rgba(241, 6, 190, 0.74);
+  margin-top: 10px;
+  height: 50px;
+}
+
+.filter-options {
+  text-decoration: underline;
+}
+
+>>>>>>> d0b02207424be23c232e560562486f4eb393ba28
 .plant-search-container {
   background-color: rgba(14, 69, 248, 0.103);
 }
@@ -139,6 +164,14 @@ button {
 .plant-div {
   border: 2px solid rgb(214, 26, 26);
 }
+
+.heart:hover {
+  color: red;
+}
+
+/* li + Link {    ---this css not working 
+  color: white;   
+} */
 
 /**** this is not giving highlight effect on hoover checkbox
   .col:hover input ~ .onclick{
@@ -241,6 +274,7 @@ button {
 .fav-search-btn {
   color: white;
   background-color: blue;
+  height: 30px;
 }
 
 .fav-search-btn:hover {
@@ -250,6 +284,7 @@ button {
 
 .fa-trash-alt:hover {
   color: red;
+<<<<<<< HEAD
 }
 /***************Calendar Page************/
 .widget-container {
@@ -303,4 +338,58 @@ button {
 
 .option {
   margin-top: 10px;
+=======
+  cursor: grab;
+}
+
+.create-favs-container {
+  background-color: rgb(153, 247, 153);
+  height: 700px;
+  width: 700px;
+  margin-top: 50px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 5%;
+}
+
+.favorites-input {
+  height: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.favs-ul {
+  color: rgb(36, 136, 44);
+  margin: 10px 25px;
+  font-size: 25px;
+}
+
+h5 {
+  text-align: center;
+  font-family: fantasy;
+  font-size: 30px;
+  color: rgb(36, 136, 44);
+}
+.fav-list-item {
+  height: 40px;
+  text-indent: 10px;
+  border-style: hidden;
+  margin-top: 5px;
+}
+
+.fav-list-item:hover {
+  color: white;
+  background-color: rgba(103, 204, 103, 0.048);
+  font-weight: 600;
+}
+
+em {
+  color: white;
+}
+.favs-counter {
+  margin-top: 100px;
+>>>>>>> d0b02207424be23c232e560562486f4eb393ba28
 }

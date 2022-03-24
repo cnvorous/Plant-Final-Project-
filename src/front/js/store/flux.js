@@ -342,8 +342,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			],
 			weatherInfo: {},
-			favoritesList: []
+			favoritesList: [],
+			favoritePlants: [
+				{ name: "test" }
+			],
 		},
+
 		actions: {
 
 			////creataccount /////
@@ -358,8 +362,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ profile: [] });
 			},
 
-			// added for now -cv 3/12
-			// Use getActions to call a function within a fuction
+			// plantData:(plantName)=>{
+			// 	setStore({plantLibrary:[{"plantName": plantName}]});
+			// },
+
 			getPlantData: () => {
 				fetch("https://plantlink.p.rapidapi.com/plantTypes", {
 					"method": "GET",
@@ -396,12 +402,37 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ favoritesList: newList });
 			},
 
-			deleteFavsList: (id) => {
-				setStore(setFavList(""));
+			FillSavedFavoriteHeart: (fav, index) => {
+				const newFavoritesList = getStore().favoritesList; {/*gives local copy of favs to pushinto  */ }
+				newFavoritesList.push(fav)
+
+				setStore({ favoritesList: newFavoritesList });
 			},
+
+			addFavoritePlantItem: (listName, plant) => {
+				const selectedList = getStore().favoritesList.map((item, index) => {
+					if (item.name == listName) {
+						item.favorites = [...item.favorites, plant]
+					}
+					return item
+				})
+				console.log(selectedList);
+				setStore({ favoritesList: selectedList});
+			},
+
 
 		}
 	};
 };
 
+// const demo= store.demo.map((elm,i)={
+//     if (i===index) elm.background=color;
+// 	 return elm;
+
+// 	 setStore({demo:demo});
+// });
+
+// deleteFavsList: (id) => {
+// 	setStore(setFavList(""));
+// },
 export default getState;

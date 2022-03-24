@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
-
 import { Context } from "../store/appContext";
 
 export const WeatherPage = () => {
 	const { store, actions } = useContext(Context);
 	const [zipcode, setZipcode] = useState("");
 	const [weatherData, setWeatherData] = useState({});  //result is zipcode input
-	console.log(weatherData);
+
 	// useEffect(()=>{
 	// 	setWeatherData(store.weatherInfo);
 	// })
