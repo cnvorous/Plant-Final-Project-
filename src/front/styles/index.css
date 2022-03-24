@@ -117,11 +117,11 @@ button {
   /*position: relative;*/
   /*margin-inline-end: 80ch;*/
 }
-.qr-code {
-  /*
+/* .qr-code {
+  
   margin-left: 60%;
-  top: 10%;*/
-}
+  top: 10%;
+} */
 
 /************* below is SearchPlantData page Css***************/
 
@@ -134,24 +134,6 @@ button {
 }
 .search-button:hover {
   background-color: rgb(214, 159, 21);
-}
-
-.clear-btn {
-  color: white;
-  background: blue;
-  margin-top: 10px;
-  height: 50px;
-}
-
-.clear-btn:hover {
-  color: white;
-  background: rgba(241, 6, 190, 0.74);
-  margin-top: 10px;
-  height: 50px;
-}
-
-.filter-options {
-  text-decoration: underline;
 }
 
 .plant-search-container {
