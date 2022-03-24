@@ -55,9 +55,23 @@ export const GrowthGallery = props => {
 
 
 				</div>
-				<p>Description:
+				<h1>Description:
+					<p>Stage 1:
+						Lavender thrives in a lot of sun and dry soil because it is a Mediterranean plant. As a result, you should choose a suitable location in your yard that receives plenty of sunlight. Lavender requires at least 4 hours of direct sunlight to thrive.</p>
+					<p>stage 2:
+						The lavender is then planted after the soil has been prepared. Growing lavender from seed is a difficult task.
+						That is why it is suggested that you get lavender from a nursery and plant it.</p>
+					<p>stage 3:
+						Caring for lavender is one of the most challenging aspects of growing it.You’ll need to water your lavender plants at least twice a week for the first few days after transplanting them from the nursery to your herb garden until they’ve established themselves.
+					</p>
+					<p>stage 4:
+						Harvest your plant first thing in the morning, when the oils are most concentrated.
 
-				</p>
+						When half of the flower buds have opened, cut the lavender stems.
+
+						Avoid cutting the plant’s woody section since this will cause it to rot.
+					</p>
+				</h1>
 			</div>
 
 
