@@ -49,7 +49,7 @@ const Layout = () => {
             {/*<Route exact path="/plantResults" component={PlantResults} />*/}
             <Route exact path="/singleplantview" component={SinglePlantView} />
             <Route exact path="/growthgallery" component={GrowthGallery} />
-            <Route exact path="/calendar" component={Calendar} />
+            <Route exact path="/calendar" component={CalendarOverview} />
             <Route exact path="/greenthumbgallery" component={GreenThumbGallery} />
             <Route exact path="/plantuses" component={PlantUses} />
             <Route exact path="/single/:theid" component={Single} />
