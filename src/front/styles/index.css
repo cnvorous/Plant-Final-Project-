@@ -44,11 +44,6 @@
   background-color: darkgreen;
 }
 
-.button-weather {
-  color: darkblue;
-  background-color: rgb(121, 239, 243);
-}
-
 /* .top-banner-box1 {
   margin-left: 10px;
 } */
@@ -112,27 +107,37 @@ button {
 
 .bi-person-circle {
   height: 150px;
+  /*
   position: relative;
   margin-left: 5%;
-  top: 9px;
+  top: 9px;*/
 }
 .UpdateUserInfo {
   color: darkblue;
-  position: relative;
-  margin-inline-end: 80ch;
+  /*position: relative;*/
+  /*margin-inline-end: 80ch;*/
 }
 .qr-code {
+  /*
   margin-left: 60%;
-  top: 10%;
+  top: 10%;*/
 }
 
 /************* below is SearchPlantData page Css***************/
 
 .search-button {
-  background-color: rgb(241, 205, 114);
+  background-color: rgb(241, 207, 120);
 }
 .search-button:hover {
-  background-color: rgba(241, 196, 82, 0.548);
+  background-color: rgb(214, 159, 21);
+}
+
+.plant-search-container {
+  background-color: rgba(14, 69, 248, 0.103);
+}
+
+.plant-div {
+  border: 2px solid rgb(214, 26, 26);
 }
 
 /**** this is not giving highlight effect on hoover checkbox
@@ -141,11 +146,11 @@ button {
 }*/
 
 /************* below is PlantCard Compontent Css***************/
-.plant-card-img {
-  height: auto;
-  width: auto;
-  border: dotted red;
-}
+
+/* .plant-card-container{
+  height: 50px;
+  width: 25px;
+} */
 /************* below is create user page Css***************/
 .profile {
   margin: 50px;
@@ -167,4 +172,135 @@ button {
 
 #editProfile {
   background-color: aquamarine;
+}
+
+/**************************below is uploadimage page css ***********/
+
+.uploadProfileFile {
+  display: block;
+  width: 120px;
+  height: 30px;
+}
+
+.uploadPicInput {
+  display: none;
+}
+
+.uploadProfileFile {
+  justify-content: center;
+  margin: auto;
+}
+
+/********** below is  weatherpage Css**************/
+.weather-container {
+  height: 500px;
+  padding: 75px;
+  background-image: url("https://content.api.news/v3/images/bin/9da010285ed2df52012e9db32f3bf03b");
+  background-color: rgba(8, 76, 99, 0.842);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.weather-frame {
+  border: 5px ridge rgb(127, 201, 250);
+  box-shadow: 5px 10px #297dfa5b;
+  height: 250px;
+  width: 450px;
+  background-color: rgba(184, 213, 238, 0.603);
+  /* background-color: rgba(255, 255, 255, .15);  
+      backdrop-filter: blur(5px); * this gives glass effect*/
+}
+.weather-input {
+  margin-top: 10px;
+  height: 40px;
+}
+
+.weather-search-button {
+  color: white;
+  background: blue;
+  margin-top: 10px;
+  height: 40px;
+}
+
+.weather-search-button:hover {
+  color: rgb(247, 243, 243);
+  background-color: rgba(6, 32, 102, 0.842);
+}
+
+.weather-ternary-div {
+  height: 100px;
+  /*border: 5px dotted rgb(242, 245, 62); */
+  text-align: center;
+  font-size: 20px;
+  color: rgb(5, 5, 5);
+}
+
+/***************************CreateFavs Page ******************/
+
+.fav-search-btn {
+  color: white;
+  background-color: blue;
+}
+
+.fav-search-btn:hover {
+  color: white;
+  background-color: rgb(19, 19, 88);
+}
+
+.fa-trash-alt:hover {
+  color: red;
+}
+/***************Calendar Page************/
+.widget-container {
+  margin-right: 320px;
+}
+
+#calendar-container {
+  margin: auto;
+}
+
+.dx-calendar-cell:not(.dx-calendar-other-month) .weekend,
+.dx-calendar-cell:not(.dx-calendar-other-month) .holyday {
+  text-shadow: none;
+  font-weight: bold;
+}
+
+.dx-calendar-cell:not(.dx-calendar-other-month) .weekend {
+  color: #3030ff;
+}
+
+.dx-state-disabled.dx-calendar
+  .dx-calendar-cell:not(.dx-calendar-other-month)
+  .weekend {
+  color: #8080ff;
+}
+
+.dx-calendar-cell:not(.dx-calendar-other-month) .holyday {
+  color: #ff3030;
+}
+
+.dx-state-disabled.dx-calendar
+  .dx-calendar-cell:not(.dx-calendar-other-month)
+  .holyday {
+  color: #ff8080;
+}
+
+.options {
+  padding: 20px;
+  background-color: rgba(191, 191, 191, 0.15);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 260px;
+}
+
+.caption {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.option {
+  margin-top: 10px;
 }

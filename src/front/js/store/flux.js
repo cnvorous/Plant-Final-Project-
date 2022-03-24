@@ -1,3 +1,5 @@
+import { array } from "prop-types";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -14,8 +16,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
-			profile:[], // for login
-			plantLibrary: [
+			profile: [], // for login/landing page
+			account: [],
+			plantLibrary: [  //database of plants for search since no proper API
 				{
 					scientificName: "Saintpaulia ionantha",
 					commonName: "African Violet",
@@ -338,14 +341,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 				},
 
 			],
+			weatherInfo: {},
+			favoritesList: []
 		},
 		actions: {
 
-			login: (email, password)=> {
-				setStore({profile:[{"email":email, "password": password}]});  //the key is in red
+			////creataccount /////
+			createAccount: (array) => {
+				setStore({ account: array });
 			},
-			logout: ()=>{
-				setStore({profile:[]});
+
+			login: (email, password) => {  //landing page
+				setStore({ profile: [{ "email": email, "password": password }] });  //the key is in red
+			},
+			logout: () => {       //landing page
+				setStore({ profile: [] });
 			},
 
 			// added for now -cv 3/12
@@ -368,30 +378,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.error(err);
 					});
 			},
-
-			//all code below was in template 
-
-			getMessage: () => {
-				// fetching data from the backend
-				fetch(process.env.BACKEND_URL + "/api/hello")
-					.then(resp => resp.json())
-					.then(data => setStore({ message: data.message }))
-					.catch(error => console.log("Error loading message from backend", error));
+			getWeatherData: (zipcode) => {
+				fetch(`https://community-open-weather-map.p.rapidapi.com/forecast/daily?zip=${zipcode}%2Cus`, {
+					"method": "GET",
+					"headers": {
+						"x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
+						"x-rapidapi-key": "5f370309abmsh52b2ef22b0e99a0p19db05jsn15130b55cf47"
+					}
+				})
+					.then(response => response.json())
+					.then(data => setStore({ weatherInfo: data }))  //data is response from respjson
+					.catch(err => {
+						console.error(err);
+					});
 			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
+			createNewFavoritesList: (newList) => {
+				setStore({ favoritesList: newList });
+			},
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
+			deleteFavsList: (id) => {
+				setStore(setFavList(""));
+			},
 
-				//reset the global store
-				setStore({ demo: demo });
-			}
 		}
 	};
 };

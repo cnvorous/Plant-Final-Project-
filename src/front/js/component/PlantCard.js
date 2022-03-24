@@ -10,9 +10,9 @@ export const PlantCard = props => {
    // const [state, setState] = useState({}); //initialize state here
 
    return (
-      <div className="plant-card-container">
+      <div className="plant-card-container mb-3">
 
-         <div className="card plant-card" style={{ width: "18rem" }}>
+         <div className="card plant-card border-primary" style={{ width: "15rem" }}> 
             <div className="card-header text-end">
                <i className="far fa-heart heart"></i>
             </div>

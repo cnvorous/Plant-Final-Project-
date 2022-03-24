@@ -73,6 +73,8 @@
 		]
 	},
 	"dependencies": {
+		"devextreme": "21.2.6",
+		"devextreme-react": "21.2.6",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
 		"react-dom": "^16.8.4",
