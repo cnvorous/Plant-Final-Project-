@@ -8,7 +8,7 @@ export const GrowthGallery = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	const lavender = ["https://k2j4u5m5.stackpathcdn.com/wp-content/uploads/2021/01/baby-lavender-seedling-germinating.jpg", "https://previews.123rf.com/images/travelman/travelman1712/travelman171200055/92543301-jeunes-plants-de-lavande-cultiv%C3%A9s-dans-le-jardin.jpg", "http://lh6.ggpht.com/gp9ocJgec8PnMA3N8ah3MLDyf0zEauRdFV6x4GCDCbwjhewW8QbtHUE3jGbpszrlQOC4ZkiEUgHA1fLP5bvocaQ=s900", "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/how-to-grow-lavender-1622644170.jpg?crop=1.00xw:0.708xh;0,0.186xh&resize=1200:*"]
-
+	const africanViolet = ["https://media.istockphoto.com/photos/propagating-african-violets-growing-african-violet-from-leaf-cuttings-picture-id1217029269?k=20&m=1217029269&s=612x612&w=0&h=8aG54PCgT1H5wy7WAg4wkekz0JAYg2hQDidvQG2TD88=", "https://www.gardenandgreenhouse.net/wp-content/uploads/2009/01/IMG_1432-1.jpg", "https://preview.redd.it/r758mipba0g41.jpg?auto=webp&s=12a0135679d98738664014f54be63cfb69f75716", "https://www.almanac.com/sites/default/files/styles/max_2600x2600/public/image_nodes/african-violet-houseplant.jpg?itok=uXXhjxlK"]
 	return (
 		<div>
 			<h1 className="text-center"> GrowthGallery</h1>
@@ -81,7 +81,7 @@ export const GrowthGallery = props => {
 			<div>
 				<h2 className="text-center">African Violet</h2>
 				<div className="d-flex justify-content-evenly" >
-					{lavender.map((item, index) => {
+					{africanViolet.map((item, index) => {
 						return (
 							<div className="card" style={{ width: "18rem" }}>
 								<img src={item} className="card-img-top h-75" alt="..." />
@@ -93,6 +93,23 @@ export const GrowthGallery = props => {
 					})}
 				</div>
 
+
+				<div className="bg-plant p-2 border rounded m-2 ">
+					<h3>Description:</h3>
+					<ul>
+						<li>Stage 1:
+						</li>
+						<li>stage 2:
+
+						</li>
+						<li>stage 3:
+
+						</li>
+						<li>stage 4:
+
+						</li>
+					</ul>
+				</div>
 
 
 			</div>
