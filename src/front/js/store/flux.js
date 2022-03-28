@@ -425,7 +425,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				// 	return "Already has plant in list"
 				// } else {
 				const newList = getStore().favoritesList.map((item, index) => {
-					if (item.name == listName) {
+					let found = item.favorites.find((object) => object.commonName == plant.commonName)
+					console.log("found", found);
+					if (item.name == listName && !found) {
 						item.favorites = [...item.favorites, plant]
 					}
 					return item
