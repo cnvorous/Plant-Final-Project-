@@ -410,23 +410,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			addFavoritePlantItem: (listName, plant) => {
-				// const selectedList = getStore().favoritesList.map((item, index) => {
-				// 	if (item.name == listName) {
-				// 		return item.favorites
-				// 	}
-				// })
-				// console.log("selectedList", selectedList);
-
-				// let selectedPlant = selectedList.filter((item) => item.commonName == plant.commonName)
-				// //selectedPlant = selectedPlant[0].commonName
-
-				// console.log(selectedPlant);
-				// if (selectedPlant) {
-				// 	return "Already has plant in list"
-				// } else {
 				const newList = getStore().favoritesList.map((item, index) => {
 					let found = item.favorites.find((object) => object.commonName == plant.commonName)
-					console.log("found", found);
 					if (item.name == listName && !found) {
 						item.favorites = [...item.favorites, plant]
 					}
@@ -434,9 +419,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
 				console.log(newList);
 				setStore({ favoritesList: newList });
-				// }
-
-
+			},
+			removeFavoritePlantItem: (listName, plant) => {
+				const newList = getStore().favoritesList.map((item, index) => {
+					let found = item.favorites.find((object) => object.commonName == plant.commonName)
+					console.log("found", found);
+					if (item.name == listName && found) {
+						let list = item.favorites.filter((object) => object.commonName != plant.commonName)
+						item.favorites = list
+						console.log(list);
+					}
+					return item
+				})
+				console.log(newList);
+				setStore({ favoritesList: newList });
 			},
 
 

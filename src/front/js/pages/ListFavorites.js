@@ -20,7 +20,7 @@ export const ListFavorites = props => {
 			<div className="favs-list d-sm-flex flex-wrap justify-content-sm-evenly">
 				{favoritesArray.map((plant, index) => {
 					return (
-						<PlantCard plants={plant} key={index} />
+						<PlantCard plants={plant} key={index} onDelete={true} listName={name} />
 					);
 				})}
 			</div>

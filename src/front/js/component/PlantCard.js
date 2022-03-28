@@ -13,6 +13,7 @@ export const PlantCard = (props) => {
    const { store, actions } = useContext(Context);
    //const [favList, setFavList] = useState(store.favoritesList);
 
+
    return (
       <div className="plant-card-container mb-3">
 
@@ -54,6 +55,9 @@ export const PlantCard = (props) => {
             </div>
             <div className="card-footer text-muted">
                Send Card via Email or Text
+               {props.onDelete &&
+                  <button
+                     onClick={() => { actions.removeFavoritePlantItem(props.listName, props.plants) }}><i className="far fa-trash-alt"></i></button>}
             </div>
          </div>
 
@@ -64,11 +68,12 @@ export const PlantCard = (props) => {
 /*** Define the data-types for your component's properties **/
 PlantCard.propTypes = {
    plants: PropTypes.object,
+   onDelete: PropTypes.bool,
+   listName: PropTypes.string,
    // history: PropTypes.object, // was already in template
    // onDelete: PropTypes.func // was already in template
 };
 
-/** Define the default values foryour component's properties**/
-// PlantCard.defaultProps = {
-//    onDelete: null
-// };
+PlantCard.defaultProps = {
+   onDelete: false,
+};
