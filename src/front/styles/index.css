@@ -1,22 +1,40 @@
 /********************* below is nav bar compontent Css*************************/
 .navbar {
-  background: rgba(213, 248, 213, 0.521);
+  font-size: 20px;
+  background: rgba(4, 135, 94, 0.815);
   height: 75px;
   border: 2px solid darkgreen;
+  text-align: end;
+}
+
+.nav-link {
+  color: rgb(201, 254, 101);
 }
 
 .nav-link:hover {
-  color: rgb(105, 248, 10);
+  color: rgb(227, 240, 132);
+  font-weight: bold;
 }
 
 /********************* below is footer Css*************************/
 .footer {
-  background: rgba(213, 248, 213, 0.521);
+  background: rgba(4, 135, 94, 0.815);
   height: 75px;
   border: 2px solid darkgreen;
 }
 
+.footer-icon {
+  color: white;
+}
+
+.footer-icon:hover {
+  color: orange;
+}
+
 /********************* below is Landing Page Css*************************/
+.main-text{
+  color: brown;
+}
 .create-link:hover {
   color: rgba(243, 11, 11, 0.842);
   background-color: rgba(245, 245, 220, 0.411);
@@ -24,12 +42,12 @@
 .top-banner {
   height: 200px;
   border: 2px solid darkgreen;
-  background-image: url(https://thumbs.dreamstime.com/z/vector-light-grey-succulent-plant-texture-drawing-seamless-pattern-background-great-subtle-botanical-modern-backgrounds-fabric-90904464.jpg);
+  /* background-image: url(https://thumbs.dreamstime.com/z/vector-light-grey-succulent-plant-texture-drawing-seamless-pattern-background-great-subtle-botanical-modern-backgrounds-fabric-90904464.jpg);
   background-repeat: repeat;
   background-size: cover;
   z-index: -1;
-  opacity: 1;
-  background-color: #e7e0e0;
+  opacity: 1; */
+  background-color: rgba(213, 248, 213, 0.521);
 }
 
 .button1 {
@@ -56,19 +74,41 @@
 }
 
 .middle-banner {
-  height: 100px;
-  background-color: rgba(213, 248, 213, 0.521);
+  height: 60px;
+  background-color: rgba(4, 135, 94, 0.815);
   justify-content: space-around;
   border: 2px solid darkgreen;
 }
 
+.seed-logo {
+  /* height: 150px;
+  width: 100%;
+  border-radius: 60%; */
+  width: 100px; height: 100px;
+  background-color: #A0DE21; 
+  -moz-border-radius: 20px 0px 20px 0px;
+  -webkit-border-radius: 20px 0px 20px 0px;
+  border-radius: 20px 0px 20px 0px;
+}
+
+.heading-text-1 {
+  color: darkgreen;
+  font-size: 25px;
+  font-weight:bolder;
+}
+.heading-text-2{
+  color: darkgreen;
+  font-size: 25px;
+  font-weight: lighter;
+  text-align: center;
+}
 .landing-body {
-  background-image: url(https://thumbs.dreamstime.com/z/vector-light-grey-succulent-plant-texture-drawing-seamless-pattern-background-great-subtle-botanical-modern-backgrounds-fabric-90904464.jpg);
+  /* background-image: url(https://thumbs.dreamstime.com/z/vector-light-grey-succulent-plant-texture-drawing-seamless-pattern-background-great-subtle-botanical-modern-backgrounds-fabric-90904464.jpg);
   background-repeat: repeat;
   background-size: cover;
   z-index: -1;
-  opacity: 1;
-  background-color: #e7e0e0;
+  opacity: 1; */
+  background-color: rgba(213, 248, 213, 0.521);
 }
 
 p {

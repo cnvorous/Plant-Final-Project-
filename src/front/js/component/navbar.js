@@ -6,10 +6,12 @@ export const Navbar = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <nav className="navbar navbar-light">
-      <Link to="/weatherpage">
-        <button className="btn weather-search-button">Search Weather</button>
-      </Link>
+    <nav className="navbar navbar-light d-flex">
+          <div className="d-flex justify-content-start">
+					<Link to="/weatherpage">
+						<button className="btn button1">Search Weather</button>
+					</Link>
+				</div>
       <div className="ml-auto">
         <ul className="nav">
           <li className="nav-item">
