@@ -7,11 +7,16 @@ export const Navbar = () => {
 
   return (
     <nav className="navbar navbar-light d-flex">
-          <div className="d-flex justify-content-start">
-					<Link to="/weatherpage">
-						<button className="btn button1">Search Weather</button>
-					</Link>
-				</div>
+      <div className="d-flex justify-content-start">
+        <Link to="/weatherpage">
+          <button className="btn button1">Search Weather</button>
+        </Link>
+        <Link to="/searchplantdata">
+          <button type="button" className="button1 btn">
+            Discover Plant Varieties
+          </button>
+        </Link>
+      </div>
       <div className="ml-auto">
         <ul className="nav">
           <li className="nav-item">
@@ -43,10 +48,11 @@ export const Navbar = () => {
               </a>
             </Link>
           </li>
+           {/* logout btn becomes seen when person signs in */}
           {store.profile.length > 0 && (
             <li>
               <button
-                className="btn btn-danger"
+                className="btn logout-btn"
                 onClick={() => {
                   actions.logout();
                 }}
