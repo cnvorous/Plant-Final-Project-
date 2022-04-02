@@ -123,7 +123,6 @@
   background-color: rgba(213, 248, 213, 0.223);
 }
 
-
 .icon-image-1 {
   background-image: url("https://images.pexels.com/photos/1463530/pexels-photo-1463530.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
   height: 300px;
@@ -132,7 +131,6 @@
   margin-right: 10px;
   background-size: cover;
 }
-
 
 .icon-image-2 {
   /* background-image: url("https://www.earthjuice.com/-/media/Images/EarthJuice-NA/US/Articles/how-to-optimize-plant-growth-at-every-stage/tomato-stage-growth-vector-h.jpg"); */
@@ -154,20 +152,38 @@
   background-size: cover;
 }
 
-
 .icon-image-1:hover {
-  opacity: 0.3;
+  opacity: 0.7;
+  /* filter: blur(3px); */
 }
 .icon-image-2:hover {
-  opacity: 0.3;
+  opacity: 0.7;
+  /* filter: blur(3px); */
 }
 .icon-image-3:hover {
-  opacity: 0.3;
+  opacity: 0.7;
+  /* filter: blur(3px); */
 }
 
+.image-text {
+  color: white;
+  opacity: 0;
+  /* font-size: 17px;
+  transition: 0.5s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center; */
+}
 
-p {
-  font-size: 20px;
+.image-text:hover {
+  color: white;
+  text-shadow: 2px 2px rgb(22, 22, 22);
+  font-size: 17px;
+  font-weight: bold;
+  opacity: 1;
 }
 
 button {

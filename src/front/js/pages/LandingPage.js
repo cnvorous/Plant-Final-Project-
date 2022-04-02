@@ -74,8 +74,8 @@ export const LandingPage = () => {
 					<div className="row row-cols-3">
 						<div className="col icon-image-1">
 							<div className="middle">
-								<div className="main-text">
-									<p>
+								<div>
+									<p className="image-text">
 										We've all been gulity of showing our plants to much love and giving them more then what
 										they need With our site you will be able to effortlessly make sure your plant is watered
 										and fertilized at the most optimal time and using the correct measurements.
@@ -85,8 +85,8 @@ export const LandingPage = () => {
 						</div>
 						<div className="col icon-image-2">
 							<div className="middle">
-								<div className="main-text">
-									<p>
+								<div>
+									<p className="image-text">
 										You can track your plants growth progress and even share your prized plants in our community gallery.
 										Feel free to share you Green Thumb tips.
 									</p>
@@ -95,8 +95,8 @@ export const LandingPage = () => {
 						</div>
 						<div className="col icon-image-3">
 							<div className="middle">
-								<div className="main-text">
-									<p>
+								<div>
+									<p className="image-text">
 										Not sure where to start ... thats ok we have you covered.  Just <Link to="/searchplantdata">CLICK HERE</Link> and search plant options
 										by size, sunlight exposure, seasons, hardiness and what plants can be used for other inhome
 										uses.
