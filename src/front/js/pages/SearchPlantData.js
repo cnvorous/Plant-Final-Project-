@@ -22,7 +22,7 @@ export const SearchPlantData = props => {
 		let filteredArray = store.plantLibrary.filter(item => {
 			if (keyword == "" || keyword == undefined) {
 				return item;
-			} else if (item.commonName.toLowerCase().includes(keyword.toLowerCase())) {
+			} else if (item.common_name.toLowerCase().includes(keyword.toLowerCase())) {
 				return item;
 			}
 		});
