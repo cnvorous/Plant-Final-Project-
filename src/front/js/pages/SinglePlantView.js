@@ -27,16 +27,16 @@ export const SinglePlantView = props => {
             {/*<div></div> not sure if need to wrap table in its own div below */}
             <div className="row row-cols-3 middle-row">
                <div className="col">
-                  <h1 className="card-text ">{dataFromComponent.commonName}</h1> {/*props.location.state.name was from class*/}
+                  <h1 className="card-text ">{dataFromComponent.common_name}</h1> {/*props.location.state.name was from class*/}
                </div>
                <div className="col">
                   <p className="card-text">Seasonal: {dataFromComponent.seasonal}</p>{/*{dataFromLink.seasonal/ */}
                </div>
                <div className="col">
-                  <p className="card-text">watering: {dataFromComponent.waterReq}</p>
+                  <p className="card-text">watering: {dataFromComponent.water_req}</p>
                </div>
                <div className="col">
-                  <p className="card-text">Light Levels: {dataFromComponent.lightExposure}</p>
+                  <p className="card-text">Light Levels: {dataFromComponent.light_exposure}</p>
                </div>
                <div className="col">
                   <p className="card-text">Height: {dataFromComponent.height}</p>
@@ -51,19 +51,17 @@ export const SinglePlantView = props => {
                   <p className="card-text">Temperature: {dataFromComponent.temperature}</p>
                </div>
                <div className="col">
-                  <p className="card-text">Fertilizer: {dataFromComponent.fertilizerReq}</p>
+                  <p className="card-text">Fertilizer: {dataFromComponent.fertilizer_req}</p>
                </div>
             </div>
             <div className="bottom-row">
-               <p>Description: {dataFromComponent.plantDetails}</p>
-               <p>Plant Care: {dataFromComponent.plantCareTips}</p>
-               <p>Watering Tips: {dataFromComponent.waterTips}</p>
+               <p>Description: {dataFromComponent.plant_details}</p>
+               <p>Plant Care: {dataFromComponent.plant_care_tips}</p>
+               <p>Watering Tips: {dataFromComponent.water_tips}</p>
             </div>
          </div>
       </div>
    );
 };
 
-// SinglePlantView.propTypes = {    will not need this for this view 
-// 	match: PropTypes.object        since called in plantcard component
-// };
+

@@ -51,6 +51,7 @@ def post_plants():
             temperature= item['temperature'],
             water_req= item['water_req'], 
             water_tips= item['water_tips'],
+            water_day=item['water_day'],
             )
 
         db.session.add(each_plant)

@@ -21,7 +21,7 @@ import { PlantUses } from "./pages/PlantUses";
 import { ListFavorites } from "./pages/ListFavorites";
 import { ForgotPassword } from "./pages/ForgotPassword";
 import { PasswordReset } from "./pages/PasswordReset";
-//import {PlantResults} from "./pages/PlantResults";
+
 import { WeatherPage } from "./pages/WeatherPage";
 
 //create your first component
@@ -46,7 +46,7 @@ const Layout = () => {
             <Route exact path="/createfavorites" component={CreateFavorites} />
             <Route exact path="/listfavorites/:listname" component={ListFavorites} />
             <Route exact path="/searchplantdata" component={SearchPlantData} />
-            {/*<Route exact path="/plantResults" component={PlantResults} />*/}
+           
             <Route exact path="/singleplantview" component={SinglePlantView} />
             <Route exact path="/growthgallery" component={GrowthGallery} />
             <Route exact path="/calendar" component={CalendarOverview} />

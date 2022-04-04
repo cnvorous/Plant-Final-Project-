@@ -40,13 +40,13 @@ export const PlantCard = (props) => {
                   </i>
                </button>
             </div>
-            <img src={props.plants.plantImage} className="card-img-top plant-card-img" alt="..." />
+            <img src={props.plants.plant_image} className="card-img-top plant-card-img" alt="..." />
             <div className="card-body">
-               <h5 className="card-title">Name:{props.plants.commonName}</h5>
+               <h5 className="card-title">Name:{props.plants.common_name}</h5>
                <p className="card-text">Size:{props.plants.size}</p>
                <p className="card-text">Blooms:{props.plants.blooms}</p>
-               <p className="card-text">Water Dependency:{props.plants.waterReq}</p>
-               <p className="card-text">Light Exposure:{props.plants.lightExposure}</p>
+               <p className="card-text">Water Dependency:{props.plants.water_req}</p>
+               <p className="card-text">Light Exposure:{props.plants.light_exposure}</p>
                <Link to={{ pathname: "/singleplantview", state: props.plants }}> {/* passing props plant from plant card to single view*/}
                   <span className="button1 btn btn-primary btn-md" role="button">
                      Plant Details
