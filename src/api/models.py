@@ -12,6 +12,7 @@ class User(db.Model):
     sms_checkbox=db.Column(db.Boolean(), unique=False, nullable=False)
     zipcode=db.Column(db.String(15), nullable=False)
     profile_image=db.Column(db.String(250), nullable=True)
+    favorite=db.relationship("Favorites")
     
 
     def __repr__(self):
@@ -55,6 +56,7 @@ class Plant(db.Model):
     poisonous=db.Column(db.Text(), nullable=False)
     plant_details=db.Column(db.Text(), nullable=False)
     plant_care_tips=db.Column(db.Text(), nullable=False)
+    favorite_id=db.Column(db.Integer, db.ForeignKey('favorites.id'))
 
 
 
@@ -88,11 +90,9 @@ class Plant(db.Model):
 
 class Favorites(db.Model):
     id=db.Column(db.Integer, primary_key=True)
-    plant_id=db.Column(db.Integer, db.ForeignKey('plant.id'))
     user_id=db.Column(db.Integer, db.ForeignKey('user.id'))
     list_name=db.Column(db.String(40), nullable=True) #would come from user 
-    #favorite_plant=Column(db.String(250), nullable=True) # would come from user 
-    #plant= relationship(Plant)
+    plant=db.relationship("Plant")
 
     def __repr__(self):
         return '<Favorites%r>' % self.id
@@ -100,7 +100,7 @@ class Favorites(db.Model):
     def serialize(self):
         return {
                "id": self.id,
-            "list_name": self.list_name,
-            #"favorites": 
+              "list_name": self.list_name,
+              #"favorites": [] some how need to make array of all plants to put in fav list 
         }
 
