@@ -101,6 +101,6 @@ class Favorites(db.Model):
         return {
                "id": self.id,
               "list_name": self.list_name,
-              #"favorites": [] some how need to make array of all plants to put in fav list 
+              #"favorites":                //fav[] how would we return picked plants
         }
 

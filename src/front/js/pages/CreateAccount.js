@@ -24,52 +24,47 @@ export const CreateAccount = props => {
 
 
 	return (
-		<div>
-			<div className="text-center justify-content-center">
+		<div className="create-account-div text-center">
+			{/* <div className="text-center justify-content-center">
 				<i className=' fas fa-user-circle fa-5x'></i>
 				<UploadImages />
-			</div>
-
-
-			<div className="text-center">
-				Create you account log in and user profile
-
-				<div className="p-5 d-flex justify-content-spacebetween row">
-					<div className="col-6 mb-3">
-						<input className="w-75" type="text" onChange={(e) => setEmailValue(e.target.value)} placeholder="Username/Email" name="fname" />
-					</div>
-					<div className="col-6 mb-3">
-						<input className="w-75" type="text" onChange={(e) => setPasswordValue(e.target.value)} placeholder="Password" name="fname" />
-					</div>
-					<div className="col-6 mb-3">
-						<input className="w-75" type="text" onChange={(e) => setFirstNameValue(e.target.value)} placeholder="First Name" name="fname" />
-					</div>
-					<div className="col-6 mb-3">
-						<input className="w-75" type="text" onChange={(e) => setLastNameValue(e.target.value)} placeholder="Last Name" name="fname" />
-					</div>
-					<div className="col-6 mb-3">
-						<input className="w-75" type="text" onChange={(e) => setPhoneValue(e.target.value)} placeholder="Phone" name="fname" />
-					</div>
-					<div className="col-6 mb-3">
-						<input className="w-75" type="text" onChange={(e) => setStateZipCodeValue(e.target.value)} placeholder="State/Zip code" name="fname" />
-					</div>
-					<div><input type="checkbox" />
-						<label>Check to receive SMS notifications</label>
-					</div>
-					<input className=" submitButton btn btn-primary" onClick={() => {
+			</div> */}
+				<div className="p-5 d-flex justify-content-center row form">
+									<div className="col-5 mb-3">
+										<input className="w-50" type="text" onChange={(e) => setEmailValue(e.target.value)} placeholder="Username/Email" name="fname" />
+									</div>
+									<div className="col-5 mb-3">
+										<input className="w-50" type="text" onChange={(e) => setPasswordValue(e.target.value)} placeholder="Password" name="fname" />
+									</div>
+									<div className="col-5 mb-3">
+										<input className="w-50" type="text" onChange={(e) => setFirstNameValue(e.target.value)} placeholder="First Name" name="fname" />
+									</div>
+									<div className="col-5 mb-3">
+										<input className="w-50" type="text" onChange={(e) => setLastNameValue(e.target.value)} placeholder="Last Name" name="fname" />
+									</div>
+									<div className="col-5 mb-3">
+										<input className="w-50" type="text" onChange={(e) => setPhoneValue(e.target.value)} placeholder="Phone" name="fname" />
+									</div>
+									<div className="col-5 mb-3">
+										<input className="w-50" type="text" onChange={(e) => setStateZipCodeValue(e.target.value)} placeholder="State/Zip code" name="fname" />
+									</div>
+									<div><input type="checkbox" />
+										<label>Check to receive SMS notifications</label>
+									</div>
+					<input className="submit-button btn" onClick={() => {
 						handleSubmit();
 						console.log(store.account)
-					}} type="submit" value="Submit" />
+					}} type="submit" value="Sign Up" />
 
-					<div>
-						<Link to="/forgotPassword">
-							<a className="nav-link">Forgot my password??</a>
-						</Link>
+									<div>
+										<Link to="/forgotPassword">
+											<a className="nav-link">Forgot my password??</a>
+										</Link>
 
-					</div>
+									</div>
 				</div>
 
-			</div>
+	
 		</div>
 	);
 };
