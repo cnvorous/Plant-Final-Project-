@@ -61,3 +61,11 @@ def post_plants():
     all_plants = list(map(lambda x: x.serialize(), plant_query))
     return jsonify(all_plants), 200 
 
+@api.route('/<int:favorites_id>/favorites', methods=['GET'])
+def get_favorties_plants(favorites_id):
+
+    favorite_query = Favorites.query.find_by(id=favorites_id).first()
+    print(favorite_query)
+    filtered_plants = list(map(lambda x: x.serialize(), favorite_query))
+
+    return jsonify(filtered_plants), 200

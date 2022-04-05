@@ -92,7 +92,9 @@ class Favorites(db.Model):
     id=db.Column(db.Integer, primary_key=True)
     user_id=db.Column(db.Integer, db.ForeignKey('user.id'))
     list_name=db.Column(db.String(40), nullable=True) #would come from user 
-    plant=db.relationship("Plant")
+    plant_id=db.children = relationship("Plant",
+                    secondary=association_table,
+                    backref="parents")
 
     def __repr__(self):
         return '<Favorites%r>' % self.id
@@ -103,4 +105,11 @@ class Favorites(db.Model):
               "list_name": self.list_name,
               #"favorites":                //fav[] how would we return picked plants
         }
+
+association_table = db.Table('association',
+    db.Column('favorite_id',db.Integer, db.ForeignKey('favorites.id'), primary_key=True)
+    db.Column('plant_id', db.Integer, db.ForeignKey('plant.id'), primary_key=True)
+)
+
+
 
