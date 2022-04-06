@@ -194,42 +194,16 @@ button {
 }
 
 /********** below is ListFavorites page Css**************/
-.fav-heading {
-  height: 100px;
-  color: darkgreen;
+h1{
+  font-weight: bolder;
   font-size: 40px;
-  margin: 10px;
+  color:rgb(59, 128, 59);
+  text-shadow: 1px 2px lightgreen;
 }
-
 .favs-list {
   height: 600px;
   background-color: aliceblue;
 }
-
-/************* below is Dashboard Css***************/
-
-.dashboard-container {
-  background: rgb(125, 189, 189);
-  height: 640px;
-}
-
-.bi-person-circle {
-  height: 150px;
-  /*
-  position: relative;
-  margin-left: 5%;
-  top: 9px;*/
-}
-.UpdateUserInfo {
-  color: darkblue;
-  /*position: relative;*/
-  /*margin-inline-end: 80ch;*/
-}
-/* .qr-code {
-  
-  margin-left: 60%;
-  top: 10%;
-} */
 
 /************* below is SearchPlantData page Css***************/
 
@@ -595,3 +569,27 @@ em {
   margin-top: 10px;
   cursor: grab;
 }
+/************* below is Dashboard Css***************/
+
+.dashboard-container {
+  background: rgb(125, 189, 189);
+  height: 640px;
+}
+
+.bi-person-circle {
+  height: 150px;
+  /*
+  position: relative;
+  margin-left: 5%;
+  top: 9px;*/
+}
+.UpdateUserInfo {
+  color: darkblue;
+  /*position: relative;*/
+  /*margin-inline-end: 80ch;*/
+}
+/* .qr-code {
+  
+  margin-left: 60%;
+  top: 10%;
+} */

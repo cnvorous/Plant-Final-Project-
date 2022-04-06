@@ -13,10 +13,8 @@ export const ListFavorites = props => {
 	console.log(favoritesArray);
 
 	return (
-		<div className="container d-flex-inline">
-			<div className="fav-heading text-center">
-				{name} list
-			</div>
+		<div className="single-fav-body d-flex-inline">
+				<h1 className="text-center">{name} list</h1>
 			<div className="favs-list d-sm-flex flex-wrap justify-content-sm-evenly">
 				{favoritesArray.map((plant, index) => {
 					return (

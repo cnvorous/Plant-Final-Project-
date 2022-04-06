@@ -2,6 +2,11 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
+pivots = db.Table('pivots',
+    db.Column('favorite_id',db.Integer, db.ForeignKey('favorites.id'), primary_key=True)
+    db.Column('plant_id', db.Integer, db.ForeignKey('plant.id'), primary_key=True)
+)
+
 class User(db.Model):
     id=db.Column(db.Integer, primary_key=True)
     email=db.Column(db.String(120), unique=True, nullable=False)
@@ -33,7 +38,32 @@ class User(db.Model):
 
         ################################
 
+class Favorites(db.Model):
+    id=db.Column(db.Integer, primary_key=True)
+    user_id=db.Column(db.Integer, db.ForeignKey('user.id'))
+    list_name=db.Column(db.String(40), nullable=True) #would come from user 
+            #  pivots = db.relationship('Discussion', secondary=pivots, lazy='subquery',
+            #     backref=db.backref('users', lazy=True))
+            # comments = db.relationship('Comment', backref='users', lazy=True)
+    pivots = db.relationship('Plant', secondary=pivots, lazy='subquery',
+        backref=db.backref('favorites', lazy=True))
+    plants=db.relationship('Plant', backref='favorites', lazy=True)
+    plant_selected = db.relationship('Plant', backref='favorites', lazy=True)
 
+                # plant_id=db.children = relationship("Plant",
+                #                 secondary=pivots,
+                #                 backref="parents")
+
+    def __repr__(self):
+        return '<Favorites%r>' % self.id
+
+    def serialize(self):
+        return {
+               "id": self.id,
+              "list_name": self.list_name,
+              #"favorites":                //fav[] how would we return picked plants
+              "plants": list(map(lambda plant: plant.serialize(), self.plants))
+        }
 
 class Plant(db.Model):
     id=db.Column(db.Integer, primary_key=True)
@@ -57,8 +87,7 @@ class Plant(db.Model):
     plant_details=db.Column(db.Text(), nullable=False)
     plant_care_tips=db.Column(db.Text(), nullable=False)
     favorite_id=db.Column(db.Integer, db.ForeignKey('favorites.id'))
-
-
+    plant_selected = db.relationship('Plant', backref='favorites', lazy=True)
 
     def __repr__(self):
         return '<Plant %r>' % self.common_name
@@ -84,32 +113,10 @@ class Plant(db.Model):
             "poisonous": self.poisonous,
             "plant_details": self.plant_details,
             "plant_care_tips": self.plant_care_tips,
+            "plant_selected": list(map(lambda plant_selected: plant_selected.serialize(), self.plant_selected))
         }
 
 
-
-class Favorites(db.Model):
-    id=db.Column(db.Integer, primary_key=True)
-    user_id=db.Column(db.Integer, db.ForeignKey('user.id'))
-    list_name=db.Column(db.String(40), nullable=True) #would come from user 
-    plant_id=db.children = relationship("Plant",
-                    secondary=association_table,
-                    backref="parents")
-
-    def __repr__(self):
-        return '<Favorites%r>' % self.id
-
-    def serialize(self):
-        return {
-               "id": self.id,
-              "list_name": self.list_name,
-              #"favorites":                //fav[] how would we return picked plants
-        }
-
-association_table = db.Table('association',
-    db.Column('favorite_id',db.Integer, db.ForeignKey('favorites.id'), primary_key=True)
-    db.Column('plant_id', db.Integer, db.ForeignKey('plant.id'), primary_key=True)
-)
 
 
 
