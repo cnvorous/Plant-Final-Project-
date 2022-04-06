@@ -9,6 +9,9 @@ export const CreateFavorites = props => {
 	const params = useParams();
 	const [favItem, setFavItem] = useState("");
 	const [favList, setFavList] = useState(store.favoritesList);
+	useEffect(() => {
+		setFavList(store.favoritesList)
+	}, [store.favoritesList])
 
 	const saveList = (e) => {
 		console.log(e);
@@ -48,24 +51,24 @@ export const CreateFavorites = props => {
 					</button>
 				</div>
 				<div className="list-body ad-sm-inline-flex">
-				<ul className="favs-ul">
-					{favList.length > 0 && favList.map((list, index) => {
-						return (
-							<button className="li-btn">
-							<li className="fav-list-item" key={index}>
-								<Link to={`/listfavorites/${list.name}`}>
-									{list.name}
-								</Link>
-								<span className="delete-icon"
-									onClick={() => removeList(index)} >
-									{""}
-									<i className="far fa-trash-alt"></i>
-								</span>
-							</li>
-							</button>
-						);
-					})}
-				</ul>
+					<ul className="favs-ul">
+						{favList.length > 0 && favList.map((list, index) => {
+							return (
+								<button className="li-btn">
+									<li className="fav-list-item" key={index}>
+										<Link to={`/listfavorites/${list.name}`}>
+											{list.name}
+										</Link>
+										<span className="delete-icon"
+											onClick={() => removeList(index)} >
+											{""}
+											<i className="far fa-trash-alt"></i>
+										</span>
+									</li>
+								</button>
+							);
+						})}
+					</ul>
 				</div>
 				<div className="favs-counter text-center">
 					<em>

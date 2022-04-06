@@ -27,6 +27,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 
 		actions: {
+			
+			getFavorites:()=>{
+				fetch("https://3001-cnvorous-plantfinalproje-8ku0pcae2xq.ws-us38.gitpod.io/api/favorites", 
+				{method: "GET"})
+				.then((response) => response.json())
+				.then((data) => setStore({favoritesList:data}))
+				.catch((err) => console.log(err))
+			},
 
 			getPlantData:()=>{
 				fetch("https://3001-cnvorous-plantfinalproje-8ku0pcae2xq.ws-us38.gitpod.io/api/plants", 

@@ -61,11 +61,26 @@ def post_plants():
     all_plants = list(map(lambda x: x.serialize(), plant_query))
     return jsonify(all_plants), 200 
 
-@api.route('/<int:favorites_id>/favorites', methods=['GET'])
-def get_favorties_plants(favorites_id):
+@api.route('/favorites', methods=['GET'])
+def get_favorties_plants():
 
-    favorite_query = Favorites.query.find_by(id=favorites_id).first()
-    print(favorite_query)
-    filtered_plants = list(map(lambda x: x.serialize(), favorite_query))
+    favorite_query = Favorites.query.all()
+    favorite_list= [favorite.serialize()for favorite in favorite_query]
 
-    return jsonify(filtered_plants), 200
+    return jsonify(favorite_list), 200
+
+
+@api.route('/favorites', methods=['POST'])
+def post_favorite():
+    body=request.get_json()
+    favorite= Favorites(name=body["name"])
+
+    db.session.add(favorite)
+    db.session.commit()
+
+    favorite_query = Favorites.query.all()
+    favorite_list= [favorite.serialize()for favorite in favorite_query]
+
+    return jsonify(favorite_list), 200
+
+     ## need to set the fetch for this post method in flux next and then call in on page when press enter
