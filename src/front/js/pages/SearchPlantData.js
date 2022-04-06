@@ -43,7 +43,7 @@ export const SearchPlantData = props => {
 	return (
 		<div className="plant-search-container">
 
-			<div className="input-group mb-3 w-50 p-3 mx-auto mt-5">{/*NEED: seems like mt cant go higher then mt-5 */}
+			<div className="input-group mb-3 w-50 p-3 mx-auto">{/*NEED: seems like mt cant go higher then mt-5 */}
 				<span className="search-button input-group-text" id="inputGroup-sizing-default">Plant Search</span>
 				<input type="search" id="search" value={input} placeholder="Type in plant name OR click enter to search..."
 					className="form-control data-search"

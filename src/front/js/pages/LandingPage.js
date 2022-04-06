@@ -23,7 +23,7 @@ export const LandingPage = () => {
 							src="https://us.123rf.com/450wm/nad1992/nad19921601/nad1992160100010/50559166-abstract-leafs-care-vector-logo-icon-eco-icon-with-green-leaf-.jpg" />
 					</div>
 					<div className="text-center main-text">
-						<strong>Leaf it to Us</strong>
+					<h1 className="text-center heading-text-1">Leaf it to Us</h1>
 					</div>
 				</div>
 				<div className="top-banner-box2 d-sm-inline-flex"> {/*m-auto */}
@@ -66,7 +66,6 @@ export const LandingPage = () => {
 				</div>
 			</div>
 			<div className="landing-body m-3">
-				<h1 className="text-center heading-text-1">About Leaf it to Us: </h1>
 				<h4 className="heading-text-2">Our site is dedicated to helping users find a streamline way of keeping your plants
 					not just healthy but thriving.
 				</h4>

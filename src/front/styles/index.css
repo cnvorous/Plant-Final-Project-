@@ -1,10 +1,21 @@
 /********************* below is nav bar compontent Css*************************/
 .navbar {
   font-size: 20px;
-  background: rgba(4, 135, 94, 0.815);
+  background-image: url("https://smartpots.com/wp-content/uploads/2017/02/Tropical-Plant-Blog.jpeg");
+  background-size: cover;
+  /* background: rgba(4, 135, 94, 0.815); */
   height: 75px;
-  border: 2px solid darkgreen;
   text-align: end;
+}
+
+.button1 {
+  background-color: rgb(231, 252, 205);
+}
+
+.button1:hover {
+  background-color: rgb(185, 252, 97);
+  /* background-color: rgb(248, 207, 74); */
+  font-weight: 400;
 }
 
 .nav-link {
@@ -28,9 +39,12 @@
 
 /********************* below is footer Css*************************/
 .footer {
-  background: rgba(4, 135, 94, 0.815);
+  background-image: url("https://smartpots.com/wp-content/uploads/2017/02/Tropical-Plant-Blog.jpeg");
+  background-size: cover;
+  /* background: rgba(4, 135, 94, 0.815); */
   height: 75px;
-  border: 2px solid darkgreen;
+  /* transform: rotate(-30deg); */
+  /* transform: scaleX(-1); */
 }
 
 .footer-icon {
@@ -57,61 +71,44 @@
 }
 .top-banner {
   height: 200px;
-  border: 2px solid darkgreen;
   /* background-image: url(https://thumbs.dreamstime.com/z/vector-light-grey-succulent-plant-texture-drawing-seamless-pattern-background-great-subtle-botanical-modern-backgrounds-fabric-90904464.jpg);
   background-repeat: repeat;
   background-size: cover;
   z-index: -1;
   opacity: 1; */
-  background-color: rgba(213, 248, 213, 0.223);
-}
-
-.button1 {
-  background-color: rgb(231, 252, 205);
-}
-.button1:hover {
-  background-color: rgb(185, 252, 97);
-  /* background-color: rgb(248, 207, 74); */
-  font-weight: 400;
-}
-.button2 {
-  color: white;
-  background-color: darkgreen;
+  background-color: white;
 }
 
 .website-name {
+  font-family: "Fredoka One", cursive;
   font-size: 30px;
-}
-
-.middle-banner {
-  height: 60px;
-  background-color: rgba(4, 135, 94, 0.815);
-  justify-content: space-around;
-  border: 2px solid darkgreen;
 }
 
 .seed-logo {
   width: 125px;
   height: 125px;
+  margin: 20px 0px 0px 200px;
   background-color: #a0de21;
   -moz-border-radius: 20px 0px 20px 0px;
   -webkit-border-radius: 20px 0px 20px 0px;
   border-radius: 20px 0px 20px 0px;
 }
 
-.top-banner-box2 {
-  margin-right: 25px;
-}
-
 .heading-text-1 {
   color: darkgreen;
-  font-size: 25px;
+  font-size: 45px;
   font-weight: bolder;
+  margin: 15px 0px 0px 200px;
+}
+
+.top-banner-box2 {
+  margin-right: 25px;
 }
 .heading-text-2 {
   color: darkgreen;
   font-size: 25px;
-  font-weight: lighter;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: bold;
   text-align: center;
 }
 .landing-body {
@@ -275,11 +272,11 @@ button {
   width: 25px;
 } */
 /************* below is create ACCOUNT page Css***************/
-.create-account-div{
+.create-account-div {
   width: 100%;
-  height:100%;
+  height: 100%;
   /* background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/high-angle-view-of-variety-of-succulent-plants-royalty-free-image-1584462052.jpg"); */
-  background-color: #EBECF0;
+  background-color: #ebecf0;
   background-repeat: no-repeat;
   background-position: center;
   /* background: #092756;
@@ -291,9 +288,9 @@ button {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 ); */
 }
 
-input{
+input {
   border-radius: 320px;
-  border: 0; 
+  border: 0;
   outline: 0;
   font-size: 16px;
   padding: 16px;
@@ -305,17 +302,17 @@ input{
   transition: all 0.2s ease-in-out;
 }
 
-input:focus{
+input:focus {
   box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
 }
 
-p{
+p {
   color: #babecc;
   text-shadow: 1px 1px, 1px #fff;
 }
 
-.form{
-  padding: 16px; 
+.form {
+  padding: 16px;
   margin: 0 auto;
   width: 700px;
   height: 500px;
@@ -334,9 +331,9 @@ p{
   box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
 }
 
-.submit-button:hover{
+.submit-button:hover {
   box-sizing: -5px -5px 20px #fff 5px 5px 20px #babecc;
-  color:red;
+  color: red;
   font-weight: bolder;
 }
 
@@ -421,22 +418,130 @@ p{
 }
 
 /***************************CreateFavs Page ******************/
+.fav-body {
+  border-style: solid;
+  background-image: url("https://smartpots.com/wp-content/uploads/2017/02/Tropical-Plant-Blog.jpeg");
+  background-size: cover;
+  /* background-color: #d1ecc6; */
+}
+
+.create-favs-container {
+  background-color: rgb(153, 247, 153);
+  border: rgb(197, 247, 195) 8px double;
+  box-shadow: 5px -5px 5px rgb(197, 247, 195);
+  /* rgb(250, 250, 244) */
+  opacity: 0.9;
+  height: 700px;
+  width: 700px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 5%;
+}
+
+.favs-bar {
+  border: red 1px dotted;
+}
 
 .fav-search-btn {
+  height: 35px;
   color: white;
-  background-color: blue;
-  height: 30px;
+  background-color: rgb(5, 113, 5);
+  font-weight: bold;
 }
 
 .fav-search-btn:hover {
-  color: white;
-  background-color: rgb(19, 19, 88);
+  color: whitesmoke;
+  text-shadow: 1px 2px #0f3906;
+  background-color: rgb(10, 135, 10);
+  font-weight: bolder;
+  border: #0f3906 1px solid;
 }
 
 .fa-trash-alt:hover {
   color: red;
 }
+
+.favorites-input {
+  height: 30px;
+  width: 250px;
+}
+
+.li-btn {
+  color: rgb(10, 135, 10);
+  background-color: #73f08a;
+  box-shadow: -5px 5px #525d5458;
+  margin: 10px 25px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10%;
+  /* backdrop-filter: blur(5px); */
+  /* -webkit-filter: blur(8px); */
+}
+
+.li-btn:hover {
+  color: rgb(10, 135, 10);
+  background-color: #74eb8a;
+  box-shadow: -5px 5px #11111158;
+  margin: 10px 25px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10%;
+  /* backdrop-filter: blur(5px); */
+  /* -webkit-filter: blur(8px); */
+}
+
+h5 {
+  margin-top: 10px;
+  text-shadow: 1px 2px #fdf8f8;
+  text-align: center;
+  font-family: fantasy;
+  font-size: 35px;
+  color: rgb(36, 136, 44);
+}
+
+.fav-list-item {
+  color: #0f3906;
+  height: 40px;
+  text-indent: 10px;
+  margin-top: 10px;
+}
+
+.fav-list-item:hover {
+  color: white;
+  background-color: rgba(103, 204, 103, 0.048);
+  font-weight: 600;
+}
+
+/* Link{       Items arent working 
+  color:rgb(10, 135, 10);
+}
+
+Link:hover{
+  color:red;
+} */
+
+em {
+  color: rgb(5, 113, 5);
+  text-shadow: 2px 1px #fdf8f8;
+  font-weight: bold;
+}
+.favs-counter {
+  margin-top: 75px;
+  border: #b82f7a 2px dotted;
+}
+
 /***************Calendar Page************/
+.fa-camera {
+  font-size: 32px;
+  margin-left: 5%;
+}
+
+.bg-plant {
+  background-image: url(https://thumbs.dreamstime.com/z/vector-light-grey-succulent-plant-texture-drawing-seamless-pattern-background-great-subtle-botanical-modern-backgrounds-fabric-90904464.jpg);
+}
 .widget-container {
   margin-right: 320px;
 }
@@ -489,64 +594,4 @@ p{
 .option {
   margin-top: 10px;
   cursor: grab;
-}
-
-.create-favs-container {
-  background-color: rgb(153, 247, 153);
-  height: 700px;
-  width: 700px;
-  margin-top: 50px;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  border-radius: 5%;
-}
-
-.favorites-input {
-  height: 30px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.favs-ul {
-  color: rgb(36, 136, 44);
-  margin: 10px 25px;
-  font-size: 25px;
-}
-
-h5 {
-  text-align: center;
-  font-family: fantasy;
-  font-size: 30px;
-  color: rgb(36, 136, 44);
-}
-.fav-list-item {
-  height: 40px;
-  text-indent: 10px;
-  border-style: hidden;
-  margin-top: 5px;
-}
-
-.fav-list-item:hover {
-  color: white;
-  background-color: rgba(103, 204, 103, 0.048);
-  font-weight: 600;
-}
-
-em {
-  color: white;
-}
-.favs-counter {
-  margin-top: 100px;
-}
-
-.fa-camera {
-  font-size: 32px;
-  margin-left: 5%;
-}
-
-.bg-plant {
-  background-image: url(https://thumbs.dreamstime.com/z/vector-light-grey-succulent-plant-texture-drawing-seamless-pattern-background-great-subtle-botanical-modern-backgrounds-fabric-90904464.jpg);
 }
