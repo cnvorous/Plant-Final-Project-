@@ -83,4 +83,16 @@ def post_favorite():
 
     return jsonify(favorite_list), 200
 
-     ## need to set the fetch for this post method in flux next and then call in on page when press enter
+@api.route('/favorites/<int:id>', methods=['DELETE'])
+def delete_favorite(id):
+    favorite= Favorites.query.get(id)
+    if favorite is None:
+        raise APIException("Favorite List not found", status_code=404)
+
+    db.session.delete(favorite)
+    db.session.commit()
+
+    favorite_query = Favorites.query.all()
+    favorite_list= [favorite.serialize()for favorite in favorite_query]
+
+    return jsonify(favorite_list), 200

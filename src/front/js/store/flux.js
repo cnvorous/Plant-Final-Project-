@@ -27,6 +27,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 
 		actions: {
+
+			removeList: (id) => {
+				fetch(
+					"https://3001-cnvorous-plantfinalproje-8ku0pcae2xq.ws-us38.gitpod.io/api/favorites/" + id,
+					{
+						method: "DELETE",
+						headers: { "Content-Type": "application/json" },
+					}
+				)
+					.then((response) => response.json())
+					.then((data) => {
+						console.log(data)
+						setStore({ favoritesList: data })
+					})
+					.catch((err) => console.log(err));
+			},
+
 			postFavoritesName: (name) => {
 				fetch("https://3001-cnvorous-plantfinalproje-8ku0pcae2xq.ws-us38.gitpod.io/api/favorites",
 					{
