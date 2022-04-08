@@ -13,22 +13,39 @@ export const CreateFavorites = props => {
 		setFavList(store.favoritesList)
 	}, [store.favoritesList])
 
+
 	const saveList = (e) => {
 		console.log(e);
 		if (e.keyCode == 13) {
-			let list = [...favList,
-			{ name: favItem, favorites: [] }]
-			actions.createNewFavoritesList(list);
+			actions.postFavoritesName(favItem)
 			setFavItem("");
-			setFavList(list);
 		}
 	};
+	// let list = [...favList,
+	// { name: favItem, favorites: [] }]
+	// actions.createNewFavoritesList(list);
+	// setFavItem("");
+	// setFavList(list);
 
-	const removeList = (index) => {
-		let list = favList.filter((item, i) => i != index) //gives a new array 
-		actions.createNewFavoritesList(list);
-		setFavList(list);
-	};
+
+	// const removeList = (index) => {
+	// 	// let list = favList.filter((item, i) => i != index) //gives a new array 
+	// 	// actions.createNewFavoritesList(list);
+	// 	// setFavList(list);
+	// };
+
+	// const removeList = (id) => {
+	// 	fetch(
+	// 		"hhttps://3001-cnvorous-plantfinalproje-8ku0pcae2xq.ws-us38.gitpod.io/api/favorites" + id,
+	// 		{
+	// 			method: "DELETE",
+	// 			headers: { "Content-Type": "application/json" },
+	// 		}
+	// 	)
+	// 		.then((response) => response.json())
+	// 		.then((data) => setFavList(data))
+	// 		.catch((err) => console.log(err));
+	// };
 
 	return (
 		<div className="fav-body">
@@ -42,11 +59,7 @@ export const CreateFavorites = props => {
 						onKeyUp={(e) => saveList(e)} />
 					<button className="btn fav-search-btn"
 						onClick={() => {
-							let list = [...favList,
-							{ name: favItem, favorites: [] }]
-							actions.createNewFavoritesList(list);
-							setFavItem("");
-							setFavList(list);
+					    actions.postFavoritesName(favItem)
 						}}>Add New List
 					</button>
 				</div>

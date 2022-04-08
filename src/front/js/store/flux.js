@@ -27,21 +27,37 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 
 		actions: {
-			
-			getFavorites:()=>{
-				fetch("https://3001-cnvorous-plantfinalproje-8ku0pcae2xq.ws-us38.gitpod.io/api/favorites", 
-				{method: "GET"})
-				.then((response) => response.json())
-				.then((data) => setStore({favoritesList:data}))
-				.catch((err) => console.log(err))
+			postFavoritesName: (name) => {
+				fetch("https://3001-cnvorous-plantfinalproje-8ku0pcae2xq.ws-us38.gitpod.io/api/favorites",
+					{
+						method: "POST",
+						headers: { "Content-Type": "application/json" },
+						body: JSON.stringify({
+							"name": name,
+						}),
+					})
+					.then((response) => response.json())
+					.then((data) => {
+						console.log(data)
+						setStore({ favoritesList: data })
+					})
+					.catch((err) => console.log(err))
 			},
 
-			getPlantData:()=>{
-				fetch("https://3001-cnvorous-plantfinalproje-8ku0pcae2xq.ws-us38.gitpod.io/api/plants", 
-				{method: "GET"})
-				.then((response) => response.json())
-				.then((data) => setStore({plantLibrary:data}))
-				.catch((err) => console.log(err))
+			getFavorites: () => {
+				fetch("https://3001-cnvorous-plantfinalproje-8ku0pcae2xq.ws-us38.gitpod.io/api/favorites",
+					{ method: "GET" })
+					.then((response) => response.json())
+					.then((data) => setStore({ favoritesList: data }))
+					.catch((err) => console.log(err))
+			},
+
+			getPlantData: () => {
+				fetch("https://3001-cnvorous-plantfinalproje-8ku0pcae2xq.ws-us38.gitpod.io/api/plants",
+					{ method: "GET" })
+					.then((response) => response.json())
+					.then((data) => setStore({ plantLibrary: data }))
+					.catch((err) => console.log(err))
 			},
 
 			////creataccount /////
@@ -60,8 +76,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 	setStore({plantLibrary:[{"plantName": plantName}]});
 			// },
 
-			
-		
+
+
 			getWeatherData: (zipcode) => {
 				fetch(`https://community-open-weather-map.p.rapidapi.com/forecast/daily?zip=${zipcode}%2Cus`, {
 					"method": "GET",
