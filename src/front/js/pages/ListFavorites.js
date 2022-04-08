@@ -9,14 +9,15 @@ export const ListFavorites = props => {
 	const params = useParams();
 	const name = params.listname
 	const favoritesObject = store.favoritesList.find((item) => item.name == name);
-	const favoritesArray = favoritesObject.favorites
+	console.log(favoritesObject)
+	const favoritesArray = favoritesObject.plants_selected
 	console.log(favoritesArray);
 
 	return (
 		<div className="single-fav-body d-flex-inline">
-				<h1 className="text-center">{name} list</h1>
+			<h1 className="text-center">{name} list</h1>
 			<div className="favs-list d-sm-flex flex-wrap justify-content-sm-evenly">
-				{favoritesArray.map((plant, index) => {
+				{favoritesArray.length > 0 && favoritesArray.map((plant, index) => {
 					return (
 						<PlantCard plants={plant} key={index} onDelete={true} listName={name} />
 					);

@@ -41,8 +41,8 @@ export const CreateFavorites = props => {
 					</button>
 				</div>
 				<div className="list-body ad-sm-inline-flex">
-					<ul className="favs-ul">
-						{favList.length > 0 && favList.map((list, index) => {
+					{favList.length > 0 ? <ul className="favs-ul">
+						{favList.map((list, index) => {
 							return (
 								<button className="li-btn">
 									<li className="fav-list-item" key={index}>
@@ -56,9 +56,9 @@ export const CreateFavorites = props => {
 										</span>
 									</li>
 								</button>
-							);
-						})}
-					</ul>
+							)
+						})}</ul> : <div>Loading...</div>
+					}
 				</div>
 				<div className="favs-counter text-center">
 					<em>
