@@ -21,8 +21,8 @@ export const PlantCard = (props) => {
          <div className="card plant-card border-primary" style={{ width: "15rem" }}>
             <div className="card-header text-end">
                <button className="heart-btn btn-sm">
-                  <i className="far fa-heart heart">
-                     <div className="nav-item dropdown">
+                  <i className="fas fa-heart heart">
+                     <div className="button1 nav-item dropdown">
                         <a className="nav-link  dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                            Send to which favs list:
                         </a>
@@ -49,7 +49,7 @@ export const PlantCard = (props) => {
                <p className="card-text">Water Frequency:<br></br>{props.plants.water_req}</p>
                <p className="card-text">Light Exposure:<br></br>{props.plants.light_exposure}</p>
                <Link to={{ pathname: "/singleplantview", state: props.plants }}> {/* passing props plant from plant card to single view*/}
-                  <span className="button1 btn btn-primary btn-md" role="button">
+                  <span className="search-button btn btn-md" role="button">
                      Plant Details
                   </span>
                </Link>

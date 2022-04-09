@@ -219,15 +219,28 @@ h1 {
 }
 
 .plant-search-container {
-  background-color: rgba(14, 69, 248, 0.103);
+  background: #cdd6c6;
 }
 
 .plant-div {
-  border: 2px solid rgb(214, 26, 26);
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+  box-sizing: border-box;
+  border: red dotted;
 }
 
+.heart {
+  color: white;
+}
 .heart:hover {
   color: red;
+}
+
+.heart-btn {
+  background-color: darkgreen;
+}
+
+.dropdown {
+  background-color: darkgreen;
 }
 
 /* li + Link {    ---this css not working 
@@ -240,6 +253,7 @@ h1 {
 }*/
 
 /************* below is PlantCard Compontent Css***************/
+
 .card-text::first-line {
   color: darkgreen;
   font-weight: bolder;
@@ -252,7 +266,7 @@ p.card-text {
   font-size: 20px;
 }
 
-.card-title:first-line {
+.card-title::first-line {
   color: darkgreen;
   font-weight: bolder;
   font-size: 25px;
@@ -262,6 +276,13 @@ p.card-text {
 h5.card-title {
   color: darkblue;
   font-size: 20px;
+}
+
+.dropdown-toggle {
+  color: white;
+}
+.nav-item:hover {
+  background-color: darkgreen;
 }
 /************* below is create ACCOUNT page Css***************/
 .create-account-div {
