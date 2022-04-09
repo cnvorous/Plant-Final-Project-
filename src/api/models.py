@@ -17,7 +17,7 @@ class User(db.Model):
     sms_checkbox=db.Column(db.Boolean(), unique=False, nullable=False)
     zipcode=db.Column(db.String(15), nullable=False)
     profile_image=db.Column(db.String(250), nullable=True)
-    favorite=db.relationship("Favorites")
+    # favorite=db.relationship("Favorites")
     
 
     def __repr__(self):
@@ -39,16 +39,18 @@ class User(db.Model):
         ################################
 
 class Favorites(db.Model):
-    id=db.Column(db.Integer, primary_key=True)
-    user_id=db.Column(db.Integer, db.ForeignKey('user.id'))
-    name=db.Column(db.String(40), nullable=True) #would come from user 
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer)
+    name = db.Column(db.String(40), nullable=True) #would come from user 
+    plant_id = db.Column(db.Integer)
+
             #  pivots = db.relationship('Discussion', secondary=pivots, lazy='subquery',
             #     backref=db.backref('users', lazy=True))
             # comments = db.relationship('Comment', backref='users', lazy=True)
             # pivots = db.relationship('Plant', secondary=pivots, lazy='subquery',
             #     backref=db.backref('favorites', lazy=True))
             # plants=db.relationship('Plant', backref='favorites', lazy=True)
-    plants_selected = db.relationship('Plant', backref='favorites', lazy=True)
+            # plants_selected = db.relationship('Plant', backref='favorites', lazy=True)
 
                 # plant_id=db.children = relationship("Plant",
                 #                 secondary=pivots,
@@ -59,10 +61,12 @@ class Favorites(db.Model):
 
     def serialize(self):
         return {
-               "id": self.id,
-              "name": self.name,
-              #"favorites":                //fav[] how would we return picked plants
-              "plants_selected": list(map(lambda plant_selected: plant_selected.serialize(), self.plants_selected))
+            "id": self.id,
+            "name": self.name,
+            "user_id": self.user_id,
+            "plant_id": self.plant_id
+                #"favorites":                //fav[] how would we return picked plants
+                #   "plants_selected": list(map(lambda plant_selected: plant_selected.serialize(), self.plants_selected))
         }
 
 class Plant(db.Model):

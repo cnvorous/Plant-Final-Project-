@@ -73,7 +73,7 @@ def get_favorties_plants():
 @api.route('/favorites', methods=['POST'])
 def post_favorite():
     body=request.get_json()
-    favorite= Favorites(name=body["name"])
+    favorite= Favorites(name=body['category_name'], user_id=body['user_id'], plant_id=body['plant_id'])
 
     db.session.add(favorite)
     db.session.commit()

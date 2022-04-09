@@ -194,10 +194,10 @@ button {
 }
 
 /********** below is ListFavorites page Css**************/
-h1{
+h1 {
   font-weight: bolder;
   font-size: 40px;
-  color:rgb(59, 128, 59);
+  color: rgb(59, 128, 59);
   text-shadow: 1px 2px lightgreen;
 }
 .favs-list {
@@ -240,11 +240,29 @@ h1{
 }*/
 
 /************* below is PlantCard Compontent Css***************/
+.card-text::first-line {
+  color: darkgreen;
+  font-weight: bolder;
+  font-size: 25px;
+  text-decoration: underline;
+}
 
-/* .plant-card-container{
-  height: 50px;
-  width: 25px;
-} */
+p.card-text {
+  color: darkblue;
+  font-size: 20px;
+}
+
+.card-title:first-line {
+  color: darkgreen;
+  font-weight: bolder;
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+h5.card-title {
+  color: darkblue;
+  font-size: 20px;
+}
 /************* below is create ACCOUNT page Css***************/
 .create-account-div {
   width: 100%;

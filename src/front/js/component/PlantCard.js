@@ -13,6 +13,7 @@ export const PlantCard = (props) => {
    const { store, actions } = useContext(Context);
    //const [favList, setFavList] = useState(store.favoritesList);
 
+   // console.log(props.plants);
 
    return (
       <div className="plant-card-container mb-3">
@@ -42,11 +43,11 @@ export const PlantCard = (props) => {
             </div>
             <img src={props.plants.plant_image} className="card-img-top plant-card-img" alt="..." />
             <div className="card-body">
-               <h5 className="card-title">Name:{props.plants.common_name}</h5>
-               <p className="card-text">Size:{props.plants.size}</p>
-               <p className="card-text">Blooms:{props.plants.blooms}</p>
-               <p className="card-text">Water Dependency:{props.plants.water_req}</p>
-               <p className="card-text">Light Exposure:{props.plants.light_exposure}</p>
+               <h5 className="card-title">Name:<br></br>{props.plants.common_name}</h5>
+               <p className="card-text">Size:<br></br>{props.plants.size}</p>
+               <p className="card-text">Blooms:<br></br>{props.plants.blooms}</p>
+               <p className="card-text">Water Frequency:<br></br>{props.plants.water_req}</p>
+               <p className="card-text">Light Exposure:<br></br>{props.plants.light_exposure}</p>
                <Link to={{ pathname: "/singleplantview", state: props.plants }}> {/* passing props plant from plant card to single view*/}
                   <span className="button1 btn btn-primary btn-md" role="button">
                      Plant Details

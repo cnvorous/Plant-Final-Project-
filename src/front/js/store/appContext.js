@@ -30,7 +30,7 @@ const injectContext = PassedComponent => {
 			 **/
 			
 			state.actions.getFavorites();
-			state.actions.getPlantData(); // <---- calling this function from the flux.js actions
+			// state.actions.getPlantData(); // <---- calling this function from the flux.js actions
 		}, []);
 
 

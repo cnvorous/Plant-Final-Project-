@@ -7,21 +7,22 @@ import { Context } from "../store/appContext";
 export const ListFavorites = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
-	const name = params.listname
-	const favoritesObject = store.favoritesList.find((item) => item.name == name);
+	const listname = params.listname
+	const favoritesObject = store.favoritePlants.find((item) => item.name == listname);
 	console.log(favoritesObject)
-	const favoritesArray = favoritesObject.plants_selected
-	console.log(favoritesArray);
+	// const favoritesArray = favoritesObject.plants_selected
+	// console.log(favoritesArray);
 
 	return (
 		<div className="single-fav-body d-flex-inline">
-			<h1 className="text-center">{name} list</h1>
+			<h1 className="text-center">{listname} list</h1>
 			<div className="favs-list d-sm-flex flex-wrap justify-content-sm-evenly">
-				{favoritesArray.length > 0 && favoritesArray.map((plant, index) => {
+				{favoritesObject && favoritesObject.length > 0 ? (favoritesObject.map((plant, index) => {
 					return (
-						<PlantCard plants={plant} key={index} onDelete={true} listName={name} />
+						<PlantCard plants={plant} key={index} onDelete={true} listName={plant.name} />
 					);
-				})}
+				}))
+					: "Loading... "}
 			</div>
 		</div>
 	);
