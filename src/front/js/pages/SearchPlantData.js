@@ -28,6 +28,41 @@ export const SearchPlantData = props => {
 			name: "Large Plant",
 			value: "large"
 		},
+		{
+			id: 108,
+			name: "Blooming Plant",
+			value: "yes"
+		},
+		{
+			id: 109,
+			name: "Non-Blooming Plant",
+			value: "no"
+		},
+		{
+			id: 110,
+			name: "Light Exposure: Direct Light",
+			value: "direct"
+		},
+		{
+			id: 111,
+			name: "Light Exposure: Indirect Light",
+			value: "indirect"
+		},
+		{
+			id: 112,
+			name: "Water Requirments: Moderate",
+			value: "moderate level "
+		},
+		{
+			id: 113,
+			name: "Water Requirments: Low",
+			value: "low level"
+		},
+		{
+			id: 114,
+			name: "Water Requirments: High",
+			value: "high level"
+		},
 	])
 
 	const [activeFilter, setActiveFilter] = useState([]);
@@ -63,7 +98,12 @@ export const SearchPlantData = props => {
 			setFilteredList(
 				plantArray.filter(item => {
 					return (
-						activeFilter.includes(item.size)
+						activeFilter.includes(item.size) ||
+						activeFilter.includes(item.height) ||
+						activeFilter.includes(item.blooms) ||
+						activeFilter.includes(item.water_req) ||
+						activeFilter.includes(item.tall) ||
+						activeFilter.includes(item.light_exposure)
 					);
 				})
 			);
