@@ -10,8 +10,66 @@ export const SearchPlantData = props => {
 	const { store, actions } = useContext(Context); //access items on flux page
 	const params = useParams();
 	const [input, setInput] = useState("");
-
 	const [plantArray, setPlantArray] = useState(store.plantLibrary);
+
+	const [filterList, setFilterList] = useState([
+		{
+			id: 105,
+			name: "Small Plant",
+			value: "small"
+		},
+		{
+			id: 106,
+			name: "Medium Plant",
+			value: "medium"
+		},
+		{
+			id: 107,
+			name: "Large Plant",
+			value: "large"
+		},
+	])
+
+	const [activeFilter, setActiveFilter] = useState([]);
+	const [filteredList, setFilteredList] = useState(store.plantLibrary);
+
+	const onFilterChange = term => {
+		// if (term === "ALL") {
+		// 	if (activeFilter.length === filterList.length) {
+		// 		setActiveFilter([]);
+		// 	} else {
+		// 		setActiveFilter(filterList.map(filter => filter.value));
+		// 	}
+		// } else {
+		if (activeFilter.includes(term)) {
+			const filterIndex = activeFilter.indexOf(term);
+			const newFilter = [...activeFilter];
+			newFilter.splice(filterIndex, 1);
+			setActiveFilter(newFilter);
+		} else {
+			setActiveFilter([...activeFilter, term]);
+		}
+		// }
+	};
+
+	useEffect(() => {
+		if (activeFilter.length === 0) {
+			setFilteredList(plantArray);
+		}
+		// if (activeFilter.length === filterList.length) {
+		// 	setFilteredList(plantArray);
+		// } 
+		else {
+			setFilteredList(
+				plantArray.filter(item => {
+					return (
+						activeFilter.includes(item.size)
+					);
+				})
+			);
+		}
+	}, [activeFilter]);
+
 
 	useEffect(() => {
 		const qs = queryString.parse(location.hash);
@@ -19,24 +77,26 @@ export const SearchPlantData = props => {
 	}, [store.plantLibrary]);
 
 	const searchFunction = keyword => {
-		let filteredArray = store.plantLibrary.filter(item => {
+		let filteredArray = filteredList.filter(item => {
 			if (keyword == "" || keyword == undefined) {
 				return item;
 			} else if (item.common_name.toLowerCase().includes(keyword.toLowerCase())) {
 				return item;
 			}
 		});
-		setPlantArray(filteredArray);
+		setFilteredList(filteredArray);
 	};
 
 	const searchHash = event => {
 		searchFunction(event);
 		if (event == "") {
 			setInput("");
-			setPlantArray(store.plantLibrary);
+			setFilteredList(store.plantLibrary);
 		}
 		location.hash = `keyword=${event}`;
 	};
+
+
 
 
 
@@ -64,10 +124,10 @@ export const SearchPlantData = props => {
 
 			<div className="plant-checkbox-container">
 
-				<div className="row row-cols-6">
-					<div className="col"></div>{/*empty space on purpose*/}
+				{/* <div className="row row-cols-6">
+					<div className="col"></div>{/*empty space on purpose*
 					<div className="col d-flex flex-column">
-						<label className="filter-options">Size of Plant Base:</label>
+						{/* <label className="filter-options">Size of Plant Base:</label> 
 						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Small</label>
 						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Medium</label>
 						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Large</label>
@@ -88,9 +148,9 @@ export const SearchPlantData = props => {
 						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Spring/Summer</label>
 						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Fall/Winter</label>
 					</div>
-					<div className="col"></div> {/*empty space on purpose*/}
-					<div className="col"></div>{/*empty space on purpose*/}
-					<div className="col d-flex flex-column mt-3"> {/*-opacity-25 */}
+					<div className="col"></div> {/*empty space on purpose*
+					<div className="col"></div>{/*empty space on purpose*
+					<div className="col d-flex flex-column mt-3"> {/*-opacity-25 *
 						<label className="filter-options">Blooming</label>
 						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Yes</label>
 						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />No</label>
@@ -112,18 +172,56 @@ export const SearchPlantData = props => {
 						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Harmful to Pets</label>
 						<label><input className="checkbox1" type='checkbox' onclick='handleClick(this);' />Safe for Humans & Pets</label>
 					</div>
-					<div className="col"></div>{/*empty space on purpose*/}
-				</div>
+					<div className="col"></div>{/*empty space on purpose*
+				</div> */}
+				<form
+					className="w-50 rounded search-box p-5 "
+					style={{
+						background: "linear-gradient(to bottom, #f9f3c8, rgba(255,0,0,0))",
+						height: "fit-content"
+					}}>
+					{/* <div className="form-check d-block form-check-inline">
+						<input
+							className="form-check-input"
+							type="checkbox"
+							id="all"
+							value="all"
+							onClick={() => onFilterChange("ALL")}
+							checked={activeFilter.length === filterList.length}
+						/>
+						{/* <label className="form-check-label" htmlFor="all">
+							ALL
+						</label> *
+					</div> */}
+					{filterList.map(filter => (
+						<div className="form-check d-block form-check-inline" key={filter.id}>
+							<input
+								className="form-check-input"
+								type="checkbox"
+								id={filter.id}
+								value={filter.value}
+								onClick={e => {
+									onFilterChange(filter.value)
+									setInput("")
+								}}
 
+								checked={activeFilter.includes(filter.value)}
+							/>
+							<label className="form-check-label mr-3" htmlFor={filter.id}>
+								{filter.name}
+							</label>
+						</div>
+					))}
+				</form>
 			</div>
 
 
 			<div className="plant-results-body bg-primary bg-opacity-10 m-5 p-5"> {/*Question why does margin in bootstrap not pass 5 */}
 				{/* <template className="plant-card-template"> */}
 				<div className="plant-div d-sm-flex flex-wrap justify-content-sm-evenly">
-					{plantArray.map((plant, index) => {
+					{filteredList.map((plant, index) => {
 						return (
-							<PlantCard plants={plant} key={index}  />
+							<PlantCard plants={plant} key={index} />
 						);
 					})}
 				</div>
