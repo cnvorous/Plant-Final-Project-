@@ -7,15 +7,19 @@ import Scheduler, { Resource } from "devextreme-react/scheduler";
 
 export const CalendarOverview = () => {
   const { store, actions } = useContext(Context);
+  const currentDate = new Date();
+  const views = ["week", "month"];
 
   return (
     <div className="container demo-container">
       <Scheduler
-        id="scheduler"
+        timeZone="America/Los_Angeles"
         dataSource={store.data}
-        textExpr="title"
-        allDayExpr="dayLong"
-        recurrenceRuleExpr="recurrence"
+        views={views}
+        defaultCurrentView="week"
+        defaultCurrentDate={currentDate}
+        height={600}
+        startDayHour={9}
       >
         {/* Configuration goes here */}
       </Scheduler>

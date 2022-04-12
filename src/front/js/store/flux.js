@@ -13,14 +13,14 @@ const getState = ({ getStore, getActions, setStore }) => {
         },
         {
           text: "Book Flights to San Fran for Sales Trip",
-          startDate: new Date("2022-04-26T00:00:00.000Z"),
-          endDate: new Date("2022-04-26T24:00:00.000Z"),
+          startDate: new Date("2022-04-26T19:00:00.000Z"),
+          endDate: new Date("2022-04-26T20:00:00.000Z"),
           allDay: true,
         },
         {
           text: "Launch New Website",
           startDate: new Date("2022-04-30T19:20:00.000Z"),
-          endDate: new Date("202-04-30T21:00:00.000Z"),
+          endDate: new Date("2021-04-30T21:00:00.000Z"),
         },
       ],
       demo: [
