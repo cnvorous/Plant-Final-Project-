@@ -61,8 +61,8 @@ class Favorites(db.Model):
 
     def serialize(self):
         return {
-            "id": self.id,
-            "name": self.name,
+            # "id": self.id,
+            "category_name": self.name,
             "user_id": self.user_id,
             "plant_id": self.plant_id
                 #"favorites":                //fav[] how would we return picked plants

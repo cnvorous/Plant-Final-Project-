@@ -4,30 +4,41 @@ import { Link, useParams } from "react-router-dom";
 import { PlantCard } from "../component/PlantCard";
 import { Context } from "../store/appContext";
 
-export const ListFavorites = props => {
-	const { store, actions } = useContext(Context);
-	const params = useParams();
-	const listname = params.listname
-	const favoritesObject = store.favoritePlants.find((item) => item.name == listname);
-	console.log(favoritesObject)
-	// const favoritesArray = favoritesObject.plants_selected
-	// console.log(favoritesArray);
+export const ListFavorites = (props) => {
+  const { store, actions } = useContext(Context);
+  const params = useParams();
+  const listname = params.listname;
+  const favoritesObject = store.favoritePlants.filter(
+    (item) => item.category_name == listname
+  );
+  console.log(favoritesObject);
+  var favPlantDetails = favoritesObject.map((fav) => {
+    let found = store.plantLibrary.find((plant) => plant.id == fav.plant_id);
+    return found;
+  });
+  console.log(favPlantDetails);
 
-	return (
-		<div className="single-fav-body d-flex-inline">
-			<h1 className="text-center">{listname} list</h1>
-			<div className="favs-list d-sm-flex flex-wrap justify-content-sm-evenly">
-				{favoritesObject && favoritesObject.length > 0 ? (favoritesObject.map((plant, index) => {
-					return (
-						<PlantCard plants={plant} key={index} onDelete={true} listName={plant.name} />
-					);
-				}))
-					: "Loading... "}
-			</div>
-		</div>
-	);
+  return (
+    <div className="single-fav-body d-flex-inline">
+      <h1 className="text-center">{listname} list</h1>
+      <div className="favs-list d-sm-flex flex-wrap justify-content-sm-evenly">
+        {favPlantDetails && favPlantDetails.length > 0
+          ? favPlantDetails.map((favPlant, index) => {
+              return (
+                <PlantCard
+                  plants={favPlant}
+                  key={index}
+                  onDelete={true}
+                  listName={listname}
+                />
+              );
+            })
+          : "Loading... "}
+      </div>
+    </div>
+  );
 };
 
 ListFavorites.propTypes = {
-	match: PropTypes.object
+  match: PropTypes.object,
 };

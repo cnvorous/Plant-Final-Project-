@@ -86,8 +86,8 @@ def post_favorite():
 @api.route('/favorites/<int:id>', methods=['DELETE'])
 def delete_favorite(id):
     favorite= Favorites.query.get(id)
-    if favorite is None:
-        raise APIException("Favorite List not found", status_code=404)
+    # if favorite is None:
+    #     raise APIException("Favorite List not found", status_code=404)
 
     db.session.delete(favorite)
     db.session.commit()

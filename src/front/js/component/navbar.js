@@ -21,34 +21,34 @@ export const Navbar = () => {
         <ul className="nav">
           <li className="nav-item">
             <Link to="/">
-              <a className="nav-link active" aria-current="page">
+              <span className="nav-link active" aria-current="page">
                 Home
-              </a>
+              </span>
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/dashboard">
-              <a className="nav-link">Profile</a>
+              <span className="nav-link">Profile</span>
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/growthgallery">
-              <a className="nav-link">Gallery</a>
+              <span className="nav-link">Gallery</span>
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/createfavorites">
-              <a className="nav-link">Favorites</a>
+              <span className="nav-link">Favorites</span>
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/calendar">
-              <a className="nav-link">
+              <span className="nav-link">
                 <i className="far fa-calendar-alt fa-2x"></i>
-              </a>
+              </span>
             </Link>
           </li>
-           {/* logout btn becomes seen when person signs in */}
+          {/* logout btn becomes seen when person signs in */}
           {store.profile.length > 0 && (
             <li>
               <button
