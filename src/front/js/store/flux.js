@@ -40,6 +40,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           water_tips:
             " Allow the top 1inch- 2inch of soil dry out before watering. Water from the bottom since this helps prevent water getting on the leaves. Set your African Violet in a deep saucer of water for 10 minutes. Refill the water as it is absorbed through the drip holes in the bottom of the pot. Remove any water that is still in the saucer after 10 minutes.",
           fertilizer_req: "low level",
+          fertilize_month: "every",
           fertilizer_tips:
             "African Violet plant food: Special plant food is available wherever plants are sold. In a pinch, you can use any balanced, soluble, houseplant food diluted to 1/2 the recommended strength. Feed an African Violet plant monthly when the plant is actively growing. Over-fertilizing can cause leaf tip burn, poor flower production, leaf cracks, and may even kill the plant.",
           poisonous:
@@ -69,6 +70,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           water_tips:
             " Water well and then allow the soil to thoroughly dry out before watering again. It may be 2-3 weeks before an aloe vera plants needs to be watered again.",
           fertilizer_req: "low level",
+          fertilize_month: "every",
           fertilizer_tips:
             "Feed monthly with a 10/40/10 plant food diluted to 1/2 the recommended strength.",
           poisonous:
@@ -98,6 +100,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           water_tips:
             " Allow the top 1/3 of the soil of a bamboo palm to dry out before watering. These plants like barely moist but never soggy soil.",
           fertilizer_req: "low level",
+          fertilize_month: "3",
           fertilizer_tips:
             "Feed a bamboo palm monthly in the spring and summer with a fertilizer high in nitrogen diluted to 1/2 the recommended strength. Do not fertilize a bamboo palm if it is not actively growing or if the soil is very dry.",
           poisonous:
@@ -127,6 +130,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           water_tips:
             "The soil of a caladium plant should be moist but never soggy during the growing season",
           fertilizer_req: "Medium Level",
+          fertilize_month: "0.5",
           fertilizer_tips:
             "Fertilize a caladium plant every two weeks when it is actively growing with a water-soluble plant food, high in nitrogen, diluted to at 1/2 the recommended strength. Always dilute the plant food you are giving a caladium plant or the salt in the fertilizer will burn the leaves.",
           poisonous:
@@ -156,6 +160,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           water_tips:
             "Water often enough to keep the barely soil moist, but not soggy, at all times. Never allow the soil to totally dry out.",
           fertilizer_req: "low level",
+          fertilize_month: "6",
           fertilizer_tips:
             " Less rather than more plant food is always better with palms. Feed a Cat Palm monthly in the spring and summer with a balanced plant food diluted to 1/2 the recommended strength. Fertilize only once or twice during winter and fall when the plant is not actively growing.",
           poisonous:
@@ -185,6 +190,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           water_tips:
             "Allow the top few inches of soil to dry out slightly before you water. Green leaves become soft and droopy when the soil is dry.",
           fertilizer_req: "Zero",
+          fertilize_month: false,
           fertilizer_tips:
             "Indoor mums do not need to be fertilized because they only last about six weeks.",
           poisonous:
@@ -213,6 +219,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           water_tips:
             "How much water for a croton plant: Allow the top 25%-30% of the soil to dry out before watering. The hard, leathery leaves become soft and flexible when a croton needs water",
           fertilizer_req: "Medium",
+          fertilize_month: "0.5",
           fertilizer_tips:
             "Fertilize monthly in the spring and fall and every two weeks in the summer with a balanced plant food diluted to 1/2 the recommended strength",
           poisonous:
@@ -242,6 +249,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           water_tips:
             "Jasmine plants loses leaves and leaves dry up from both too much and too little water. In the spring and summer, keep the soil moist but never soggy. The top 30% of the soil should dry out before watering",
           fertilizer_req: "Medium",
+          fertilize_month: "1",
           fertilizer_tips:
             "Feed a jasmine plant every 2-4 weeks from March-August when the plant is actively growing. Do not feed during the fall and winter when the plant is dormant. Jasmine plants prefer a water soluble plant food high in phosphorous and low in nitrogen",
           poisonous:
@@ -271,6 +279,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           water_tips:
             "Allow the soil to practically dry out and the leaves to become a little soft and flat before watering.",
           fertilizer_req: "Low",
+          fertilize_month: "3",
           fertilizer_tips:
             "Feed a few times (2-3) in spring and summer. Do not over fertilize.",
           poisonous:
@@ -300,6 +309,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           water_tips:
             "Always allow the top 50% of the soil to dry-out before watering a kalanchoe. The succulent kalanchoe plant has plump leaves that store water for long periods of time. These plants are easily over-watered which results in root-rot",
           fertilizer_req: "Low",
+          fertilize_month: "1",
           fertilizer_tips:
             "Fertilize monthly when the plant is actively growing with a fertilizer high in nitrogen diluted to 1/2 the recommended strength. If the soil is very dry, moisten the soil with plain water before fertilizing; this prevents the plant food from burning the roots.",
           poisonous: "Yes, plant and is toxic to cats and dogs.",
@@ -327,6 +337,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           water_tips:
             "Keep the marbles and pebbles in your vase covered with water at all times. Add water to the container to keep the proper level.  Once a month rinse out stem and add replace fresh water ",
           fertilizer_req: "Low",
+          fertilize_month: "1",
           fertilizer_tips:
             "Fertilize monthly in the spring and summer with an African Violet plant food diluted to 1/2 the recommended strength",
           poisonous:
@@ -356,6 +367,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           water_tips:
             "Wait until leaves get soft and droop a little before watering. Allow the top 50% of the soil to dry out before watering",
           fertilizer_req: "Low",
+          fertilize_month: "2",
           fertilizer_tips:
             " Feed every other month when the plant is actively growing with a balanced plant food diluted to 1/2 the recommended strength",
           poisonous:
@@ -385,6 +397,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           water_tips:
             " Allow the top 50-70% of the soil to dry out before watering. During the warm months you may need to water every 7-14 days; in winter, only every three or four weeks.",
           fertilizer_req: "Moderate",
+          fertilize_month: "1",
           fertilizer_tips:
             "Fertilize monthly during the spring and summer with a basic houseplant food diluted to 1/2 the recommended strength.",
           poisonous: "No, A Ponytail Palm is a non- 'poisonous' plant",
@@ -413,6 +426,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           water_tips:
             " Be sure to check the soil every few days. Allow the top 1 inch (2.5cm) of soil to dry out before watering. During the winter, when a miniature rose bush plant is resting, keep the soil barely moist.",
           fertilizer_req: "Moderate",
+          fertilize_month: "0.5",
           fertilizer_tips:
             "Feed every two weeks in the spring and summer when the plant is actively growing. Use a fertilizer that is high in phosphorous (5-10-5) at ½ the recommended strength.",
           poisonous:
@@ -441,6 +455,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           water_tips:
             " Allow the top 50% of the soil to dry out before you water.  The green color in the leaves starts to fade when the soil is dry.",
           fertilizer_req: "Low",
+          fertilize_month: "1",
           fertilizer_tips:
             "Feed monthly with a balanced plant food diluted to 1/2 the recommended strength. Spider plants need food only when they are actively growing",
           poisonous: "No, plant is not toxic to dogs, cats, or small children.",
@@ -468,6 +483,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           water_tips:
             "If the top 2 inch- 3inch of soil in the Strawberry Begonia Plant are still moist, do not water. A Strawberry Begonia Plant needs less water in the fall and winter when it is resting",
           fertilizer_req: "Low",
+          fertilize_month: "1",
           fertilizer_tips:
             "Fertilize a Strawberry begonia Plant monthly during the spring and summer when the plant is actively growing with a balanced indoor plant food at 1/2 the recommended strength. Do not fertilize a Strawberry Begonia during the fall and winter.",
           poisonous:
