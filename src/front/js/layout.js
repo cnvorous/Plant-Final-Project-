@@ -8,6 +8,7 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { MyPlants } from "./pages/MyPlants";
 import { CreateAccount } from "./pages/CreateAccount";
 import { CreateFavorites } from "./pages/CreateFavorites";
 import { SearchPlantData } from "./pages/SearchPlantData";
@@ -42,15 +43,24 @@ const Layout = () => {
             <Route exact path="/forgotpassword" component={ForgotPassword} />
             <Route exact path="/passwordreset" component={PasswordReset} />
             <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/myplants" component={MyPlants} />
             <Route exact path="/editprofile" component={EditProfile} />
             <Route exact path="/createfavorites" component={CreateFavorites} />
-            <Route exact path="/listfavorites/:listname" component={ListFavorites} />
+            <Route
+              exact
+              path="/listfavorites/:listname"
+              component={ListFavorites}
+            />
             <Route exact path="/searchplantdata" component={SearchPlantData} />
-           
+
             <Route exact path="/singleplantview" component={SinglePlantView} />
             <Route exact path="/growthgallery" component={GrowthGallery} />
             <Route exact path="/calendar" component={CalendarOverview} />
-            <Route exact path="/greenthumbgallery" component={GreenThumbGallery} />
+            <Route
+              exact
+              path="/greenthumbgallery"
+              component={GreenThumbGallery}
+            />
             <Route exact path="/plantuses" component={PlantUses} />
             <Route exact path="/single/:theid" component={Single} />
 

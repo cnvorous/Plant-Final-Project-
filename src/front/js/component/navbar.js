@@ -31,6 +31,9 @@ export const Navbar = () => {
               <span className="nav-link">Profile</span>
             </Link>
           </li>
+          <Link to="/myplants">
+            <span className="nav-link">MyPlants</span>
+          </Link>
           <li className="nav-item">
             <Link to="/growthgallery">
               <span className="nav-link">Gallery</span>

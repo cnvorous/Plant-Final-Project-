@@ -479,7 +479,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         },
       ],
       weatherInfo: {},
-      favoritesList: ["Blooming", "Small"],
+      favoritesList: ["MyPlants", "Blooming", "Small"],
       favoritePlants: [{ id: 33, plant: "African Violet" }],
     },
 
