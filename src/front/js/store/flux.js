@@ -5,6 +5,24 @@ const getState = ({ getStore, getActions, setStore }) => {
     store: {
       message: null,
       url: "https://3001-cnvorous-plantfinalproje-08ggkbayuri.ws-us39a.gitpod.io/",
+      data: [
+        {
+          text: "Website Re-Design Plan",
+          startDate: new Date("2022-04-26T16:30:00.000Z"),
+          endDate: new Date("2022-04-26T18:30:00.000Z"),
+        },
+        {
+          text: "Book Flights to San Fran for Sales Trip",
+          startDate: new Date("2022-04-26T00:00:00.000Z"),
+          endDate: new Date("2022-04-26T24:00:00.000Z"),
+          allDay: true,
+        },
+        {
+          text: "Launch New Website",
+          startDate: new Date("2022-04-30T19:20:00.000Z"),
+          endDate: new Date("202-04-30T21:00:00.000Z"),
+        },
+      ],
       demo: [
         {
           title: "FIRST",
