@@ -83,11 +83,12 @@ def post_favorite():
 
     return jsonify(favorite_list), 200
 
-@api.route('/favorites/<int:id>', methods=['DELETE'])
-def delete_favorite(id):
-    favorite= Favorites.query.get(id)
+@api.route('/favorites/<int:id>/<name>', methods=['DELETE'])
+def delete_favorite(id, name):
+    favorite = Favorites.query.filter_by(name=name, plant_id=id).first()
     # if favorite is None:
     #     raise APIException("Favorite List not found", status_code=404)
+    print(favorite)
 
     db.session.delete(favorite)
     db.session.commit()

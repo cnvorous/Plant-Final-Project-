@@ -7,7 +7,7 @@ import { Context } from "../store/appContext";
 export const MyPlants = (props) => {
   const { store, actions } = useContext(Context);
   const params = useParams();
-  const listname = params.listname;
+  const listname = "MyPlants";
   const favoritesObject = store.favoritePlants.filter(
     (item) => item.category_name == "MyPlants"
   );

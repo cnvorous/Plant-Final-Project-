@@ -14,7 +14,7 @@ export const CalendarOverview = () => {
     <div className="container demo-container">
       <Scheduler
         timeZone="America/Los_Angeles"
-        dataSource={store.data}
+        dataSource={store.calendarEntries}
         views={views}
         defaultCurrentView="week"
         defaultCurrentDate={currentDate}

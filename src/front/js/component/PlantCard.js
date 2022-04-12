@@ -27,41 +27,39 @@ export const PlantCard = (props) => {
                   ? "fas fa-heart heart text-danger"
                   : "fas fa-heart heart"
               }
-            >
-              {props.onDelete ? (
-                <div className="button1 nav-item dropdown">
-                  This plant is in favorites
-                </div>
-              ) : (
-                <div className="button1 nav-item dropdown">
-                  <a
-                    className="nav-link  dropdown-toggle"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Send to which favs list:
-                  </a>
-                  <ul
-                    className="dropdown-menu"
-                    aria-labelledby="navbarDropdown"
-                  >
-                    {store.favoritesList.map((list, index) => {
-                      return (
-                        <li
-                          key={index}
-                          onClick={() => {
-                            actions.addFavoritePlantItem(list, props.plants);
-                          }}
-                        >
-                          {list}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              )}
-            </i>
+            ></i>
+            {props.onDelete ? (
+              <div className="button1 nav-item dropdown">
+                This plant is in favorites
+              </div>
+            ) : (
+              <div className="button1 nav-item dropdown">
+                <a
+                  className="nav-link  dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Send to which favs list:
+                </a>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  {store.favoritesList.map((list, index) => {
+                    return (
+                      <li
+                        key={index}
+                        onClick={() => {
+                          if (list == "MyPlants")
+                            actions.addMyPlant(list, props.plants);
+                          else actions.addFavoritePlantItem(list, props.plants);
+                        }}
+                      >
+                        {list}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            )}
           </button>
         </div>
         <img
@@ -104,7 +102,10 @@ export const PlantCard = (props) => {
             <button
               className="btn btn-outline-danger"
               onClick={() => {
-                actions.removeFavoritePlantItem(props.plants.id);
+                actions.removeFavoritePlantItem(
+                  props.listName,
+                  props.plants.id
+                );
               }}
             >
               <i className="far fa-trash-alt"></i>

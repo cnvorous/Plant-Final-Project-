@@ -5,24 +5,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     store: {
       message: null,
       url: "https://3001-cnvorous-plantfinalproje-08ggkbayuri.ws-us39a.gitpod.io/",
-      data: [
-        {
-          text: "Website Re-Design Plan",
-          startDate: new Date("2022-04-26T16:30:00.000Z"),
-          endDate: new Date("2022-04-26T18:30:00.000Z"),
-        },
-        {
-          text: "Book Flights to San Fran for Sales Trip",
-          startDate: new Date("2022-04-26T19:00:00.000Z"),
-          endDate: new Date("2022-04-26T20:00:00.000Z"),
-          allDay: true,
-        },
-        {
-          text: "Launch New Website",
-          startDate: new Date("2022-04-30T19:20:00.000Z"),
-          endDate: new Date("2021-04-30T21:00:00.000Z"),
-        },
-      ],
+      calendarEntries: [],
       demo: [
         {
           title: "FIRST",
@@ -624,20 +607,32 @@ const getState = ({ getStore, getActions, setStore }) => {
           .catch((err) => console.log(err));
       },
 
-      // addFavoritePlantItem: (listName, plant) => {
-      // 	const newList = getStore().favoritesList.map((item, index) => {
-      // 		let found = item.favorites.find((object) => object.commonName == plant.commonName)
-      // 		if (item.name == listName && !found) {
-      // 			item.favorites = [...item.favorites, plant]
-      // 		}
-      // 		return item
-      // 	})
-      // 	console.log(newList);
-      // 	setStore({ favoritesList: newList });
-      // },
+      addMyPlant: (list, plant) => {
+        console.log("AddMyPlant: ", plant);
+        let dataArray = getStore().calendarEntries;
 
-      removeFavoritePlantItem: (plantId) => {
-        fetch(getStore().url + "api/favorites/" + plantId, {
+        dataArray.push({
+          text: `Water ${plant.common_name}`,
+          startDate: new Date("2022-04-15T16:30:00.000Z"),
+          endDate: new Date("2022-04-15T18:30:00.000Z"),
+          allDay: true,
+          recurrenceRule: "FREQ=WEEKLY;BYDAY=MO;WKST=TU;INTERVAL=2;COUNT=2",
+        });
+
+        dataArray.push({
+          text: `Fertilize ${plant.common_name}`,
+          startDate: new Date("2022-04-15T16:30:00.000Z"),
+          endDate: new Date("2022-04-15T18:30:00.000Z"),
+          allDay: true,
+          recurrenceRule: "FREQ=MONTHLY;BYMONTHDAY=1;COUNT=10",
+        });
+        setStore({ calendarEntries: dataArray });
+
+        getActions().addFavoritePlantItem(list, plant);
+      },
+
+      removeFavoritePlantItem: (listname, plantId) => {
+        fetch(getStore().url + "api/favorites/" + plantId + "/" + listname, {
           method: "DELETE",
         })
           .then((response) => response.json())

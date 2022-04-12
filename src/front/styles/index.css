@@ -236,7 +236,8 @@ h1 {
 }
 
 .heart-btn {
-  background-color: darkgreen;
+  background-color: green;
+  color: white;
 }
 
 .dropdown {
@@ -484,7 +485,7 @@ p {
 
 .li-btn {
   color: rgb(10, 135, 10);
-  background-color: #73f08a;
+  background-color: whitesmoke;
   box-shadow: -5px 5px #525d5458;
   margin: 10px 25px;
   font-size: 20px;
@@ -715,4 +716,9 @@ em {
 
 .dx-theme-material .name h2 {
   font-size: 28px;
+}
+
+.dx-scheduler-appointment-content {
+  background-color: lightgreen;
+  color: darkgreen;
 }
