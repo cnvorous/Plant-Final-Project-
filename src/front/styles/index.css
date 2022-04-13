@@ -324,6 +324,7 @@ p.card-text {
 .card-img {
   width: 350px;
   height: 500px;
+  border: #a0de21 3px double;
 }
 
 /************* below is create ACCOUNT page Css***************/

@@ -14,7 +14,7 @@ import { CreateFavorites } from "./pages/CreateFavorites";
 import { SearchPlantData } from "./pages/SearchPlantData";
 import { SinglePlantView } from "./pages/SinglePlantView";
 import { GrowthGallery } from "./pages/GrowthGallery";
-// import { CalendarOverview } from "./pages/Calendar";
+import { CalendarOverview } from "./pages/Calendar";
 import { GreenThumbGallery } from "./pages/GreenThumbGallery";
 import { EditProfile } from "./pages/EditProfile";
 import { Dashboard } from "./pages/Dashboard";
@@ -55,7 +55,7 @@ const Layout = () => {
 
             <Route exact path="/singleplantview" component={SinglePlantView} />
             <Route exact path="/growthgallery" component={GrowthGallery} />
-            {/* <Route exact path="/calendar" component={CalendarOverview} /> */}
+            <Route exact path="/calendar" component={CalendarOverview} />
             <Route
               exact
               path="/greenthumbgallery"
