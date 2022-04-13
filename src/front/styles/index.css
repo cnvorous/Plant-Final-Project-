@@ -214,10 +214,18 @@ button {
 /* .hide {
   display: none;
 } */
+.data-search {
+  width: 300px;
+  height: 75px;
+  margin: 0px 0px 0px 0px;
+}
 .search-button {
   background-color: rgb(241, 207, 120);
   color: darkgreen;
   font-weight: bold;
+  border-radius: 10%;
+  height: 75px;
+  padding-top: 20px;
 }
 .search-button:hover {
   background-color: rgb(235, 183, 52);
@@ -227,9 +235,13 @@ button {
 
 .clear-btn {
   background-color: rgb(205, 249, 251);
-  color: gray;
-  min-height: 100%;
-  padding: 20px;
+  color: rgb(33, 158, 100);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 23px;
+  border-radius: 10%;
+  height: 75px;
+  border: none;
 }
 .clear-btn:hover {
   background-color: rgb(253, 215, 221);
@@ -237,26 +249,36 @@ button {
 }
 
 .plant-div {
-  box-shadow: inset 2px 2px 5px #c1c9bb, inset -5px -5px 10px #c1c9bb;
+  box-shadow: inset 2px 2px 5px #c9ebaf, inset -5px -5px 10px #c9ebaf;
   box-sizing: border-box;
   background-color: #ccdac2;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.text-success {
+  font-size: 25px;
 }
 
 form {
-  border: #a0de21 dotted;
-  /* background: linear-gradient(to bottom, #f9f3c8, rgba(255, 0, 0, 0)); */
+  /* border: 5px #f7eb87 dotted; */
+  width: 1125px;
+  margin-left: 125px;
+  background: linear-gradient(to bottom, #f5fdd0, rgba(195, 247, 152, 0));
   /* height: fit-content; */
 }
 
 .filter-box {
-  border: red dotted;
+  /* border: red dotted; */
   width: 275px;
 }
 .form-check-input {
-  border: yellow dotted;
+  border: rgb(202, 245, 186) double;
 }
 .form-check-label {
-  border: solid rgb(0, 136, 255);
+  color: darkgreen;
+  font-size: 15px;
+  /* border: solid rgb(0, 136, 255); */
 }
 
 /************* below is PlantCard Compontent Css***************/

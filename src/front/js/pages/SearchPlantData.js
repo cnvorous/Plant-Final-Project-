@@ -141,7 +141,7 @@ export const SearchPlantData = (props) => {
     <div className="plant-search-container">
       <div className="input-group mb-3 w-50 p-3 mx-auto">
         <span
-          className="search-button input-group-text"
+          className=" btn search-button input-group-text"
           id="inputGroup-sizing-default"
         >
           Plant Search
@@ -162,9 +162,9 @@ export const SearchPlantData = (props) => {
             searchHash(input);
           }}
         />
-        <button className="clear-btn" onClick={() => searchHash("")}>
+        <span className="clear-btn btn" onClick={() => searchHash("")}>
           Clear Results
-        </button>
+        </span>
       </div>
       <p className="text-success text-center mb-2">Filtering Options:</p>{" "}
       <form className="rounded d-flex flex-row flex-wrap">
