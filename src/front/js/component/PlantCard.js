@@ -17,7 +17,7 @@ export const PlantCard = (props) => {
     <div className="plant-card-container mb-3">
       <div
         className="card plant-card border-primary"
-        style={{ width: "15rem" }}
+        style={{ width: "15rem" }} f
       >
         <div className="card-header text-end">
           <button className="heart-btn btn-sm">
@@ -29,18 +29,18 @@ export const PlantCard = (props) => {
               }
             ></i>
             {props.onDelete ? (
-              <div className="button1 nav-item dropdown">
+              <div className="dropdown">
                 This plant is in favorites
               </div>
             ) : (
-              <div className="button1 nav-item dropdown">
+              <div className="dropdown">
                 <a
-                  className="nav-link  dropdown-toggle"
+                  className="dropdown-toggle"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Send to which favs list:
+                  Send to which favorites list:
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   {store.favoritesList.map((list, index) => {
@@ -69,7 +69,6 @@ export const PlantCard = (props) => {
         />
         <div className="card-body">
           <h5 className="card-title">
-            Name:<br></br>
             {props.plants.common_name}
           </h5>
           <p className="card-text">
@@ -90,14 +89,12 @@ export const PlantCard = (props) => {
           </p>
           <Link to={{ pathname: "/singleplantview", state: props.plants }}>
             {" "}
-            {/* passing props plant from plant card to single view*/}
-            <span className="search-button btn btn-md" role="button">
+            <span className="search-button btn btn-md plant-details" role="button">
               Plant Details
             </span>
           </Link>
         </div>
         <div className="card-footer text-muted">
-          Send Card via Email or Text
           {props.onDelete && (
             <button
               className="btn btn-outline-danger"
