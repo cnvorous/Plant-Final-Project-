@@ -27,13 +27,13 @@ export const WeatherPage = () => {
 					}}>Search Local Weather
 					</button>
 				</div>
-				<div className="weather-ternary-div">
+				<div className="weather-item">
 					{store.weatherInfo.list &&
-						<div className="ternary-weather-output">
-							<h2>City Name: {store.weatherInfo.city.name}</h2>
-							<p>Current Weather: {store.weatherInfo.list[0].weather[0].description}</p>
-							<p>Max Temp: {convertDegrees(store.weatherInfo.list[0].temp.max)}</p>
-							<p>Min Temp: {convertDegrees(store.weatherInfo.list[0].temp.min)}</p>
+						<div>
+							<p className="weather-item">City Name: {store.weatherInfo.city.name}</p>
+							<p className="weather-item">Max Temp: {convertDegrees(store.weatherInfo.list[0].temp.max)} ℉ </p>
+							<p className="weather-item">Min Temp: {convertDegrees(store.weatherInfo.list[0].temp.min)} ℉</p>
+							<p className="weather-item">Current Weather: {store.weatherInfo.list[0].weather[0].description}</p>
 						</div>}
 				</div>
 
