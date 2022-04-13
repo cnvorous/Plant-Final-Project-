@@ -63,7 +63,6 @@ export const SearchPlantData = (props) => {
       name: "Water Requirments: High",
       value: "high level",
     },
-
   ]);
 
   const [activeFilter, setActiveFilter] = useState([]);
@@ -163,13 +162,12 @@ export const SearchPlantData = (props) => {
             searchHash(input);
           }}
         />
-        <button className="clear-btn" onClick={() => searchHash("")}>
+        <span className="btn clear-btn" onClick={() => searchHash("")}>
           Clear Results
-        </button>
+        </span>
       </div>
       <p className="text-success text-center mb-2">Filtering Options:</p>{" "}
-      <form
-        className="rounded d-flex flex-row flex-wrap">
+      <form className="rounded d-flex flex-row flex-wrap">
         {filterList.map((filter) => (
           <div
             className="form-check filter-box d-flex flex-row flex-wrap"
@@ -191,8 +189,7 @@ export const SearchPlantData = (props) => {
             </label>
           </div>
         ))}
-      </form>
-      {" "}
+      </form>{" "}
       <div className="m-5 p-4 bg-opacity-10 plant-div d-sm-flex flex-wrap justify-content-sm-evenly">
         {filteredList.map((plant, index) => {
           return <PlantCard plants={plant} key={index} />;

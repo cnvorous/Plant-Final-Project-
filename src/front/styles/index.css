@@ -1,3 +1,7 @@
+body {
+  font-family: "Helvetica Neue", "Segoe UI", helvetica, verdana, sans-serif !important;
+}
+
 /********************* below is nav bar compontent Css*************************/
 .navbar {
   font-size: 20px;
@@ -251,6 +255,9 @@ form {
 
 .clear-btn {
   background-color: rgb(205, 249, 251);
+  color: gray;
+  min-height: 100%;
+  padding: 20px;
 }
 .clear-btn:hover {
   background-color: rgb(253, 215, 221);
@@ -275,6 +282,8 @@ form {
   color: white;
   border: yellow double;
   margin: auto;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px gray;
 }
 .heart-btn .heart:hover {
   color: red;
@@ -294,6 +303,20 @@ form {
   text-decoration: none;
 }
 
+.dropdown-menu {
+  box-shadow: 2px 2px 12px gray;
+  text-align: center;
+}
+
+.dropdown-menu li {
+  color: darkgreen;
+  margin: 0 auto;
+}
+
+.dropdown-menu li:hover {
+  background-color: lightgrey;
+  box-shadow: 0 1px 5px gray;
+}
 .card-header {
   border: red dotted;
 }
@@ -355,6 +378,10 @@ input {
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
   box-sizing: border-box;
   transition: all 0.2s ease-in-out;
+}
+
+.input-group.mb-3 {
+  min-height: 90px;
 }
 
 input:focus {
@@ -762,4 +789,9 @@ em {
 .dx-scheduler-appointment-content {
   background-color: lightgreen;
   color: darkgreen;
+}
+
+.dx-theme-generic-typography a {
+  color: whitesmoke;
+  text-decoration: none;
 }
