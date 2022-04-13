@@ -17,10 +17,11 @@ export const PlantCard = (props) => {
     <div className="plant-card-container mb-3">
       <div
         className="card plant-card border-primary"
-        style={{ width: "15rem" }} f
+        style={{ width: "15rem" }}
+        f
       >
         <div className="card-header text-end">
-          <button className="heart-btn btn-sm">
+          <button className="btn heart-btn btn-sm">
             <i
               className={
                 props.onDelete
@@ -29,9 +30,7 @@ export const PlantCard = (props) => {
               }
             ></i>
             {props.onDelete ? (
-              <div className="dropdown">
-                This plant is in favorites
-              </div>
+              <div className="dropdown">This plant is in favorites</div>
             ) : (
               <div className="dropdown">
                 <a
@@ -68,9 +67,7 @@ export const PlantCard = (props) => {
           alt="..."
         />
         <div className="card-body">
-          <h5 className="card-title">
-            {props.plants.common_name}
-          </h5>
+          <h5 className="card-title">{props.plants.common_name}</h5>
           <p className="card-text">
             Size:<br></br>
             {props.plants.size}
@@ -89,7 +86,10 @@ export const PlantCard = (props) => {
           </p>
           <Link to={{ pathname: "/singleplantview", state: props.plants }}>
             {" "}
-            <span className="search-button btn btn-md plant-details" role="button">
+            <span
+              className="search-button btn btn-md plant-details"
+              role="button"
+            >
               Plant Details
             </span>
           </Link>
