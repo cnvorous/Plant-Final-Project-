@@ -45,10 +45,10 @@ body {
 .footer {
   background-image: url("https://smartpots.com/wp-content/uploads/2017/02/Tropical-Plant-Blog.jpeg");
   background-size: cover;
-  /* background: rgba(4, 135, 94, 0.815); */
   height: 75px;
   /* transform: rotate(-30deg); */
   /* transform: scaleX(-1); */
+  /* background: rgba(4, 135, 94, 0.815); */
 }
 
 .footer-icon {
@@ -60,27 +60,39 @@ body {
 }
 
 /********************* below is Landing Page Css*************************/
-.main-text {
-  color: brown;
+.landing-body {
+  background-color: #cdd6c6;
+  border: #57bee4 dotted;
+  height: 600px;
 }
+
+.create-link {
+  color: #0ef634;
+  text-shadow: 1px 0px black;
+  margin-left: 30px;
+}
+
+.forgot-link {
+  color: #fc4ccd;
+  text-shadow: -1px 0px black;
+  margin-left: 45px;
+}
+
 .create-link:hover {
   color: rgba(8, 235, 247, 0.842);
-  background-color: rgba(245, 245, 220, 0.411);
   font-weight: 500;
 }
 .forgot-link:hover {
-  color: rgba(243, 11, 11, 0.842);
-  background-color: rgba(245, 245, 220, 0.411);
+  color: rgba(250, 76, 76, 0.842);
   font-weight: 500;
+}
+
+label {
+  color: #cdd6c6;
+  margin-left: 25px;
 }
 .top-banner {
   height: 200px;
-  /* background-image: url(https://thumbs.dreamstime.com/z/vector-light-grey-succulent-plant-texture-drawing-seamless-pattern-background-great-subtle-botanical-modern-backgrounds-fabric-90904464.jpg);
-  background-repeat: repeat;
-  background-size: cover;
-  z-index: -1;
-  opacity: 1; */
-  background-color: white;
 }
 
 .website-name {
@@ -109,28 +121,21 @@ body {
   margin-right: 25px;
 }
 .heading-text-2 {
-  color: darkgreen;
-  font-size: 25px;
-  font-family: "Alegreya Sans SC", sans-serif;
-  font-weight: bold;
-  text-align: center;
-}
-.landing-body {
-  /* background-image: url(https://thumbs.dreamstime.com/z/vector-light-grey-succulent-plant-texture-drawing-seamless-pattern-background-great-subtle-botanical-modern-backgrounds-fabric-90904464.jpg);
-  background-repeat: repeat;
-  background-size: cover;
-  z-index: -1;
-  opacity: 1; */
-  background-color: rgba(213, 248, 213, 0.223);
+  color: rgb(57, 133, 89);
+  text-shadow: 1px 1px rgb(204, 247, 207), 1px 1px rgb(19, 20, 19);
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 0px 0px 10px 150px;
 }
 
 .icon-image-1 {
   background-image: url("https://images.pexels.com/photos/1463530/pexels-photo-1463530.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
   height: 300px;
   width: 300px;
-  border: #ff3030 dotted;
-  margin-right: 10px;
+  margin: 15px 10px 0px 0px;
   background-size: cover;
+  border-radius: 5%;
+  /* border: #ff3030 dotted; */
 }
 
 .icon-image-2 {
@@ -138,9 +143,10 @@ body {
   background-image: url("https://www.clearwaycommunitysolar.com/wp-content/uploads/2019/03/iStock-956366756-1024x683.jpg");
   height: 300px;
   width: 300px;
-  border: #30ff52 dotted;
-  margin: 0px 10px;
+  margin: 15px 10px 0px 10px;
   background-size: cover;
+  border-radius: 5%;
+  /* border: #30ff52 dotted; */
 }
 
 .icon-image-3 {
@@ -148,9 +154,10 @@ body {
   background-image: url("https://balconygardenweb-lhnfx0beomqvnhspx.netdna-ssl.com/wp-content/uploads/2021/04/19-Best-Plant-Identification-Apps-for-2021-2.jpg");
   height: 300px;
   width: 300px;
-  border: #b82f7a dotted;
-  margin-left: 10px;
+  margin: 15px 0px 0px 10px;
   background-size: cover;
+  border-radius: 5%;
+  /* border: #b82f7a dotted; */
 }
 
 .icon-image-1:hover {
@@ -167,54 +174,46 @@ body {
 }
 
 .image-text {
-  color: white;
+  color: rgb(245, 246, 244);
   opacity: 0;
-  /* font-size: 17px;
-  transition: 0.5s ease;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center; */
+  background: rgba(149, 145, 145, 0.644);
+  border-radius: 5%;
+  padding: 5px;
+  /* font-size: 17px; */
+  /* transition: 0.5s ease; */
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  /* -ms-transform: translate(-50%, -50%); */
+  /* text-align: center; */
 }
 
 .image-text:hover {
-  color: white;
-  text-shadow: 2px 2px rgb(22, 22, 22);
+  color: rgb(247, 208, 11);
+  text-shadow: 1px 1px rgb(22, 22, 22), -1px -1px rgb(145, 77, 4);
   font-size: 17px;
   font-weight: bold;
   opacity: 1;
+  margin: 30px 0px;
 }
 
 button {
   margin: 15px;
 }
 
-.bottom-banner {
-  height: 250px;
-  background-color: rgba(213, 248, 213, 0.521);
-  border: 2px solid darkgreen;
-}
-
-/********** below is ListFavorites page Css**************/
-h1 {
-  font-weight: bolder;
-  font-size: 40px;
-  color: rgb(59, 128, 59);
-  text-shadow: 1px 2px lightgreen;
-}
-.favs-list {
-  height: 600px;
-  background-color: aliceblue;
-}
-
 /************* below is SearchPlantData page Css***************/
 
-.hide {
-  display: none;
+.plant-search-container {
+  background: #cdd6c6;
+  border: #b82f7a dotted;
 }
-
+.main-text {
+  color: brown;
+}
+/* .hide {
+  display: none;
+} */
 .search-button {
   background-color: rgb(241, 207, 120);
   color: darkgreen;
@@ -226,8 +225,15 @@ h1 {
   font-weight: bolder;
 }
 
-.plant-search-container {
-  background: #cdd6c6;
+.clear-btn {
+  background-color: rgb(205, 249, 251);
+  color: gray;
+  min-height: 100%;
+  padding: 20px;
+}
+.clear-btn:hover {
+  background-color: rgb(253, 215, 221);
+  color: rgb(244, 7, 7);
 }
 
 .plant-div {
@@ -251,17 +257,6 @@ form {
 }
 .form-check-label {
   border: solid rgb(0, 136, 255);
-}
-
-.clear-btn {
-  background-color: rgb(205, 249, 251);
-  color: gray;
-  min-height: 100%;
-  padding: 20px;
-}
-.clear-btn:hover {
-  background-color: rgb(253, 215, 221);
-  color: rgb(244, 7, 7);
 }
 
 /************* below is PlantCard Compontent Css***************/
@@ -795,4 +790,16 @@ em {
 .dx-theme-generic-typography a {
   color: whitesmoke;
   text-decoration: none;
+}
+
+/********** below is ListFavorites page Css**************/
+h1 {
+  font-weight: bolder;
+  font-size: 40px;
+  color: rgb(59, 128, 59);
+  text-shadow: 1px 2px lightgreen;
+}
+.favs-list {
+  height: 600px;
+  background-color: aliceblue;
 }

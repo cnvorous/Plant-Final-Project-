@@ -162,9 +162,9 @@ export const SearchPlantData = (props) => {
             searchHash(input);
           }}
         />
-        <span className="btn clear-btn" onClick={() => searchHash("")}>
+        <button className="clear-btn" onClick={() => searchHash("")}>
           Clear Results
-        </span>
+        </button>
       </div>
       <p className="text-success text-center mb-2">Filtering Options:</p>{" "}
       <form className="rounded d-flex flex-row flex-wrap">

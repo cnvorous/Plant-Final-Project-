@@ -18,29 +18,14 @@ export const SinglePlantView = props => {
          <div className="d-flex flex-column plant-info">
             <div className="col">
                <h1 className="card-text ">{dataFromComponent.common_name}</h1> {/*props.location.state.name was from class*/}
-
-
                <p className="card-text">Seasonal: {dataFromComponent.seasonal}</p>{/*{dataFromLink.seasonal/ */}
-
-
                <p className="card-text">watering: {dataFromComponent.water_req}</p>
-
-
                <p className="card-text">Light Levels: {dataFromComponent.light_exposure}</p>
-
-
                <p className="card-text">Height: {dataFromComponent.height}</p>
-
                <p className="card-text">size: {dataFromComponent.size}</p>
-
-
                <p className="card-text">Blooming: {dataFromComponent.blooms}</p>
-
                <p className="card-text">Temperature: {dataFromComponent.temperature}</p>
-
-
                <p className="card-text">Fertilizer: {dataFromComponent.fertilizer_req}</p>
-
             </div>
 
             <p>Description: {dataFromComponent.plant_details}</p>

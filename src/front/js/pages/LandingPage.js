@@ -16,7 +16,7 @@ export const LandingPage = () => {
   }, [store.profile]);
 
   return (
-    <div>
+    <div className="landing-body">
       <div className="top-banner d-flex justify-content-center">
         <div className="top-banner-box1 m-auto">
           <div className="text-center">
@@ -36,7 +36,7 @@ export const LandingPage = () => {
             {profile.length > 0 ? (
               <div>
                 {store.profile.map((item, index) => {
-                  return <span>Logged-in as:{item.email}</span>;
+                  return <span>Logged-in as: {item.email}</span>;
                 })}
               </div> //need the colon for tenr. expression
             ) : (
@@ -91,11 +91,11 @@ export const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="landing-body m-3">
-        <h4 className="heading-text-2">
+      <div className="mb-5">
+        <span className="heading-text-2">
           Our site is dedicated to helping users find a streamline way of
           keeping your plants not just healthy but thriving.
-        </h4>
+        </span>
         <div className="d-flex justify-content-center">
           <div className="row row-cols-3">
             <div className="col icon-image-1">
