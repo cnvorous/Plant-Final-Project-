@@ -24,8 +24,8 @@ export const CreateFavorites = (props) => {
 
   return (
     <div className="fav-body">
-      <div className="create-favs-container">
-        <h5>Favorite Plants </h5>
+      <div className="create-favs-container text-center">
+        <span className="fav-title">Favorite Plants </span>
         <div className="favs-bar text-center">
           <input
             className="favorites-input"

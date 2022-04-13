@@ -14,7 +14,7 @@ export const PlantCard = (props) => {
   // console.log(props.plants);
 
   return (
-    <div className="plant-card-container mb-3">
+    <div className="plant-card-container">
       <div
         className="card plant-card border-primary"
         style={{ width: "15rem" }}
