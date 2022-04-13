@@ -213,9 +213,13 @@ h1 {
 
 .search-button {
   background-color: rgb(241, 207, 120);
+  color: darkgreen;
+  font-weight: bold;
 }
 .search-button:hover {
-  background-color: rgb(214, 159, 21);
+  background-color: rgb(235, 183, 52);
+  color: white;
+  font-weight: bolder;
 }
 
 .plant-search-container {
@@ -223,74 +227,111 @@ h1 {
 }
 
 .plant-div {
-  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+  box-shadow: inset 2px 2px 5px #c1c9bb, inset -5px -5px 10px #c1c9bb;
   box-sizing: border-box;
-  border: red dotted;
+  background-color: #ccdac2;
 }
 
+form {
+  border: #a0de21 dotted;
+  /* background: linear-gradient(to bottom, #f9f3c8, rgba(255, 0, 0, 0)); */
+  /* height: fit-content; */
+}
+
+.filter-box {
+  border: red dotted;
+  width: 275px;
+}
+.form-check-input {
+  border: yellow dotted;
+}
+.form-check-label {
+  border: solid rgb(0, 136, 255);
+}
+
+.clear-btn {
+  background-color: rgb(205, 249, 251);
+}
+.clear-btn:hover {
+  background-color: rgb(253, 215, 221);
+  color: rgb(244, 7, 7);
+}
+
+/************* below is PlantCard Compontent Css***************/
+.plant-card-img {
+  width: 238px;
+  height: 175px;
+  background-size: cover;
+}
+.plant-details {
+  margin-left: 35px;
+}
 .heart {
   color: white;
-}
-.heart:hover {
-  color: red;
 }
 
 .heart-btn {
   background-color: green;
   color: white;
+  border: yellow double;
+  margin: auto;
 }
-
+.heart-btn .heart:hover {
+  color: red;
+  margin: auto;
+}
 .dropdown {
-  background-color: darkgreen;
-}
-
-/* li + Link {    ---this css not working 
-  color: white;   
-} */
-
-/**** this is not giving highlight effect on hoover checkbox
-  .col:hover input ~ .onclick{
-  background-color: yellow;
-}*/
-
-/************* below is PlantCard Compontent Css***************/
-
-.card-text::first-line {
-  color: darkgreen;
-  font-weight: bolder;
-  font-size: 25px;
-  text-decoration: underline;
-}
-
-p.card-text {
-  color: darkblue;
-  font-size: 20px;
-}
-
-.card-title::first-line {
-  color: darkgreen;
-  font-weight: bolder;
-  font-size: 25px;
-  text-decoration: underline;
-}
-
-h5.card-title {
-  color: darkblue;
-  font-size: 20px;
+  background-color: green;
 }
 
 .dropdown-toggle {
   color: white;
+  text-decoration: none;
 }
-.nav-item:hover {
+
+.dropdown-toggle:hover {
+  color: rgb(154, 255, 113);
+  text-decoration: none;
+}
+
+.card-header {
+  border: red dotted;
+}
+
+/* .nav-item:hover {
   background-color: darkgreen;
+} */
+
+.card-text::first-line {
+  color: darkgreen;
+  font-weight: bolder;
+  font-size: 15px;
+  text-decoration: underline;
 }
+
+p.card-text {
+  color: brown;
+  font-size: 15px;
+}
+
+.card-title {
+  color: rgb(232, 194, 6);
+  font-size: 25px;
+  text-shadow: 2px 1px #031c13, -1px 1px black;
+}
+
+/************* below is singlplant view  page Css***************/
+.card-img {
+  width: 350px;
+  height: 500px;
+}
+
 /************* below is create ACCOUNT page Css***************/
 .create-account-div {
   width: 100%;
   height: 100%;
   /* background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/high-angle-view-of-variety-of-succulent-plants-royalty-free-image-1584462052.jpg"); */
-  background-color: #ebecf0;
+  background-color: #cdd6c6;
   background-repeat: no-repeat;
   background-position: center;
   /* background: #092756;
