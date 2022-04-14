@@ -225,9 +225,7 @@ button {
 .main-text {
   color: brown;
 }
-/* .hide {
-  display: none;
-} */
+
 .data-search {
   width: 250px;
   height: 50px;
@@ -248,8 +246,8 @@ button {
 }
 
 .clear-btn {
-  background-color: rgb(205, 249, 251);
-  color: rgb(33, 158, 100);
+  background-color: rgb(21, 63, 190);
+  color: white;
   font-size: 15px;
   font-weight: bold;
   padding: 12px;
@@ -258,11 +256,11 @@ button {
   border: none;
 }
 .clear-btn:hover {
-  background-color: rgb(253, 215, 221);
-  color: rgb(244, 7, 7);
+  background-color: rgb(5, 49, 142);
+  color: rgb(224, 248, 102);
 }
 
-/* page container */
+/* container that plant cards populate in  */
 .plant-div {
   box-shadow: inset 2px 2px 5px #e4f7d5, inset -5px -5px 10px #cfe4c0;
   box-sizing: border-box;

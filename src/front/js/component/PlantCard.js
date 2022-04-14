@@ -22,7 +22,7 @@ export const PlantCard = (props) => {
       >
         <div className="card-header text-end">
 
-          {props.onDelete && (
+          {/* {props.onDelete && (
             <button
               className="btn btn-outline-danger"
               onClick={() => {
@@ -34,13 +34,22 @@ export const PlantCard = (props) => {
             >
               <i className="far fa-trash-alt"> </i>
             </button>
-          )}
+          )} */}
+          {props.onDelete ? (
+            <button
+              className="btn btn-outline-danger"
+              onClick={() => {
+                actions.removeFavoritePlantItem(
+                  props.listName,
+                  props.plants.id
+                );
+              }}
+            >
+              <i className="far fa-trash-alt"> </i>
+            </button>
 
-          <button className="btn heart-btn btn-sm">
-
-            {props.onDelete ? (
-              <div className="dropdown">Delete from favorites</div>
-            ) : (
+          ) : (
+            <button className="btn heart-btn btn-sm">
               <div className="dropdown">
                 <a
                   className="dropdown-toggle"
@@ -75,8 +84,9 @@ export const PlantCard = (props) => {
                   })}
                 </ul>
               </div>
-            )}
-          </button>
+            </button>
+          )}
+
         </div>
         <img
           src={props.plants.plant_image}
@@ -111,21 +121,7 @@ export const PlantCard = (props) => {
             </span>
           </Link>
         </div>
-        <div className="card-footer text-muted">
-          {props.onDelete && (
-            <button
-              className="btn btn-outline-danger"
-              onClick={() => {
-                actions.removeFavoritePlantItem(
-                  props.listName,
-                  props.plants.id
-                );
-              }}
-            >
-              <i className="far fa-trash-alt"></i>
-            </button>
-          )}
-        </div>
+
       </div>
     </div>
   );
