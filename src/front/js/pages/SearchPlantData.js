@@ -190,7 +190,7 @@ export const SearchPlantData = (props) => {
           </div>
         ))}
       </form>{" "}
-      <div className="m-5 p-4 bg-opacity-10 plant-div d-sm-flex flex-wrap justify-content-sm-evenly">
+      <div className="m-5 p-4 bg-opacity-10 plant-div row">
         {filteredList.map((plant, index) => {
           return <PlantCard plants={plant} key={index} />;
         })}

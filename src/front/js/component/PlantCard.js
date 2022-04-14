@@ -14,27 +14,14 @@ export const PlantCard = (props) => {
   // console.log(props.plants);
 
   return (
-    <div className="plant-card-container">
+    <div className="plant-card-container col-4">
       <div
         className="card plant-card border-primary"
-        style={{ width: "15rem" }}
-        f
+      // style={{ width: "15rem" }}
+      // f
       >
         <div className="card-header text-end">
 
-          {/* {props.onDelete && (
-            <button
-              className="btn btn-outline-danger"
-              onClick={() => {
-                actions.removeFavoritePlantItem(
-                  props.listName,
-                  props.plants.id
-                );
-              }}
-            >
-              <i className="far fa-trash-alt"> </i>
-            </button>
-          )} */}
           {props.onDelete ? (
             <button
               className="btn btn-outline-danger"
@@ -95,22 +82,26 @@ export const PlantCard = (props) => {
         />
         <div className="card-body">
           <h5 className="card-title">{props.plants.common_name}</h5>
-          <p className="card-text">
-            Size:<br></br>
-            {props.plants.size}
-          </p>
-          <p className="card-text">
-            Blooms:<br></br>
-            {props.plants.blooms}
-          </p>
-          <p className="card-text">
-            Water Frequency:<br></br>
-            {props.plants.water_req}
-          </p>
-          <p className="card-text">
-            Light Exposure:<br></br>
-            {props.plants.light_exposure}
-          </p>
+          <div className="d-flex justify-content-evenly">
+            <p className="card-text">
+              Size:<br></br>
+              {props.plants.size}
+            </p>
+            <p className="card-text">
+              Water Frequency:<br></br>
+              {props.plants.water_req}
+            </p>
+          </div>
+          <div className="d-flex justify-content-evenly">
+            <p className="card-text">
+              Blooms:<br></br>
+              {props.plants.blooms}
+            </p>
+            <p className="card-text">
+              Light Exposure:<br></br>
+              {props.plants.light_exposure}
+            </p>
+          </div>
           <Link to={{ pathname: "/singleplantview", state: props.plants }}>
             {" "}
             <span

@@ -16,23 +16,42 @@ export const SinglePlantView = props => {
             <img src={dataFromComponent.plant_image} className="card-img" alt="..." />
          </div>
          <div className="d-flex flex-column plant-info">
+            <p className="plant-name text-center">{dataFromComponent.common_name}</p>
+            <div className="d-flex flex-column">
+               <div className="d-flex flex-row justify-content-between mb-4">
+                  <p className="card-plant">Size: <span className="top-details">
+                     <br></br> {dataFromComponent.size}</span></p>
+                  <p className="card-plant">Height: <span className="top-details">
+                     <br></br>   {dataFromComponent.height}</span></p>
+                  <p className="card-plant">Blooming: <span className="top-details">
+                     <br></br>   {dataFromComponent.blooms}</span></p>
+                  <p className="card-plant">Seasonal:<span className="top-details">
+                     <br></br>{dataFromComponent.seasonal}</span></p>
+               </div>
+               <div className="d-flex flex-row justify-content-between mb-4">
+                  <p className="card-plant">Fertilizer: <span className="top-details">
+                     <br></br>   {dataFromComponent.fertilizer_req}</span></p>
+                  <p className="card-plant">Watering: <span className="top-details">
+                     <br></br>   {dataFromComponent.water_req}</span></p>
+                  <p className="card-plant">Light Levels: <span className="top-details">
+                     <br></br>  {dataFromComponent.light_exposure}</span></p>
+                  <p className="card-plant">Most Suitable Temperature: <span className="top-details">
+                     <br></br>   {dataFromComponent.temperature}</span></p>
 
-            <p className="card-text ">{dataFromComponent.common_name}</p> {/*props.location.state.name was from class*/}
-            <p className="card-text">Seasonal: {dataFromComponent.seasonal}</p>{/*{dataFromLink.seasonal/ */}
-            <p className="card-text">watering: {dataFromComponent.water_req}</p>
-            <p className="card-text">Light Levels: {dataFromComponent.light_exposure}</p>
-            <p className="card-text">Height: {dataFromComponent.height}</p>
-            <p className="card-text">size: {dataFromComponent.size}</p>
-            <p className="card-text">Blooming: {dataFromComponent.blooms}</p>
-            <p className="card-text">Temperature: {dataFromComponent.temperature}</p>
-            <p className="card-text">Fertilizer: {dataFromComponent.fertilizer_req}</p>
-
-            <p className="card-text">Description: {dataFromComponent.plant_details}</p>
-            <p className="card-text">Plant Care: {dataFromComponent.plant_care_tips}</p>
-            <p className="card-text">Watering Tips: {dataFromComponent.water_tips}</p>
+               </div>
+            </div>
+            <div>
+               <p className="card-plant">Description:<span className="top-details">
+                  <br></br>  {dataFromComponent.plant_details}</span></p>
+               <p className="card-plant">Plant Care: <span className="top-details">
+                  <br></br>  {dataFromComponent.plant_care_tips}</span></p>
+               <p className="card-plant">Watering Tips:<span className="top-details">
+                  <br></br>  {dataFromComponent.water_tips}</span></p>
+            </div>
          </div>
       </div>
    );
 };
+
 
 
