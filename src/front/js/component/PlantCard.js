@@ -21,6 +21,21 @@ export const PlantCard = (props) => {
         f
       >
         <div className="card-header text-end">
+
+          {props.onDelete && (
+            <button
+              className="btn btn-outline-danger"
+              onClick={() => {
+                actions.removeFavoritePlantItem(
+                  props.listName,
+                  props.plants.id
+                );
+              }}
+            >
+              <i className="far fa-trash-alt"> </i>
+            </button>
+          )}
+
           <button className="btn heart-btn btn-sm">
 
             {props.onDelete ? (
