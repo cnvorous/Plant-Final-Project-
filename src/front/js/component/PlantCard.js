@@ -22,15 +22,9 @@ export const PlantCard = (props) => {
       >
         <div className="card-header text-end">
           <button className="btn heart-btn btn-sm">
-            <i
-              className={
-                props.onDelete
-                  ? "fas fa-heart heart text-danger"
-                  : "fas fa-heart heart"
-              }
-            ></i>
+
             {props.onDelete ? (
-              <div className="dropdown">This plant is in favorites</div>
+              <div className="dropdown">Delete from favorites</div>
             ) : (
               <div className="dropdown">
                 <a
@@ -39,7 +33,15 @@ export const PlantCard = (props) => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Send to which favorites list:
+                  <i
+                    className={
+                      props.onDelete
+                        ? "fas fa-heart heart text-danger"
+                        : "fas fa-heart heart"
+                    }
+                  >
+                    <br></br>
+                    Send to favorites list:</i>
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   {store.favoritesList.map((list, index) => {

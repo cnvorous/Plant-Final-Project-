@@ -24,15 +24,15 @@ export const ListFavorites = (props) => {
       <div className="favs-list d-sm-flex flex-wrap justify-content-sm-evenly">
         {favPlantDetails && favPlantDetails.length > 0
           ? favPlantDetails.map((favPlant, index) => {
-              return (
-                <PlantCard
-                  plants={favPlant}
-                  key={index}
-                  onDelete={true}
-                  listName={listname}
-                />
-              );
-            })
+            return (
+              <PlantCard
+                plants={favPlant}
+                key={index}
+                onDelete={true}
+                listName={listname}
+              />
+            );
+          })
           : "Loading... "}
       </div>
     </div>

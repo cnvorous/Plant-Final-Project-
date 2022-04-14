@@ -103,10 +103,11 @@ export const LandingPage = () => {
                 <div>
                   <p className="image-text">
                     We've all been gulity of showing our plants to much love and
-                    giving them more then what they need With our site you will
-                    be able to effortlessly make sure your plant is watered and
-                    fertilized at the most optimal time and using the correct
-                    measurements.
+                    giving them more then what they need.
+                    <br></br>
+                    <br></br>
+                    With our site you will be able to effortlessly make sure your plant is watered &
+                    fertilized at the most optimal time and using the correct measurements.
                   </p>
                 </div>
               </div>
@@ -116,8 +117,10 @@ export const LandingPage = () => {
                 <div>
                   <p className="image-text">
                     You can track your plants growth progress and even share
-                    your prized plants in our community gallery. Feel free to
-                    share you Green Thumb tips.
+                    your prized plants in our community gallery.
+                    <br></br>
+                    <br></br>
+                    Feel free to share you Green Thumb tips.
                   </p>
                 </div>
               </div>
@@ -127,9 +130,10 @@ export const LandingPage = () => {
                 <div>
                   <p className="image-text">
                     Not sure where to start ... thats ok we have you covered.
+                    <br></br>
+                    <br></br>
                     Just <Link to="/searchplantdata">CLICK HERE</Link> and
-                    search plant options by size, sunlight exposure, seasons,
-                    hardiness and what plants can be used for other inhome uses.
+                    search plants by size, height and light options.
                   </p>
                 </div>
               </div>
