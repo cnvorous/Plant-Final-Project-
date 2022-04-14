@@ -25,8 +25,8 @@ export const LandingPage = () => {
               src="https://us.123rf.com/450wm/nad1992/nad19921601/nad1992160100010/50559166-abstract-leafs-care-vector-logo-icon-eco-icon-with-green-leaf-.jpg"
             />
           </div>
-          <div className="text-center main-text">
-            <h1 className="text-center heading-text-1">Leaf it to Us</h1>
+          <div className="text-center">
+            <span className="webname">Leaf it to Us</span>
           </div>
         </div>
         <div className="top-banner-box2 d-sm-inline-flex">
@@ -61,7 +61,6 @@ export const LandingPage = () => {
                 </div>
                 <div className="row">
                   {" "}
-                  {/* added row and input-sm, col-xs-3  didnt work */}
                   <div className="form-floating col-xs-3">
                     <input
                       type="password"
@@ -106,8 +105,8 @@ export const LandingPage = () => {
                     giving them more then what they need.
                     <br></br>
                     <br></br>
-                    With our site you will be able to effortlessly make sure your plant is watered &
-                    fertilized at the most optimal time and using the correct measurements.
+                    Our site will help you effortlessly make sure your plants are watered &
+                    fertilized at the most optimal time while using the correct measurements.
                   </p>
                 </div>
               </div>
@@ -115,9 +114,11 @@ export const LandingPage = () => {
             <div className="col icon-image-2">
               <div className="middle">
                 <div>
-                  <p className="image-text">
-                    You can track your plants growth progress and even share
-                    your prized plants in our community gallery.
+                  <p className="image-text-group">
+                    You can track growth stages of your plants and gain helpful tips
+                    to maximize their potential.
+                    <br></br>
+                    <br></br>
                     <br></br>
                     <br></br>
                     Feel free to share you Green Thumb tips.
@@ -128,12 +129,16 @@ export const LandingPage = () => {
             <div className="col icon-image-3">
               <div className="middle">
                 <div>
-                  <p className="image-text">
+                  <p className="image-text-group">
                     Not sure where to start ... thats ok we have you covered.
                     <br></br>
                     <br></br>
-                    Just <Link to="/searchplantdata">CLICK HERE</Link> and
-                    search plants by size, height and light options.
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    Just <Link to="/searchplantdata" className="link">CLICK HERE</Link>
+                    <br></br>
+                    and search plants by size, height and light options.
                   </p>
                 </div>
               </div>

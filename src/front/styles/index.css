@@ -13,11 +13,11 @@ body {
 }
 
 .button1 {
-  background-color: rgb(231, 252, 205);
+  background-color: rgb(189, 249, 111);
 }
 
 .button1:hover {
-  background-color: rgb(185, 252, 97);
+  background-color: rgb(242, 249, 147);
   /* background-color: rgb(248, 207, 74); */
   font-weight: 400;
 }
@@ -45,28 +45,29 @@ body {
 .footer {
   background-image: url("https://smartpots.com/wp-content/uploads/2017/02/Tropical-Plant-Blog.jpeg");
   background-size: cover;
-  height: 75px;
-  /* transform: rotate(-30deg); */
-  /* transform: scaleX(-1); */
-  /* background: rgba(4, 135, 94, 0.815); */
+  height: 50px;
 }
 
 .footer-icon {
-  color: white;
+  color: rgb(189, 117, 15);
+  font-size: xx-large;
+  /* border: #0ef634 dotted; */
+  margin: 10px 55px 0px 55px;
 }
 
 .footer-icon:hover {
-  color: orange;
+  color: rgb(233, 219, 22);
 }
 
 /********************* below is Landing Page Css*************************/
 .landing-body {
-  background-color: #cdd6c6;
+  background-color: #fffddb;
   height: 600px;
+  /* #cdd6c6; #f8f8ce; #f5f5c3; #fbf6c5; #fcf8d5; #faf5cb; #fffbd2; #fffddb */
 }
 
 .create-link {
-  color: #0ef634;
+  color: rgba(8, 235, 247, 0.842);
   text-shadow: 1px 0px black;
   margin-left: 30px;
 }
@@ -78,7 +79,7 @@ body {
 }
 
 .create-link:hover {
-  color: rgba(8, 235, 247, 0.842);
+  color: #0ef634;
   font-weight: 500;
 }
 .forgot-link:hover {
@@ -94,11 +95,6 @@ label {
   height: 200px;
 }
 
-.website-name {
-  font-family: "Fredoka One", cursive;
-  font-size: 30px;
-}
-
 .seed-logo {
   width: 125px;
   height: 125px;
@@ -109,11 +105,12 @@ label {
   border-radius: 20px 0px 20px 0px;
 }
 
-.heading-text-1 {
-  color: darkgreen;
+.webname {
+  color: rgb(57, 133, 89);
+  text-shadow: -1px 0px rgb(160, 237, 160);
+  margin: 5px 0px 20px 200px;
   font-size: 45px;
-  font-weight: bolder;
-  margin: 15px 0px 0px 200px;
+  font-weight: bold;
 }
 
 .top-banner-box2 {
@@ -121,7 +118,7 @@ label {
 }
 .heading-text-2 {
   color: rgb(57, 133, 89);
-  text-shadow: 1px 1px rgb(204, 247, 207), 1px 1px rgb(19, 20, 19);
+  /* text-shadow: 1px 1px rgb(204, 247, 207), 1px 1px rgb(19, 20, 19); */
   font-size: 20px;
   font-weight: bolder;
   margin: 0px 0px 10px 150px;
@@ -173,39 +170,57 @@ label {
 }
 
 .image-text {
-  color: rgb(245, 246, 244);
   opacity: 0;
-  background: rgba(9, 9, 9, 0.644);
+  background: rgba(165, 5, 251, 0.812);
+  /* background: rgba(0, 0, 0, 0.812); */
   border-radius: 5%;
   padding: 5px;
-  /* font-size: 17px; */
-  /* transition: 0.5s ease; */
-  /* position: absolute; */
-  /* top: 50%; */
-  /* left: 50%; */
-  /* transform: translate(-50%, -50%); */
-  /* -ms-transform: translate(-50%, -50%); */
-  /* text-align: center; */
+}
+
+.image-text-group {
+  opacity: 0;
+  background: rgba(165, 5, 251, 0.812);
+  border-radius: 5%;
+  padding: 5px;
 }
 
 .image-text:hover {
-  color: rgb(247, 208, 11);
+  color: white;
+  /* color: rgb(0, 255, 200); */
   text-shadow: 1px 1px rgb(7, 7, 7), -1px -1px rgb(18, 18, 17);
   font-size: 17px;
   font-weight: bold;
   opacity: 1;
-  margin: 30px 0px;
+  margin: 10px 0px 30px 0px;
+  padding: 15px;
+  text-align: center;
+}
+
+.image-text-group:hover {
+  color: white;
+  text-shadow: 1px 1px rgb(7, 7, 7), -1px -1px rgb(18, 18, 17);
+  font-size: 17px;
+  font-weight: bold;
+  opacity: 1;
+  margin: 25px 0px 30px 0px;
+  padding: 15px;
+  text-align: center;
 }
 
 button {
   margin: 15px;
 }
 
+.link {
+  color: darkblue;
+}
+
 /************* below is SearchPlantData page Css***************/
 
 .plant-search-container {
-  background: #cdd6c6;
+  background: #fffddb;
   /* border: yellow dotted; */
+  height: 3000px;
 }
 .main-text {
   color: brown;
@@ -366,7 +381,7 @@ p.card-text {
 
 /************* below is singlplant view  page Css***************/
 .card-img {
-  width: 400px;
+  width: 500px;
   height: 600px;
   border: green 3px double;
 }

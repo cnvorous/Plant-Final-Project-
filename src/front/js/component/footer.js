@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 export const Footer = () => (
-  <footer className="footer mt-auto py-3 text-center">
-    <div className="row d-flex justify-content-center">
+  <footer className="footer text-center">
+    <div className="d-inline-flex">
       <div className="col">
         <i className="footer-icon far fa-envelope"></i>
       </div>

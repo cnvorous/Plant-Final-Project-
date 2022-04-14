@@ -13,11 +13,11 @@ export const SinglePlantView = props => {
 
       <div className="single-plant-container d-flex">
          <div className="plant-image">
-            <img src="https://target.scene7.com/is/image/Target/GUEST_8acd0212-7aa5-4d0d-aec2-b7a73e037fc6" alt="short plant" className="card-img" alt="..." />
+            <img src={dataFromComponent.plant_image} className="card-img" alt="..." />
          </div>
          <div className="d-flex flex-column plant-info">
 
-            <h1 className="card-text ">{dataFromComponent.common_name}</h1> {/*props.location.state.name was from class*/}
+            <p className="card-text ">{dataFromComponent.common_name}</p> {/*props.location.state.name was from class*/}
             <p className="card-text">Seasonal: {dataFromComponent.seasonal}</p>{/*{dataFromLink.seasonal/ */}
             <p className="card-text">watering: {dataFromComponent.water_req}</p>
             <p className="card-text">Light Levels: {dataFromComponent.light_exposure}</p>
