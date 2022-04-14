@@ -380,7 +380,7 @@ p.card-text {
 /************* below is singlplant view  page Css***************/
 .card-img {
   width: 500px;
-  height: 600px;
+  height: 675px;
   border: green 3px double;
   padding: 20px;
   background-color: rgb(250, 55, 214);
@@ -396,12 +396,13 @@ p.card-text {
   /* border: red dotted; */
   font-size: 35px;
   color: #0ef634;
+  margin-bottom: 2px;
 }
 
 .top-details {
   /* border: #0ef634 1px solid; */
   color: rgb(225, 50, 199);
-  font-size: 15px;
+  font-size: 12px;
   /* rgb(246, 55, 217); */
   /* text-decoration: underline; */
 }

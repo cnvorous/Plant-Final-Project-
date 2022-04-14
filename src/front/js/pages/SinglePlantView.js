@@ -25,8 +25,8 @@ export const SinglePlantView = props => {
                      <br></br>   {dataFromComponent.height}</span></p>
                   <p className="card-plant">Blooming: <span className="top-details">
                      <br></br>   {dataFromComponent.blooms}</span></p>
-                  <p className="card-plant">Seasonal:<span className="top-details">
-                     <br></br>{dataFromComponent.seasonal}</span></p>
+                  <p className="card-plant">Growth Season:<span className="top-details">
+                     <br></br>{dataFromComponent.growth_period}</span></p>
                </div>
                <div className="d-flex flex-row justify-content-between mb-4">
                   <p className="card-plant">Fertilizer: <span className="top-details">
@@ -43,10 +43,16 @@ export const SinglePlantView = props => {
             <div>
                <p className="card-plant">Description:<span className="top-details">
                   <br></br>  {dataFromComponent.plant_details}</span></p>
+               <p className="card-plant">Most Suitable Placement:<span className="top-details">
+                  <br></br>  {dataFromComponent.most_suitable_location}</span></p>
                <p className="card-plant">Plant Care: <span className="top-details">
                   <br></br>  {dataFromComponent.plant_care_tips}</span></p>
                <p className="card-plant">Watering Tips:<span className="top-details">
                   <br></br>  {dataFromComponent.water_tips}</span></p>
+               <p className="card-plant">Fertilizing Tips:<span className="top-details">
+                  <br></br>  {dataFromComponent.fertilizer_tips}</span></p>
+               <p className="card-plant">Poisonous Risk:<span className="top-details">
+                  <br></br>  {dataFromComponent.poisonous}</span></p>
             </div>
          </div>
       </div>
