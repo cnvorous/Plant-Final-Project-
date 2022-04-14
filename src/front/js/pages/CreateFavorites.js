@@ -45,12 +45,12 @@ export const CreateFavorites = (props) => {
             Add New List
           </button>
         </div>
-        <div className="list-body ad-sm-inline-flex">
+        <div className="list-body d-flex flex-column">
           {favList.length > 0 ? (
             <ul className="favs-ul">
               {favList.map((list, index) => {
                 return (
-                  <button className="li-btn" key={index}>
+                  <button className="li-btn d-flex flex-column" key={index}>
                     <li className="fav-list-item" key={index}>
                       <Link to={`/listfavorites/${list}`}>{list}</Link>
                       <span
