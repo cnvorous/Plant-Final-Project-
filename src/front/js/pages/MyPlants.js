@@ -19,20 +19,20 @@ export const MyPlants = (props) => {
   console.log(favPlantDetails);
 
   return (
-    <div className="single-fav-body d-flex-inline">
-      <h1 className="text-center">My Plants</h1>
-      <div className="favs-list d-sm-flex flex-wrap justify-content-sm-evenly">
+    <div className="single-body d-flex-inline">
+      <h1 className="single-name text-center">My Tracked Plants</h1>
+      <div className="plant-div m-5 p-4 row d-flex flex-wrap justify-content-center">
         {favPlantDetails && favPlantDetails.length > 0
           ? favPlantDetails.map((favPlant, index) => {
-              return (
-                <PlantCard
-                  plants={favPlant}
-                  key={index}
-                  onDelete={true}
-                  listName={listname}
-                />
-              );
-            })
+            return (
+              <PlantCard
+                plants={favPlant}
+                key={index}
+                onDelete={true}
+                listName={listname}
+              />
+            );
+          })
           : "Loading... "}
       </div>
     </div>

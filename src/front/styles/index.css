@@ -220,8 +220,9 @@ button {
 .plant-search-container {
   background: #fffddb;
   /* border: yellow dotted; */
-  height: 3000px;
+  height: 2400px;
 }
+
 .main-text {
   color: brown;
 }
@@ -262,11 +263,11 @@ button {
 
 /* container that plant cards populate in  */
 .plant-div {
-  box-shadow: inset 2px 2px 5px #e4f7d5, inset -5px -5px 10px #cfe4c0;
   box-sizing: border-box;
   background-color: #ccdac2;
   border-radius: 20px;
   margin: 20px;
+  box-shadow: 1px 1px 5px #747a71, -1px -1px 10px #747a71;
 }
 
 .text-success {
@@ -295,100 +296,108 @@ form {
 }
 
 /************* below is PlantCard Compontent Css***************/
-/* .plant-card-container {
-  margin: 0px 10px 15px 5px;
-} */
-.plant-card-img {
-  width: 238px;
-  height: 175px;
-  background-size: cover;
+
+.plant-card {
+  /* border: #ecf499 2px dotted; */
+  margin: 5px 25px 10px 25px;
+  width: 180px;
+  box-shadow: 1px 1px #747a71, -1px -1px 10px #747a71;
 }
-.plant-details {
-  margin-left: 35px;
+.plant-img {
+  width: 200px;
+  height: 125px;
+  background-size: cover;
+  border-radius: 5%;
+  border: darkolivegreen double;
+}
+.btn-outline-danger {
+  margin: auto;
+}
+
+.green {
+  margin-right: 10px;
 }
 .heart {
   color: white;
 }
 
 .heart-btn {
-  background-color: green;
+  background-color: rgb(31, 135, 81);
   color: white;
-  /* border: yellow double; */
-  border-radius: 5px;
-  box-shadow: 1px 2px 5px gray;
+  border: yellow double;
+  /* box-shadow: 1px 2px 5px gray; */
+  margin: 0px 0px 0px 0px;
+  width: 180px;
 }
 .heart-btn .heart:hover {
-  color: rgb(246, 99, 99);
-  text-shadow: 1px 1px #031c13;
+  color: rgb(237, 172, 172);
+  text-shadow: -2px 0px #c10909;
 }
 .dropdown {
   background-color: green;
-}
-
-.dropdown-toggle {
-  color: white;
-  text-decoration: none;
-}
-
-.dropdown-toggle:hover {
-  color: rgb(154, 255, 113);
-  text-decoration: none;
+  height: 30px;
+  margin-right: 10px;
 }
 
 .dropdown-menu {
-  box-shadow: 2px 2px 12px gray;
   text-align: center;
 }
 
 .dropdown-menu li {
-  color: darkgreen;
+  color: rgb(201, 20, 32);
   margin: 0 auto;
+  font-weight: bold;
 }
 
 .dropdown-menu li:hover {
-  background-color: lightgrey;
+  background-color: rgba(255, 192, 221, 0.671);
   box-shadow: 0 1px 5px gray;
 }
-.card-header {
-  /* border: red dotted; */
-  color: green;
-  background: green;
-}
-
-/* .nav-item:hover {
-  background-color: darkgreen;
-} */
 
 .card-text::first-line {
-  color: darkgreen;
-  font-weight: bolder;
-  font-size: 15px;
+  color: blue;
+  font-weight: bold;
+  font-size: 18px;
   text-decoration: underline;
 }
 
-p.card-text {
-  color: brown;
-  font-size: 15px;
+.card-text {
+  margin-right: 15px;
 }
 
-.card-title {
+p.card-text {
+  color: rgb(225, 50, 199);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.common {
   color: rgb(232, 194, 6);
-  font-size: 25px;
-  text-shadow: 2px 1px #031c13, -1px 1px black;
+  font-size: 22px;
+  text-shadow: 1px 1px #031c13, -1px 1px black;
+}
+
+.plant-details {
+  margin: 5px 0px 10px 5px;
+  width: 140px;
+  height: 40px;
+  border-radius: 4px;
+  box-shadow: 1px 1px #7a7a71, -1px -1px 5px #747a71;
 }
 
 /************* below is singlplant view  page Css***************/
 .card-img {
   width: 500px;
-  height: 675px;
-  border: green 3px double;
-  padding: 20px;
-  background-color: rgb(250, 55, 214);
+  height: 850px;
+  border: rgb(181, 151, 1) 1px solid;
+  padding: 100px 10px;
+  background-color: rgb(254, 219, 115);
+  /* background-color: rgb(250, 55, 214); */
 }
 
 .plant-info {
   background-color: #fffddb;
-  border: green 3px double;
+  border: rgb(181, 151, 1) 1px double;
   padding: 20px;
 }
 
@@ -402,7 +411,7 @@ p.card-text {
 .top-details {
   /* border: #0ef634 1px solid; */
   color: rgb(225, 50, 199);
-  font-size: 12px;
+  font-size: 15px;
   /* rgb(246, 55, 217); */
   /* text-decoration: underline; */
 }
@@ -414,148 +423,6 @@ p.card-text {
   font-size: 15px;
   color: blue;
   margin-top: 10px;
-}
-
-/************* below is create ACCOUNT page Css***************/
-.create-account-div {
-  width: 100%;
-  height: 600px;
-  /* background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/high-angle-view-of-variety-of-succulent-plants-royalty-free-image-1584462052.jpg"); */
-  background-color: #cdd6c6;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-input {
-  border-radius: 320px;
-  border: 0;
-  outline: 0;
-  font-size: 16px;
-  padding: 16px;
-  background-color: #ebecf0;
-  text-shadow: 1px 1px 0 #fff;
-  margin-right: 8px;
-  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
-  box-sizing: border-box;
-  transition: all 0.2s ease-in-out;
-}
-
-.input-group.mb-3 {
-  min-height: 90px;
-}
-
-input:focus {
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
-}
-
-p {
-  color: #babecc;
-  text-shadow: 1px 1px, 1px #fff;
-}
-
-.form {
-  padding: 16px;
-  margin: auto;
-  width: 700px;
-  height: 500px;
-  border-radius: 10%;
-  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
-}
-
-.profile {
-  margin: 50px;
-}
-
-.submit-button {
-  width: 100px;
-  color: rgb(59, 128, 59);
-  font-weight: bold;
-  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
-}
-
-.submit-button:hover {
-  box-sizing: -5px -5px 20px #fff 5px 5px 20px #babecc;
-  color: red;
-  font-weight: bolder;
-}
-
-.submit-button:active {
-  box-shadow: inset 1px 1px 2px #031c13, inset -1px -1px 2px #fff;
-}
-/************* below is forgotpassword page css *****************/
-
-.sendButton {
-  width: 100px;
-}
-
-#temporaryPasswordMsg {
-  visibility: hidden;
-}
-/***********************below is edit profile page css ***************/
-
-#editProfile {
-  background-color: aquamarine;
-}
-
-/**************************below is uploadimage page css ***********/
-
-.uploadProfileFile {
-  display: block;
-  width: 120px;
-  height: 30px;
-}
-
-.uploadPicInput {
-  display: none;
-}
-
-.uploadProfileFile {
-  justify-content: center;
-  margin: auto;
-}
-
-/********** below is  weatherpage Css**************/
-.weather-container {
-  height: 600px;
-  padding: 75px;
-  background-image: url("https://content.api.news/v3/images/bin/9da010285ed2df52012e9db32f3bf03b");
-  background-color: rgba(8, 76, 99, 0.842);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.weather-frame {
-  border: 5px ridge rgb(127, 201, 250);
-  box-shadow: 5px 10px #297dfa5b;
-  height: 350px;
-  width: 500px;
-  background-color: rgba(184, 213, 238, 0.603);
-  border-radius: 5%;
-}
-.weather-input {
-  margin: 20px 0px 0px 20px;
-  height: 40px;
-  width: 300px;
-}
-
-.weather-search-button {
-  color: white;
-  background: blue;
-  margin-top: 20px;
-  height: 40px;
-}
-
-.weather-search-button:hover {
-  color: rgb(247, 243, 243);
-  background-color: rgba(6, 32, 102, 0.842);
-}
-
-.weather-item {
-  color: rgb(57, 38, 226);
-  font-weight: bold;
-  text-align: center;
-  font-size: 25px;
 }
 
 /***************************CreateFavs Page ******************/
@@ -580,10 +447,6 @@ p {
   margin-bottom: 50px;
   border-radius: 5%;
 }
-
-/* .favs-bar {
-  border: red 1px dotted;
-} */
 
 .fav-search-btn {
   height: 35px;
@@ -661,6 +524,143 @@ em {
   /* border: #b82f7a 2px dotted; */
 }
 
+/********** below is ListFavorites page Css**************/
+.single-name {
+  font-weight: bolder;
+  font-size: 50px;
+  color: rgb(59, 128, 59);
+  text-shadow: 1px 2px lightgreen;
+}
+
+.single-body {
+  background-color: #fffddb;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  border: #fffddb solid;
+  height: 600px;
+}
+
+/************* below is create ACCOUNT page Css***************/
+.create-account-div {
+  width: 100%;
+  height: 600px;
+  /* background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/high-angle-view-of-variety-of-succulent-plants-royalty-free-image-1584462052.jpg"); */
+  background-color: #cdd6c6;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input {
+  border-radius: 320px;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  padding: 16px;
+  background-color: #ebecf0;
+  text-shadow: 1px 1px 0 #fff;
+  margin-right: 8px;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-group.mb-3 {
+  min-height: 90px;
+}
+
+input:focus {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+p {
+  color: #babecc;
+  text-shadow: 1px 1px, 1px #fff;
+}
+
+.form {
+  padding: 16px;
+  margin: auto;
+  width: 700px;
+  height: 500px;
+  border-radius: 10%;
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+
+.profile {
+  margin: 50px;
+}
+
+.submit-button {
+  width: 100px;
+  color: rgb(59, 128, 59);
+  font-weight: bold;
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+
+.submit-button:hover {
+  box-sizing: -5px -5px 20px #fff 5px 5px 20px #babecc;
+  color: red;
+  font-weight: bolder;
+}
+
+.submit-button:active {
+  box-shadow: inset 1px 1px 2px #031c13, inset -1px -1px 2px #fff;
+}
+/************* below is forgotpassword page css *****************/
+
+.sendButton {
+  width: 100px;
+}
+
+#temporaryPasswordMsg {
+  visibility: hidden;
+}
+
+/********** below is  weatherpage Css**************/
+.weather-container {
+  height: 600px;
+  padding: 75px;
+  background-image: url("https://content.api.news/v3/images/bin/9da010285ed2df52012e9db32f3bf03b");
+  background-color: rgba(8, 76, 99, 0.842);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.weather-frame {
+  border: 5px ridge rgb(127, 201, 250);
+  box-shadow: 5px 10px #297dfa5b;
+  height: 350px;
+  width: 500px;
+  background-color: rgba(184, 213, 238, 0.603);
+  border-radius: 5%;
+}
+.weather-input {
+  margin: 20px 0px 0px 20px;
+  height: 40px;
+  width: 300px;
+}
+
+.weather-search-button {
+  color: white;
+  background: blue;
+  margin-top: 20px;
+  height: 40px;
+}
+
+.weather-search-button:hover {
+  color: rgb(247, 243, 243);
+  background-color: rgba(6, 32, 102, 0.842);
+}
+
+.weather-item {
+  color: rgb(57, 38, 226);
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+}
+
 /***************Calendar Page************/
 
 /* .dx-calendar-cell:not(.dx-calendar-other-month) .weekend,
@@ -709,7 +709,7 @@ em {
   cursor: grab;
 } */
 
-/********************************* CALENDAR */
+/********************************* CALENDAR *******************************************/
 .demo-container {
   background-color: #baf28e;
 }
@@ -808,20 +808,6 @@ em {
   text-decoration: none;
 }
 
-/********** below is ListFavorites page Css**************/
-h1 {
-  font-weight: bolder;
-  font-size: 40px;
-  color: rgb(59, 128, 59);
-  text-shadow: 1px 2px lightgreen;
-}
-
-.single-fav-body {
-  color: #4ff36d;
-  height: 1000px;
-  background-color: #cdd6c6;
-}
-
 /************* below is Dashboard Css***************/
 
 .dashboard-container {
@@ -875,4 +861,31 @@ h1 {
   width: 175px;
   margin: 10px 0px 0px 100px;
   border-radius: 5%;
+}
+***********************below
+  is
+  edit
+  profile
+  page
+  css
+  ***************/
+  #editProfile {
+  background-color: aquamarine;
+}
+
+/**************************below is uploadimage page css ***********/
+
+.uploadProfileFile {
+  display: block;
+  width: 120px;
+  height: 30px;
+}
+
+.uploadPicInput {
+  display: none;
+}
+
+.uploadProfileFile {
+  justify-content: center;
+  margin: auto;
 }

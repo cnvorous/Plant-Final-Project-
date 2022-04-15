@@ -19,9 +19,9 @@ export const ListFavorites = (props) => {
   console.log(favPlantDetails);
 
   return (
-    <div className="single-fav-body d-flex-inline">
-      <h1 className="text-center">{listname} list</h1>
-      <div className="favs-list d-sm-flex flex-wrap justify-content-sm-evenly">
+    <div className="single-body d-flex-inline">
+      <p className="text-center single-name">{listname}</p>
+      <div className="plant-div m-5 p-4 row d-flex flex-wrap justify-content-center">
         {favPlantDetails && favPlantDetails.length > 0
           ? favPlantDetails.map((favPlant, index) => {
             return (
@@ -33,9 +33,9 @@ export const ListFavorites = (props) => {
               />
             );
           })
-          : "Loading... "}
+          : "Check out some plants... add what you like!"}
       </div>
-    </div>
+    </div >
   );
 };
 

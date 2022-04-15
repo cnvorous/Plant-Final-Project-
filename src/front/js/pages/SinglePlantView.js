@@ -35,7 +35,7 @@ export const SinglePlantView = props => {
                      <br></br>   {dataFromComponent.water_req}</span></p>
                   <p className="card-plant">Light Levels: <span className="top-details">
                      <br></br>  {dataFromComponent.light_exposure}</span></p>
-                  <p className="card-plant">Most Suitable Temperature: <span className="top-details">
+                  <p className="card-plant">Temperature: <span className="top-details">
                      <br></br>   {dataFromComponent.temperature}</span></p>
 
                </div>

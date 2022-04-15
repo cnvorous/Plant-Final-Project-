@@ -15,53 +15,53 @@ export const SearchPlantData = (props) => {
     {
       id: 105,
       name: "Small Plant",
-      value: "small",
+      value: "Small",
     },
     {
       id: 106,
       name: "Water Requirments: Low",
-      value: "low level",
+      value: "Low Level",
     },
     {
       id: 107,
       name: "Light Exposure: Direct Light",
-      value: "direct",
+      value: "Direct Light",
     },
     {
       id: 108,
       name: "Blooming Plant",
-      value: "yes",
+      value: "Yes",
     },
     {
       id: 109,
       name: "Medium Plant",
-      value: "medium",
+      value: "Medium",
     },
     {
       id: 110,
       name: "Water Requirments: Moderate",
-      value: "moderate level ",
+      value: "Moderate Level",
     },
     {
       id: 111,
       name: "Light Exposure: Indirect Light",
-      value: "indirect",
+      value: "Indirect Light",
     },
     {
       id: 112,
       name: "Non-Blooming Plant",
-      value: "no",
+      value: "No",
     },
 
     {
       id: 113,
       name: "Large Plant",
-      value: "large",
+      value: "Large",
     },
     {
       id: 114,
       name: "Water Requirments: High",
-      value: "high level",
+      value: "High Level",
     },
   ]);
 
@@ -142,6 +142,7 @@ export const SearchPlantData = (props) => {
       <div className="input-group mb-3 w-50 p-3 mx-auto">
         <span
           className=" btn search-button input-group-text"
+          role="button"
           id="inputGroup-sizing-default"
         >
           Plant Search
@@ -190,7 +191,7 @@ export const SearchPlantData = (props) => {
           </div>
         ))}
       </form>{" "}
-      <div className="m-5 p-4 bg-opacity-10 plant-div row">
+      <div className="m-5 p-4 bg-opacity-10 plant-div row d-flex flex-wrap justify-content-center">
         {filteredList.map((plant, index) => {
           return <PlantCard plants={plant} key={index} />;
         })}
