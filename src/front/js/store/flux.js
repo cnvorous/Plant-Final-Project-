@@ -410,7 +410,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         {
           id: 14,
           scientific_name: "R. Chinensis Minima",
-          common_name: "Miniature Rose Bush",
+          common_name: "Miniature Rose",
           size: "Small",
           height: "Small",
           blooms: "Yes",

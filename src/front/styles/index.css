@@ -289,11 +289,12 @@ form {
 }
 
 /********************************   PlantCard Compontent **********************************/
-
+/* i {
+  border: #0ef634 dotted;
+} */
 .plant-card {
-  /* border: #ecf499 2px dotted; */
   margin: 5px 25px 10px 25px;
-  width: 180px;
+  width: 195px;
   box-shadow: 1px 1px #747a71, -1px -1px 10px #747a71;
 }
 .plant-img {
@@ -303,33 +304,28 @@ form {
   border-radius: 5%;
   border: darkolivegreen double;
 }
-.btn-outline-danger {
-  margin: auto;
-}
 
-.green {
-  margin-right: 10px;
-}
 .heart {
-  color: white;
+  background: white;
+  color: blue;
+  font-size: 15px;
 }
 
-.heart-btn {
-  background-color: rgb(31, 135, 81);
+/* .heart-btn {
+  background-color: rgb(108, 224, 164);
   color: white;
-  border: yellow double;
-  /* box-shadow: 1px 2px 5px gray; */
+   border: yellow double; 
+  box-shadow: 1px 2px 5px gray;
   margin: 0px 0px 0px 0px;
-  width: 180px;
-}
-.heart-btn .heart:hover {
-  color: rgb(237, 172, 172);
-  text-shadow: -2px 0px #c10909;
+  width: 190px; 
+} */
+.heart:hover {
+  color: rgb(241, 28, 184);
 }
 .dropdown {
-  background-color: green;
-  height: 30px;
-  margin-right: 10px;
+  background-color: white;
+  height: 40px;
+  width: 180px;
 }
 
 .dropdown-menu {
@@ -337,7 +333,7 @@ form {
 }
 
 .dropdown-menu li {
-  color: rgb(201, 20, 32);
+  color: rgb(241, 28, 184);
   margin: 0 auto;
   font-weight: bold;
 }
@@ -368,10 +364,11 @@ p.card-text {
   color: rgb(232, 194, 6);
   font-size: 22px;
   text-shadow: 1px 1px #031c13, -1px 1px black;
+  margin: 0px;
 }
 
 .plant-details {
-  margin: 5px 0px 10px 5px;
+  margin: 10px 0px 10px 5px;
   width: 140px;
   height: 40px;
   border-radius: 4px;
