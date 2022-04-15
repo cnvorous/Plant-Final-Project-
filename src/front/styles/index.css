@@ -374,13 +374,11 @@ p.card-text {
 }
 
 /**********************************  singleplant *******************************************/
+
 .card-img {
-  width: 500px;
-  height: 850px;
-  border: rgb(181, 151, 1) 1px solid;
-  padding: 100px 10px;
-  background-color: rgb(254, 219, 115);
-  /* background-color: rgb(250, 55, 214); */
+  width: 400px;
+  height: 825px;
+  border: rgb(22, 77, 43) 1px solid;
 }
 
 .plant-info {
