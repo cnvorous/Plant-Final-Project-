@@ -33,7 +33,7 @@ export const MyPlants = (props) => {
               />
             );
           })
-          : "Loading... "}
+          : "Add your current plant collection here... "}
       </div>
     </div>
   );

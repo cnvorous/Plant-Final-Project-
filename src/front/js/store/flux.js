@@ -494,6 +494,122 @@ const getState = ({ getStore, getActions, setStore }) => {
           plant_care_tips:
             "Direct sun burns a Strawberry Begonia Plant and puts holes in the leaves. Always water a Strawberry Begonia from the bottom so no water collects on the hairs of the leaves.",
         },
+        {
+          id: 17,
+          scientific_name: "EUPHORBIA TIRUCALLI",
+          common_name: "Pencil Cactus",
+          size: "Small",
+          height: "Medium",
+          blooms: "NO",
+          seasonal: "NO",
+          growth_period: "Spring and Summer",
+          light_exposure: "Direct Light",
+          most_suitable_location: "Needs very bright light and can even handle direct morning sun.",
+          temperature: " 65°-70°F",
+          plant_image:
+            "https://www.houseplant411.com/wp-content/uploads/Pencil-Cactus.jpeg",
+          water_req: "Low Level",
+          water_day: 25,
+          water_tips:
+            "During the spring and summer allow the top 50% of the soil to dry out before watering. In the fall & winter water once a month.",
+          fertilizer_req: "Low",
+          fertilize_month: "1",
+          fertilizer_tips:
+            "Feed at the beginning of spring and the beginning of summer with a balanced 20-20-20 fertilizer at 1/4 the recommended strength.",
+          poisonous:
+            "Yes, Pencil Cactus are very poisonous plants. The stems contain an irritating sap-like substance that oozes out of any cut or break in the stem.",
+          plant_details:
+            "This unique looking plant, native to Africa and India, is also referred to as Indian Tree Spurge, Naked Lady Plant, Aveloz, Milk Bush Plant, and Petroleum Plant. The green succulent stems of a Pencil Cactus, which are about the width of a pencil, branch upwards in an almost geometrical pattern.",
+          plant_care_tips:
+            "Pencil Cactus are very drought resistant, so when in doubt, do not water.",
+        },
+        {
+          id: 18,
+          scientific_name: "CYCAS REVOLUTA PALM",
+          common_name: "Sago Palm",
+          size: "Large",
+          height: "Large",
+          blooms: "No",
+          seasonal: "No",
+          growth_period: "Spring and Summer",
+          light_exposure: "Direct Light",
+          most_suitable_location: "Needs needs bright light with a little direct sun in the morning.",
+          temperature: "60°-75°F",
+          plant_image:
+            "https://www.houseplant411.com/wp-content/uploads/Cycas-revoluta-17-4.jpg",
+          water_req: "Low Level",
+          water_day: 25,
+          water_tips:
+            "Allow the top 75% of the soil to dry out before thoroughly watering a Sago Palm. Be sure the water comes out the drip holes in the bottom of the pot, but do not allow the plant to sit in the excess water.",
+          fertilizer_req: "Moderate",
+          fertilize_month: "1",
+          fertilizer_tips:
+            "Feed a Sago palm monthly from spring through fall with a liquid fertilizer (18-6-18) diluted to ½ the recommended strength.",
+          poisonous:
+            "Yes, All parts are poisonous, especially the seeds.",
+          plant_details:
+            "This plant is not really a palm at all; and although it resembles a true palm, it is not even a close relative.  An interesting fact is that although these plants produce nuts, they never produce flowers or fruit.",
+          plant_care_tips:
+            "Be careful not to over water or the plant can quickly die. Use a sandy soil that drains quickly",
+        },
+        {
+          id: 19,
+          scientific_name: "YUCCA ELEPHANTIPES",
+          common_name: "Yucca",
+          size: "Large",
+          height: "Large",
+          blooms: "No",
+          seasonal: "No",
+          growth_period: "Spring and Summer",
+          light_exposure: "Indirect Light",
+          most_suitable_location: " An ideal location is near a west, east, or south-facing window.",
+          temperature: "30°-90°F",
+          plant_image:
+            "https://www.houseplant411.com/wp-content/uploads/Yucca-elephantipes-14-5432.jpg",
+          water_req: "Low Level",
+          water_day: 20,
+          water_tips:
+            "Allow at least the top 50% of the soil of a to dry out before watering.",
+          fertilizer_req: "Moderate",
+          fertilize_month: "1",
+          fertilizer_tips:
+            "Feed monthly in the spring and summer with a basic houseplant food at 1/2 the recommended strength.",
+          poisonous:
+            "Slightly, The poisonous part of the plant is difficult to reach, but it is still possible.",
+          plant_details:
+            "The spineless Yucca plant, a native of Guatemala and southeast Mexico, is an ideal, easy care houseplant. Yucca plants can be a bush or a stalk plant.",
+          plant_care_tips:
+            "Over watering is the main and probably the only way to kill a yucca.",
+        },
+        {
+          id: 20,
+          scientific_name: "RHODODENDRON",
+          common_name: "Azalea",
+          size: "Medium",
+          height: "Small",
+          blooms: "Yes",
+          seasonal: "Yes",
+          growth_period: "Spring and Summer",
+          light_exposure: "Indirect Light",
+          most_suitable_location: "An ideal location is no direct sun. If there is not enough indirect light, the flower buds on an azalea plant won't open.",
+          temperature: "60°-70°F",
+          plant_image:
+            "https://www.houseplant411.com/wp-content/uploads/800px-Azalea_japonica_Madame_Van_Hecke_J2-256x192.jpg",
+          water_req: "Low Level",
+          water_day: 20,
+          water_tips:
+            "Allow at least the top 50% of the soil of a to dry out before watering.",
+          fertilizer_req: "Moderate",
+          fertilize_month: "1",
+          fertilizer_tips:
+            "Fertilize monthly with an acidic fertilizer diluted to 1/3 the recommended strength. Never fertilize your azalea plant when it is in bloom.",
+          poisonous:
+            "Yes, All parts of an Azalea contain a substance called grayanotoxin which makes the plant very poisonous.",
+          plant_details:
+            "An Azalea plant is the national flower of Nepal, and is part of an ancient group of plants dating back million of years.  Azaleas have delicate, funnel shaped, lipped flowers.",
+          plant_care_tips:
+            "Large numbers of leaves drop off if the soil is too wet or too dry.",
+        },
       ],
       weatherInfo: {},
       favoritesList: ["MyPlants", "Blooming", "Small"],

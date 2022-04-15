@@ -426,7 +426,6 @@ p.card-text {
   background-color: rgb(153, 247, 153);
   border: rgb(197, 247, 195) 8px double;
   box-shadow: 5px -5px 5px rgb(197, 247, 195);
-  /* rgb(250, 250, 244) */
   opacity: 0.9;
   height: 700px;
   width: 700px;
@@ -463,25 +462,20 @@ p.card-text {
 }
 
 .li-btn {
-  background-color: #e89939;
-  box-shadow: -3px 3px #3a413b58;
+  background-color: #eb89dc;
+  box-shadow: -4px 3px #3a413b58;
   margin: 10px 25px;
   font-size: 20px;
   border: none;
-  border-radius: 10%;
-  /* backdrop-filter: blur(5px); */
-  /* -webkit-filter: blur(8px); */
+  border-radius: 10px;
 }
 
 .li-btn:hover {
-  background-color: #f3bb77;
+  background-color: #eb89dc;
   box-shadow: -5px 5px #11111158;
   margin: 10px 25px;
   font-size: 20px;
   border: none;
-  border-radius: 10%;
-  /* backdrop-filter: blur(5px); */
-  /* -webkit-filter: blur(8px); */
 }
 
 .fav-title {
@@ -528,7 +522,7 @@ em {
   font-size: large;
   font-weight: bold;
   border: #fffddb solid;
-  height: 600px;
+  height: 700px;
 }
 
 /******************************************* MyPlants ***************************************/
@@ -584,153 +578,6 @@ em {
   text-align: center;
   font-size: 30px;
   text-shadow: 2px 1px 1px black;
-}
-
-/***************Calendar Page************/
-
-/* .dx-calendar-cell:not(.dx-calendar-other-month) .weekend,
-.dx-calendar-cell:not(.dx-calendar-other-month) .holyday {
-  text-shadow: none;
-  font-weight: bold;
-}
-
-.dx-calendar-cell:not(.dx-calendar-other-month) .weekend {
-  color: #3030ff;
-}
-
-.dx-state-disabled.dx-calendar
-  .dx-calendar-cell:not(.dx-calendar-other-month)
-  .weekend {
-  color: #8080ff;
-}
-
-.dx-calendar-cell:not(.dx-calendar-other-month) .holyday {
-  color: #ff3030;
-}
-
-.dx-state-disabled.dx-calendar
-  .dx-calendar-cell:not(.dx-calendar-other-month)
-  .holyday {
-  color: #ff8080;
-}
-
-.options {
-  padding: 20px;
-  background-color: rgba(191, 191, 191, 0.15);
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 260px;
-}
-
-.caption {
-  font-weight: 500;
-  font-size: 18px;
-}
-
-.option {
-  margin-top: 10px;
-  cursor: grab;
-} */
-
-/********************************* CALENDAR *******************************************/
-.demo-container {
-  background-color: #baf28e;
-}
-
-#scheduler {
-  height: 600px;
-  width: 1400px;
-}
-
-.dx-scheduler-date-table-other-month.dx-scheduler-date-table-cell {
-  opacity: 1;
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.dx-template-wrapper,
-.dx-scheduler-date-table-cell {
-  position: relative;
-}
-
-.dx-scheduler-date-table-cell .dx-template-wrapper {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  padding-right: 6px;
-}
-
-.avatar {
-  width: 155px;
-  float: left;
-  overflow: hidden;
-  position: relative;
-  height: 125px;
-}
-
-.name {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-.name h2 {
-  color: #fff;
-  text-align: left;
-  padding: 0 0 5px 175px;
-  margin: 0;
-}
-
-.info {
-  width: auto;
-  text-align: left;
-  height: 100%;
-  font-size: 11pt;
-  font-weight: normal;
-  padding: 25px 20px;
-  color: #707070;
-}
-
-.dx-color-scheme-contrast .info {
-  color: #fff;
-}
-
-.day-cell {
-  height: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.employee-1 {
-  background-color: rgba(86, 202, 133, 0.1);
-}
-
-.employee-2 {
-  background-color: rgba(255, 151, 71, 0.1);
-}
-
-.employee-weekend-1 {
-  background-color: rgba(86, 202, 133, 0.2);
-}
-
-.employee-weekend-2 {
-  background-color: rgba(255, 151, 71, 0.2);
-}
-
-.dx-theme-material .name h2 {
-  font-size: 28px;
-}
-
-.dx-scheduler-appointment-content {
-  background-color: lightgreen;
-  color: darkgreen;
-}
-
-.dx-theme-generic-typography a {
-  color: whitesmoke;
-  text-decoration: none;
 }
 
 /********************************* Dashboard **********************************************/
@@ -859,23 +706,7 @@ em {
   height: 600px;
 }
 
-/**************************below is uploadimage page css ***********/
-
-/* .uploadProfileFile {
-  display: block;
-  width: 120px;
-  height: 30px;
-}
-
-.uploadPicInput {
-  display: none;
-}
-
-.uploadProfileFile {
-  justify-content: center;
-  margin: auto;
-} */
-/************* below is create ACCOUNT page Css***************/
+/************************************* Create ACCOUNT ****************************************/
 .create-account-div {
   width: 100%;
   height: 550px;
@@ -949,3 +780,165 @@ p {
   font-size: 25px;
   color: blue;
 }
+/**************************below is uploadimage page css ***********/
+
+/* .uploadProfileFile {
+  display: block;
+  width: 120px;
+  height: 30px;
+}
+
+.uploadPicInput {
+  display: none;
+}
+
+.uploadProfileFile {
+  justify-content: center;
+  margin: auto;
+} */
+
+/********************************* CALENDAR *******************************************/
+.demo-container {
+  background-color: #baf28e;
+}
+
+#scheduler {
+  height: 600px;
+  width: 1400px;
+}
+
+.dx-scheduler-date-table-other-month.dx-scheduler-date-table-cell {
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.dx-template-wrapper,
+.dx-scheduler-date-table-cell {
+  position: relative;
+}
+
+.dx-scheduler-date-table-cell .dx-template-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding-right: 6px;
+}
+
+.avatar {
+  width: 155px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  height: 125px;
+}
+
+.name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.name h2 {
+  color: #fff;
+  text-align: left;
+  padding: 0 0 5px 175px;
+  margin: 0;
+}
+
+.info {
+  width: auto;
+  text-align: left;
+  height: 100%;
+  font-size: 11pt;
+  font-weight: normal;
+  padding: 25px 20px;
+  color: #707070;
+}
+
+.dx-color-scheme-contrast .info {
+  color: #fff;
+}
+
+.day-cell {
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.employee-1 {
+  background-color: rgba(86, 202, 133, 0.1);
+}
+
+.employee-2 {
+  background-color: rgba(255, 151, 71, 0.1);
+}
+
+.employee-weekend-1 {
+  background-color: rgba(86, 202, 133, 0.2);
+}
+
+.employee-weekend-2 {
+  background-color: rgba(255, 151, 71, 0.2);
+}
+
+.dx-theme-material .name h2 {
+  font-size: 28px;
+}
+
+.dx-scheduler-appointment-content {
+  background-color: lightgreen;
+  color: darkgreen;
+}
+
+.dx-theme-generic-typography a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+/***************Calendar Page************/
+
+/* .dx-calendar-cell:not(.dx-calendar-other-month) .weekend,
+.dx-calendar-cell:not(.dx-calendar-other-month) .holyday {
+  text-shadow: none;
+  font-weight: bold;
+}
+
+.dx-calendar-cell:not(.dx-calendar-other-month) .weekend {
+  color: #3030ff;
+}
+
+.dx-state-disabled.dx-calendar
+  .dx-calendar-cell:not(.dx-calendar-other-month)
+  .weekend {
+  color: #8080ff;
+}
+
+.dx-calendar-cell:not(.dx-calendar-other-month) .holyday {
+  color: #ff3030;
+}
+
+.dx-state-disabled.dx-calendar
+  .dx-calendar-cell:not(.dx-calendar-other-month)
+  .holyday {
+  color: #ff8080;
+}
+
+.options {
+  padding: 20px;
+  background-color: rgba(191, 191, 191, 0.15);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 260px;
+}
+
+.caption {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.option {
+  margin-top: 10px;
+  cursor: grab;
+} */
