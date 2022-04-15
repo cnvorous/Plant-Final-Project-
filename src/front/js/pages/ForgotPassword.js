@@ -19,20 +19,27 @@ export const ForgotPassword = props => {
    }
 
    return (
-      <div className="text-center">
-         <p> Forgot Password</p>
-         <p> Please enter your email address below and press send to recieve a temporary password</p>
-         <div className="p-5 d-flex justify-content-spacebetween row">
-            <div className="col-6 mb-3">
-               <input className="w-75" type="text" placeholder="Email" name="fname" />
-               <input className="sendButton btn btn-primary" onClick={() => makeVisible()} type="Send" value="Send" />
-               <label id="temporaryPasswordMsg"> An email has been send to you with a temporary password</label>
-            </div>
+      <div className="create-account-div">
+         <div className="text-center">
+            <p> Forgot Password</p>
+            <p> Please enter your email address below and press send to recieve a temporary password</p>
          </div>
-         <Link to="/passwordreset">
-            <a className="nav-link">go to password-reset</a>
-         </Link>
-      </div>
+         <div className="text-center">
+            <input className="w-49" type="text" placeholder="Email" name="fname" />
+            <button className="btn send-btn" onClick={() => makeVisible()} type="Send" value="Send">
+               Send
+            </button>
+            <div className="text-center">
+               <label> An email has been send to you with a temporary password</label>
+            </div>
+         </div >
+         <div className="text-center">
+            <Link to="/passwordreset">
+               <button className="pw btn">password-reset Page</button>
+            </Link>
+         </div>
+      </div >
+
    );
 };
 

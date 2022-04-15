@@ -2,7 +2,7 @@ body {
   font-family: "Helvetica Neue", "Segoe UI", helvetica, verdana, sans-serif !important;
 }
 
-/********************* below is nav bar compontent Css*************************/
+/************************************ NAV BAR PAGE ****************************************/
 .navbar {
   font-size: 20px;
   background-image: url("https://smartpots.com/wp-content/uploads/2017/02/Tropical-Plant-Blog.jpeg");
@@ -41,7 +41,7 @@ body {
   background-color: rgb(110, 3, 3);
 }
 
-/********************* below is footer Css*************************/
+/************************************ FOOTER PAGE ****************************************/
 .footer {
   background-image: url("https://smartpots.com/wp-content/uploads/2017/02/Tropical-Plant-Blog.jpeg");
   background-size: cover;
@@ -59,11 +59,10 @@ body {
   color: rgb(233, 219, 22);
 }
 
-/********************* below is Landing Page Css*************************/
+/************************************ LANDING PAGE ****************************************/
 .landing-body {
   background-color: #fffddb;
-  height: 600px;
-  /* #cdd6c6; #f8f8ce; #f5f5c3; #fbf6c5; #fcf8d5; #faf5cb; #fffbd2; #fffddb */
+  height: 675px;
 }
 
 .create-link {
@@ -215,7 +214,7 @@ button {
   color: darkblue;
 }
 
-/************* below is SearchPlantData page Css***************/
+/*****************************SearchPlantData*******************************************/
 
 .plant-search-container {
   background: #fffddb;
@@ -271,15 +270,11 @@ button {
 }
 
 form {
-  /* border: 5px #f7eb87 dotted; */
   width: 1125px;
   margin-left: 125px;
-  /* background: linear-gradient(to bottom, #f5fdd0, rgba(195, 247, 152, 0)); */
-  /* height: fit-content; */
 }
 
 .filter-box {
-  /* border: red dotted; */
   width: 275px;
 }
 .form-check-input {
@@ -288,10 +283,9 @@ form {
 .form-check-label {
   color: darkgreen;
   font-size: 15px;
-  /* border: solid rgb(0, 136, 255); */
 }
 
-/************* below is PlantCard Compontent Css***************/
+/********************************   PlantCard Compontent **********************************/
 
 .plant-card {
   /* border: #ecf499 2px dotted; */
@@ -381,7 +375,7 @@ p.card-text {
   box-shadow: 1px 1px #7a7a71, -1px -1px 5px #747a71;
 }
 
-/************* below is singleplant view  page Css***************/
+/**********************************  singleplant *******************************************/
 .card-img {
   width: 500px;
   height: 850px;
@@ -421,7 +415,7 @@ p.card-text {
   margin-top: 10px;
 }
 
-/***************************CreateFavs Page ******************/
+/***********************************   CreateFavs Page ***********************************/
 .fav-body {
   border-style: solid;
   background-image: url("https://smartpots.com/wp-content/uploads/2017/02/Tropical-Plant-Blog.jpeg");
@@ -520,7 +514,7 @@ em {
   /* border: #b82f7a 2px dotted; */
 }
 
-/********** below is ListFavorites page Css**************/
+/*************************************ListFavorites  ***************************************/
 .single-name {
   font-weight: bolder;
   font-size: 50px;
@@ -537,10 +531,10 @@ em {
   height: 600px;
 }
 
-/********** below is MyPlants page Css**************/
+/******************************************* MyPlants ***************************************/
 /*used listfav css*/
 
-/********** below is  weatherpage Css**************/
+/******************************  weatherpage   *********************************************/
 .weather-container {
   height: 600px;
   padding: 75px;
@@ -739,7 +733,7 @@ em {
   text-decoration: none;
 }
 
-/************* below is Dashboard Css***************/
+/********************************* Dashboard **********************************************/
 
 .dashboard-container {
   background: #fffddb;
@@ -857,8 +851,12 @@ em {
 }
 
 /***********************below is editprofile  page   css  ***************/
-#editProfile {
-  background-color: #fffddb;
+.edit-box {
+  /* background-image: url("https://media.istockphoto.com/photos/set-of-green-indoor-plants-isolated-on-black-background-picture-id1204424977?k=20&m=1204424977&s=170667a&w=0&h=hBP39YdS5-RWXGxQDaI8MS12yCUu3cAI0s_5NrUWJYE=");
+  background-size: cover;
+  background-position: bottom; */
+  background-color: #729174;
+  height: 600px;
 }
 
 /**************************below is uploadimage page css ***********/
@@ -932,10 +930,22 @@ input {
 
 /************* below is forgotpassword page css *****************/
 
-.sendButton {
+.send-btn {
+  background: blue;
+  color: white;
   width: 100px;
+  height: 50px;
 }
 
-#temporaryPasswordMsg {
-  visibility: hidden;
+.pw {
+  background: #0ef634;
+}
+.pw:hover {
+  background: #bcf15a;
+}
+
+p {
+  margin: 20px 0px 20px 0px;
+  font-size: 25px;
+  color: blue;
 }

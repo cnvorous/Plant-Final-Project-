@@ -9,13 +9,12 @@ export const PasswordReset = props => {
     //const params = useParams();
 
     return (
-        <div className="text-center">
-
-            <div className="p-5 d-flex justify-content-spacebetween row">
-                <div className="col-6 mb-3">
-                    <input className="w-75" type="text" placeholder="New Password" />
-                    <input className="w-75" type="text" placeholder=" Confirm New Password" />
-                    <input className=" submitButton btn btn-primary" type="Submit" value="Submit" />
+        <div className="landing-body">
+            <div className="d-flex justify-content-center">
+                <div className="col-6">
+                    <input className="w-75 m-5" type="text" placeholder="New Password" />
+                    <input className="w-75 m-5" type="text" placeholder=" Confirm New Password" />
+                    <input className="ms-5 submit-btn btn btn-primary" type="Submit" value="Submit" />
                 </div>
             </div>
         </div>
