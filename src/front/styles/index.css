@@ -222,7 +222,7 @@ button {
 .plant-search-container {
   background: #fffddb;
   /* border: yellow dotted; */
-  height: 2400px;
+  height: 2700px;
 }
 
 .data-search {
@@ -289,9 +289,7 @@ form {
 }
 
 /********************************   PlantCard Compontent **********************************/
-/* i {
-  border: #0ef634 dotted;
-} */
+
 .plant-card {
   margin: 5px 25px 10px 25px;
   width: 195px;
@@ -344,7 +342,7 @@ form {
 }
 
 .card-text::first-line {
-  color: blue;
+  color: rgb(225, 50, 199);
   font-weight: bold;
   font-size: 18px;
   text-decoration: underline;
@@ -355,7 +353,7 @@ form {
 }
 
 p.card-text {
-  color: rgb(225, 50, 199);
+  color: blue;
   font-size: 12px;
   font-weight: bold;
 }
@@ -541,9 +539,9 @@ em {
 .weather-frame {
   border: 5px ridge rgb(127, 201, 250);
   box-shadow: 5px 10px #297dfa5b;
-  height: 350px;
+  height: 375px;
   width: 500px;
-  background-color: rgba(184, 213, 238, 0.784);
+  background-color: rgba(184, 213, 238, 0.849);
   border-radius: 5%;
 }
 .weather-input {
@@ -565,7 +563,7 @@ em {
 }
 
 .weather-item {
-  color: rgb(245, 35, 178);
+  color: blue;
   font-weight: bold;
   text-align: center;
   font-size: 30px;
@@ -710,15 +708,11 @@ em {
 .create-account-div {
   width: 100%;
   height: 550px;
-  /* background-image: url("https://ak.picdn.net/offset/photos/54bff17fa6dfde507e9ff50b/medium/offset_180966.jpg");
-  background-position: center;
-  background-size: cover; */
   background-color: #fffddb;
   border: #fffddb solid;
 }
 
 .form {
-  /* background-color: #fffddb3d; */
   background-image: url("https://cdn11.bigcommerce.com/s-yzgoj/images/stencil/1280x1280/products/2610497/5564779/apizzzup7__02898.1625595816.jpg?c=2");
   background-position: top;
   background-size: cover;
@@ -942,3 +936,14 @@ p {
   margin-top: 10px;
   cursor: grab;
 } */
+
+/*******************************************GAller **********************************************/
+.card-body {
+  background-color: tan;
+  color: #fffddb;
+  font-weight: bold;
+}
+
+.card-bottom {
+  background: #fffddb;
+}

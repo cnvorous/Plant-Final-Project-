@@ -11,16 +11,16 @@ export const GrowthGallery = props => {
 	const africanViolet = ["https://media.istockphoto.com/photos/propagating-african-violets-growing-african-violet-from-leaf-cuttings-picture-id1217029269?k=20&m=1217029269&s=612x612&w=0&h=8aG54PCgT1H5wy7WAg4wkekz0JAYg2hQDidvQG2TD88=", "https://www.gardenandgreenhouse.net/wp-content/uploads/2009/01/IMG_1432-1.jpg", "https://preview.redd.it/r758mipba0g41.jpg?auto=webp&s=12a0135679d98738664014f54be63cfb69f75716", "https://www.almanac.com/sites/default/files/styles/max_2600x2600/public/image_nodes/african-violet-houseplant.jpg?itok=uXXhjxlK"]
 	return (
 		<div>
-			<h1 className="text-center"> GrowthGallery</h1>
+			<h1 className="card-body text-center"> GrowthGallery</h1>
 			<div>
-				<h2 className="text-center">Lavender</h2>
+				<h2 className=" card-bottom text-center">Lavender</h2>
 				<div className="d-flex justify-content-evenly" >
 					{lavender.map((item, index) => {
 						return (
 							<div className="card" style={{ width: "18rem" }}>
 								<img src={item} className="card-img-top h-75" alt="..." />
 								<div className="card-body">
-									<h5 className="card-title">Stage {index + 1}</h5>
+									<h5 className="card-title text-center">Stage {index + 1} </h5>
 								</div>
 							</div>
 						)
@@ -55,7 +55,7 @@ export const GrowthGallery = props => {
 
 
 				</div>
-				<div className="bg-plant p-2 border rounded m-2 ">
+				<div className="bg-plant p-2 border rounded m-2 card-bottom ">
 					<h3>Description:</h3>
 					<ul>
 						<li>Stage 1:
@@ -85,7 +85,7 @@ export const GrowthGallery = props => {
 						return (
 							<div className="card" style={{ width: "18rem" }}>
 								<img src={item} className="card-img-top h-75" alt="..." />
-								<div className="card-body">
+								<div className="card-body text-center">
 									<h5 className="card-title">Stage {index + 1}</h5>
 								</div>
 							</div>
@@ -94,18 +94,18 @@ export const GrowthGallery = props => {
 				</div>
 
 
-				<div className="bg-plant p-2 border rounded m-2 ">
+				<div className="bg-plant p-2 border rounded m-2 card-bottom ">
 					<h3>Description:</h3>
 					<ul>
-						<li>Stage 1:
+						<li>Stage 1: When potting, remember that violet leaves, stems and root systems are very tender and easily broken.
 						</li>
-						<li>stage 2:
+						<li>stage 2:Violets, like most plants, respond well to regular doses of fertilizer. Most violet hobbyists prefer to use liquid or water-soluble fertilizers such as 20-20-20 every four to six weeks.
 
 						</li>
-						<li>stage 3:
+						<li>stage 3:African violets are easily propagated by division (see Potting). You also can get more violets with leaf-petiole cuttings; however, this takes longer to produce a flowering plant.
 
 						</li>
-						<li>stage 4:
+						<li>stage 4:Violets exposed to too much sunlight will have pale yellow-green leaves. Bleached-out, burned or dead areas also may be present
 
 						</li>
 					</ul>
