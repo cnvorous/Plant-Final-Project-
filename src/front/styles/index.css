@@ -45,9 +45,9 @@ body {
 .footer {
   background-image: url("https://smartpots.com/wp-content/uploads/2017/02/Tropical-Plant-Blog.jpeg");
   background-size: cover;
+  background-position: bottom;
   height: 50px;
 }
-
 .footer-icon {
   color: rgb(189, 117, 15);
   font-size: xx-large;
@@ -541,6 +541,9 @@ em {
   height: 600px;
 }
 
+/********** below is MyPlants page Css**************/
+/*used listfav css*/
+
 /************* below is create ACCOUNT page Css***************/
 .create-account-div {
   width: 100%;
@@ -811,56 +814,100 @@ p {
 /************* below is Dashboard Css***************/
 
 .dashboard-container {
-  background: #cdd6c6;
+  background: #fffddb;
   height: 600px;
 }
 
 .dashboard-box-1 {
   /* border: yellow 2px dotted; */
   width: 400px;
-  height: 60px;
-  margin: 0px 0px 25px 25px;
-  background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/high-angle-view-of-variety-of-succulent-plants-royalty-free-image-1584462052.jpg");
+  height: 75px;
+  margin: 0px 0px 10px 25px;
+  background-image: url("https://blog.fnp.com/wp-content/uploads/2019/04/1024px-Dahlia_x_hybrida-1024x683.jpg");
   background-size: cover;
   border-radius: 5px;
 }
 .dashboard-box-2 {
   /* border: yellow 2px dotted; */
   width: 400px;
-  height: 60px;
+  height: 75px;
   margin: 0px 0px 25px 25px;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrAOBREuH7RBPpaTl0XtnPYAIUrk86-Ik59kDSbJ_mFB9SsHa1zwKcxHDJYzij19ZIjW8&usqp=CAU");
+  background-image: url("https://blog.fnp.com/wp-content/uploads/2019/04/1024px-Dahlia_x_hybrida-1024x683.jpg");
   background-size: cover;
+  background-position: bottom;
   border-radius: 5px;
 }
 .dashboard-box-3 {
-  /* border: yellow 2px dotted; */
   width: 400px;
-  height: 60px;
-  margin: 0px 0px 25px 25px;
+  height: 75px;
+  margin: 0px 0px 10px 25px;
   background-image: url("http://s3-wp-lyleprintingandp.netdna-ssl.com/wp-content/uploads/2016/06/03155732/raindrops-on-leaf.jpg");
   background-size: cover;
   border-radius: 5px;
 }
 .dashboard-box-4 {
-  /* border: yellow 2px dotted; */
   width: 400px;
-  height: 60px;
+  height: 75px;
   margin: 0px 0px 25px 25px;
   background-image: url("http://s3-wp-lyleprintingandp.netdna-ssl.com/wp-content/uploads/2016/06/03155732/raindrops-on-leaf.jpg");
+  background-position: bottom;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.dashboard-box-5 {
+  /* border: yellow 2px dotted; */
+  width: 400px;
+  height: 75px;
+  margin: 0px 0px 10px 25px;
+  background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3841828.jpg");
+  background-attachment: fixed;
+  background-position: bottom;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.dashboard-box-6 {
+  width: 400px;
+  height: 75px;
+  margin: 0px 0px 25px 25px;
+  background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3841828.jpg");
+  background-attachment: fixed;
+  background-position: bottom;
   background-size: cover;
   border-radius: 5px;
 }
 
 .dashboard-link {
   font-size: 15px;
-  background-color: rgba(121, 127, 71, 0.873);
-  /* border: #8080ff dotted; */
+  font-weight: bolder;
+  background-color: rgba(225, 50, 199, 0.599);
   text-align: center;
   height: 35px;
-  width: 175px;
-  margin: 10px 0px 0px 100px;
-  border-radius: 5%;
+  width: 200px;
+  margin: 15px 0px 0px 90px;
+  border-radius: 5px;
+}
+
+.dashboard-link:hover {
+  background-color: rgba(252, 126, 212, 0.743);
+  font-size: 16px;
+}
+
+.second-link {
+  font-size: 15px;
+  font-weight: bolder;
+  background-color: rgba(0, 0, 255, 0.572);
+  text-align: center;
+  height: 35px;
+  width: 200px;
+  margin: 15px 0px 0px 90px;
+  border-radius: 5px;
+}
+
+.second-link:hover {
+  background-color: rgba(97, 231, 236, 0.822);
+  font-size: 16px;
 }
 ***********************below
   is
