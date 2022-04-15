@@ -545,8 +545,7 @@ em {
   height: 600px;
   padding: 75px;
   background-image: url("https://content.api.news/v3/images/bin/9da010285ed2df52012e9db32f3bf03b");
-  background-color: rgba(8, 76, 99, 0.842);
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -556,7 +555,7 @@ em {
   box-shadow: 5px 10px #297dfa5b;
   height: 350px;
   width: 500px;
-  background-color: rgba(184, 213, 238, 0.603);
+  background-color: rgba(184, 213, 238, 0.784);
   border-radius: 5%;
 }
 .weather-input {
@@ -578,10 +577,19 @@ em {
 }
 
 .weather-item {
-  color: rgb(57, 38, 226);
+  color: rgb(245, 35, 178);
   font-weight: bold;
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
+  text-shadow: 2px 1px 1px black;
+}
+
+.weather {
+  color: rgb(242, 241, 248);
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 2px 1px 1px black;
 }
 
 /***************Calendar Page************/
@@ -733,10 +741,6 @@ em {
 
 /************* below is Dashboard Css***************/
 
-/* .doubles {
-  border: rgb(255, 0, 13) dotted;
-} */
-
 .dashboard-container {
   background: #fffddb;
   height: 600px;
@@ -810,10 +814,11 @@ em {
   width: 200px;
   margin: 40px 0px 0px 100px;
   border-radius: 5px;
+  text-shadow: 2px 1px 1px black;
 }
 
 .dashboard-link:hover {
-  background-color: rgba(252, 126, 212, 0.743);
+  background-color: rgba(252, 126, 212, 0.818);
   font-size: 16px;
 }
 
@@ -826,10 +831,11 @@ em {
   width: 200px;
   margin: 40px 0px 0px 100px;
   border-radius: 5px;
+  text-shadow: 2px 1px 1px black;
 }
 
 .second-link:hover {
-  background-color: rgba(97, 231, 236, 0.822);
+  background-color: rgba(97, 231, 236, 0.866);
   font-size: 16px;
 }
 
@@ -842,10 +848,11 @@ em {
   width: 200px;
   margin: 40px 0px 0px 100px;
   border-radius: 5px;
+  text-shadow: 2px 1px 1px black;
 }
 
 .third-link:hover {
-  background-color: rgba(243, 242, 165, 0.873);
+  background-color: rgba(243, 242, 165, 0.897);
   font-size: 16px;
 }
 

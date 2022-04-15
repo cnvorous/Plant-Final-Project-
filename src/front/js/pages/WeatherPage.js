@@ -30,10 +30,10 @@ export const WeatherPage = () => {
 				<div className="weather-item">
 					{store.weatherInfo.list &&
 						<div>
-							<p className="weather-item">City Name: {store.weatherInfo.city.name}</p>
-							<p className="weather-item">Max Temp: {convertDegrees(store.weatherInfo.list[0].temp.max)} ℉ </p>
-							<p className="weather-item">Min Temp: {convertDegrees(store.weatherInfo.list[0].temp.min)} ℉</p>
-							<p className="weather-item">Current Weather: {store.weatherInfo.list[0].weather[0].description}</p>
+							<p className="weather"><span className="weather-item">City Name:</span>  {store.weatherInfo.city.name}</p>
+							<p className="weather"><span className="weather-item">Max Temp:</span> {convertDegrees(store.weatherInfo.list[0].temp.max)} ℉ </p>
+							<p className="weather"><span className="weather-item">Min Temp:</span> {convertDegrees(store.weatherInfo.list[0].temp.min)} ℉</p>
+							<p className="weather"><span className="weather-item">Current Weather:</span> {store.weatherInfo.list[0].weather[0].description}</p>
 						</div>}
 				</div>
 
