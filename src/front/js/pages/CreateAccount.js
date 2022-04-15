@@ -22,16 +22,11 @@ export const CreateAccount = props => {
 
 	}
 
-
 	return (
 		<div className="create-account-div text-center">
-			{/* <div className="text-center justify-content-center">
-				<i className=' fas fa-user-circle fa-5x'></i>
-				<UploadImages />
-			</div> */}
-			<div className="p-5 d-flex justify-content-center row form">
+			<div className="p-5 d-flex justify-content-around row form">
 				<div className="col-5 mb-3">
-					<input className="w-70" type="text" onChange={(e) => setEmailValue(e.target.value)} placeholder="Username/Email" name="fname" />
+					<input className="w-70" type="text" onChange={(e) => setEmailValue(e.target.value)} placeholder="Email as username" name="fname" />
 				</div>
 				<div className="col-5 mb-3">
 					<input className="w-70" type="text" onChange={(e) => setPasswordValue(e.target.value)} placeholder="Password" name="fname" />
@@ -46,25 +41,21 @@ export const CreateAccount = props => {
 					<input className="w-70" type="text" onChange={(e) => setPhoneValue(e.target.value)} placeholder="Phone" name="fname" />
 				</div>
 				<div className="col-5 mb-3">
-					<input className="w-70" type="text" onChange={(e) => setStateZipCodeValue(e.target.value)} placeholder="State/Zip code" name="fname" />
+					<input className="w-70" type="text" onChange={(e) => setStateZipCodeValue(e.target.value)} placeholder="Zip code" name="fname" />
 				</div>
-				<div><input type="checkbox" />
-					<label>Check to receive SMS notifications</label>
-				</div>
-				<input className="submit-button btn" onClick={() => {
-					handleSubmit();
-					console.log(store.account)
-				}} type="submit" value="Sign Up" />
-
+				<input
+					className="btn submit"
+					onClick={() => {
+						handleSubmit();
+						console.log(store.account)
+					}}
+					type="submit" value="Sign Up" />
 				<div>
 					<Link to="/forgotPassword">
 						<a className="nav-link">Forgot my password??</a>
 					</Link>
-
 				</div>
 			</div>
-
-
 		</div>
 	);
 };
