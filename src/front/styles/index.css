@@ -223,10 +223,6 @@ button {
   height: 2400px;
 }
 
-.main-text {
-  color: brown;
-}
-
 .data-search {
   width: 250px;
   height: 50px;
@@ -544,82 +540,6 @@ em {
 /********** below is MyPlants page Css**************/
 /*used listfav css*/
 
-/************* below is create ACCOUNT page Css***************/
-.create-account-div {
-  width: 100%;
-  height: 600px;
-  /* background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/high-angle-view-of-variety-of-succulent-plants-royalty-free-image-1584462052.jpg"); */
-  background-color: #cdd6c6;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-input {
-  border-radius: 320px;
-  border: 0;
-  outline: 0;
-  font-size: 16px;
-  padding: 16px;
-  background-color: #ebecf0;
-  text-shadow: 1px 1px 0 #fff;
-  margin-right: 8px;
-  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
-  box-sizing: border-box;
-  transition: all 0.2s ease-in-out;
-}
-
-.input-group.mb-3 {
-  min-height: 90px;
-}
-
-input:focus {
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
-}
-
-p {
-  color: #babecc;
-  text-shadow: 1px 1px, 1px #fff;
-}
-
-.form {
-  padding: 16px;
-  margin: auto;
-  width: 700px;
-  height: 500px;
-  border-radius: 10%;
-  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
-}
-
-.profile {
-  margin: 50px;
-}
-
-.submit-button {
-  width: 100px;
-  color: rgb(59, 128, 59);
-  font-weight: bold;
-  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
-}
-
-.submit-button:hover {
-  box-sizing: -5px -5px 20px #fff 5px 5px 20px #babecc;
-  color: red;
-  font-weight: bolder;
-}
-
-.submit-button:active {
-  box-shadow: inset 1px 1px 2px #031c13, inset -1px -1px 2px #fff;
-}
-/************* below is forgotpassword page css *****************/
-
-.sendButton {
-  width: 100px;
-}
-
-#temporaryPasswordMsg {
-  visibility: hidden;
-}
-
 /********** below is  weatherpage Css**************/
 .weather-container {
   height: 600px;
@@ -812,6 +732,12 @@ p {
 }
 
 /************* below is Dashboard Css***************/
+.box {
+  border: red dotted;
+}
+.doubles {
+  border: yellow dotted;
+}
 
 .dashboard-container {
   background: #fffddb;
@@ -821,7 +747,7 @@ p {
 .dashboard-box-1 {
   /* border: yellow 2px dotted; */
   width: 400px;
-  height: 75px;
+  height: 100px;
   margin: 0px 0px 10px 25px;
   background-image: url("https://blog.fnp.com/wp-content/uploads/2019/04/1024px-Dahlia_x_hybrida-1024x683.jpg");
   background-size: cover;
@@ -830,7 +756,7 @@ p {
 .dashboard-box-2 {
   /* border: yellow 2px dotted; */
   width: 400px;
-  height: 75px;
+  height: 100px;
   margin: 0px 0px 25px 25px;
   background-image: url("https://blog.fnp.com/wp-content/uploads/2019/04/1024px-Dahlia_x_hybrida-1024x683.jpg");
   background-size: cover;
@@ -839,7 +765,7 @@ p {
 }
 .dashboard-box-3 {
   width: 400px;
-  height: 75px;
+  height: 100px;
   margin: 0px 0px 10px 25px;
   background-image: url("http://s3-wp-lyleprintingandp.netdna-ssl.com/wp-content/uploads/2016/06/03155732/raindrops-on-leaf.jpg");
   background-size: cover;
@@ -847,7 +773,7 @@ p {
 }
 .dashboard-box-4 {
   width: 400px;
-  height: 75px;
+  height: 100px;
   margin: 0px 0px 25px 25px;
   background-image: url("http://s3-wp-lyleprintingandp.netdna-ssl.com/wp-content/uploads/2016/06/03155732/raindrops-on-leaf.jpg");
   background-position: bottom;
@@ -858,8 +784,8 @@ p {
 .dashboard-box-5 {
   /* border: yellow 2px dotted; */
   width: 400px;
-  height: 75px;
-  margin: 0px 0px 10px 25px;
+  height: 100px;
+  margin: 100px 0px 10px 25px;
   background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3841828.jpg");
   background-attachment: fixed;
   background-position: bottom;
@@ -869,7 +795,7 @@ p {
 
 .dashboard-box-6 {
   width: 400px;
-  height: 75px;
+  height: 100px;
   margin: 0px 0px 25px 25px;
   background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3841828.jpg");
   background-attachment: fixed;
@@ -935,4 +861,79 @@ p {
 .uploadProfileFile {
   justify-content: center;
   margin: auto;
+}
+/************* below is create ACCOUNT page Css***************/
+.create-account-div {
+  width: 100%;
+  height: 600px;
+  /* background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/high-angle-view-of-variety-of-succulent-plants-royalty-free-image-1584462052.jpg"); */
+  background-color: #cdd6c6;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input {
+  border-radius: 320px;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  padding: 16px;
+  background-color: #ebecf0;
+  text-shadow: 1px 1px 0 #fff;
+  margin-right: 8px;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-group.mb-3 {
+  min-height: 90px;
+}
+
+input:focus {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+p {
+  color: #babecc;
+  text-shadow: 1px 1px, 1px #fff;
+}
+
+.form {
+  padding: 16px;
+  margin: auto;
+  width: 700px;
+  height: 500px;
+  border-radius: 10%;
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+
+.profile {
+  margin: 50px;
+}
+
+.submit-button {
+  width: 100px;
+  color: rgb(59, 128, 59);
+  font-weight: bold;
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+
+.submit-button:hover {
+  box-sizing: -5px -5px 20px #fff 5px 5px 20px #babecc;
+  color: red;
+  font-weight: bolder;
+}
+
+.submit-button:active {
+  box-shadow: inset 1px 1px 2px #031c13, inset -1px -1px 2px #fff;
+}
+/************* below is forgotpassword page css *****************/
+
+.sendButton {
+  width: 100px;
+}
+
+#temporaryPasswordMsg {
+  visibility: hidden;
 }

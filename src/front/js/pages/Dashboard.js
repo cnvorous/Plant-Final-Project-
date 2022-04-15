@@ -11,55 +11,65 @@ export const Dashboard = (props) => {
   return (
     <div className="dashboard-container">
       <div>
-        <h1 className="text-center py-4">
+        <p className="plant-name text-center">
           <strong>User Dashboard</strong>
-        </h1>
+        </p>
       </div>
-      <div className="row d-flex flex-column justify-content-between">
-        <div className="dashboard-box-1">
-          <div className="dashboard-link btn">
-            <Link to="/createfavorites">
-              Favorites List
-            </Link>
+
+      <div className="doubles">
+        <div className="d-inline-flex flex-column justify-content-between">
+          <div className="dashboard-box-1">
+            <div className="dashboard-link btn">
+              <Link to="/createfavorites">
+                Favorites List
+              </Link>
+            </div>
+          </div>
+          <div className="dashboard-box-2">
+            <div className="dashboard-link btn">
+              <Link to="/growthgallery">
+                Plant Growth Gallery
+              </Link>
+            </div>
           </div>
         </div>
-        <div className="dashboard-box-2">
-          <div className="dashboard-link btn">
-            <Link to="/growthgallery">
-              Plant Growth Gallery
-            </Link>
+
+        <div className="d-inline-flex flex-column justify-content-between">
+          <div className="dashboard-box-3">
+            <div className="second-link btn">
+              <Link to="/calendar">
+                H20/Fertilization Schd
+              </Link>
+            </div>
+          </div>
+          <div className="dashboard-box-4">
+            <div className="second-link btn">
+              <Link to="/weatherpage">
+                Search Weather
+              </Link>
+            </div>
           </div>
         </div>
-        <div className="dashboard-box-3">
-          <div className="second-link btn">
-            <Link to="/calendar">
-              H20/Fertilization Schd
-            </Link>
+        <div className="d-inline-flex flex-column justify-content-between">
+          <div className="dashboard-box-5">
+            <div className="dashboard-link btn">
+              <Link to="/editprofile">
+                Update User Info
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="dashboard-box-4">
-          <div className="second-link btn">
-            <Link to="/weatherpage">
-              Search Weather
-            </Link>
-          </div>
-        </div>
-        <div className="dashboard-box-5">
-          <div className="dashboard-link btn">
-            <Link to="/editprofile">
-              Update User Info
-            </Link>
-          </div>
-        </div>
-        <div className="dashboard-box-6">
-          <div className="dashboard-link btn">
-            <Link to="/editprofile">
-              Gallery
-            </Link>
+          <div className="dashboard-box-6">
+            <div className="dashboard-link btn">
+              <Link to="/editprofile">
+                Gallery
+              </Link>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+
   );
 };
 
