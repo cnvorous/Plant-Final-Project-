@@ -29,19 +29,6 @@ export const Navbar = () => {
               <span className="nav-link">Profile</span>
             </Link>
           </li>
-          <Link to="/myplants">
-            <span className="nav-link">MyPlants</span>
-          </Link>
-          <li className="nav-item">
-            <Link to="/growthgallery">
-              <span className="nav-link">Gallery</span>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/createfavorites">
-              <span className="nav-link">Favorites</span>
-            </Link>
-          </li>
           <li className="nav-item">
             <Link to="/calendar">
               <span className="nav-link">

@@ -732,31 +732,32 @@ em {
 }
 
 /************* below is Dashboard Css***************/
-.box {
-  border: red dotted;
-}
-.doubles {
-  border: yellow dotted;
-}
+
+/* .doubles {
+  border: rgb(255, 0, 13) dotted;
+} */
 
 .dashboard-container {
   background: #fffddb;
   height: 600px;
 }
 
+.dash {
+  border: #fffddb solid;
+  background: #fffddb;
+}
+
 .dashboard-box-1 {
-  /* border: yellow 2px dotted; */
   width: 400px;
-  height: 100px;
+  height: 120px;
   margin: 0px 0px 10px 25px;
   background-image: url("https://blog.fnp.com/wp-content/uploads/2019/04/1024px-Dahlia_x_hybrida-1024x683.jpg");
   background-size: cover;
   border-radius: 5px;
 }
 .dashboard-box-2 {
-  /* border: yellow 2px dotted; */
   width: 400px;
-  height: 100px;
+  height: 120px;
   margin: 0px 0px 25px 25px;
   background-image: url("https://blog.fnp.com/wp-content/uploads/2019/04/1024px-Dahlia_x_hybrida-1024x683.jpg");
   background-size: cover;
@@ -765,7 +766,7 @@ em {
 }
 .dashboard-box-3 {
   width: 400px;
-  height: 100px;
+  height: 120px;
   margin: 0px 0px 10px 25px;
   background-image: url("http://s3-wp-lyleprintingandp.netdna-ssl.com/wp-content/uploads/2016/06/03155732/raindrops-on-leaf.jpg");
   background-size: cover;
@@ -773,7 +774,7 @@ em {
 }
 .dashboard-box-4 {
   width: 400px;
-  height: 100px;
+  height: 120px;
   margin: 0px 0px 25px 25px;
   background-image: url("http://s3-wp-lyleprintingandp.netdna-ssl.com/wp-content/uploads/2016/06/03155732/raindrops-on-leaf.jpg");
   background-position: bottom;
@@ -782,23 +783,19 @@ em {
 }
 
 .dashboard-box-5 {
-  /* border: yellow 2px dotted; */
   width: 400px;
-  height: 100px;
-  margin: 100px 0px 10px 25px;
-  background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3841828.jpg");
-  background-attachment: fixed;
-  background-position: bottom;
+  height: 120px;
+  margin: 25px 0px 10px 25px;
+  background-image: url("https://watchandlearn.scholastic.com/content/dam/classroom-magazines/watchandlearn/videos/animals-and-plants/plants/what-are-plants-/What-Are-Plants.jpg");
   background-size: cover;
   border-radius: 5px;
 }
 
 .dashboard-box-6 {
   width: 400px;
-  height: 100px;
+  height: 120px;
   margin: 0px 0px 25px 25px;
-  background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3841828.jpg");
-  background-attachment: fixed;
+  background-image: url("https://watchandlearn.scholastic.com/content/dam/classroom-magazines/watchandlearn/videos/animals-and-plants/plants/what-are-plants-/What-Are-Plants.jpg");
   background-position: bottom;
   background-size: cover;
   border-radius: 5px;
@@ -811,7 +808,7 @@ em {
   text-align: center;
   height: 35px;
   width: 200px;
-  margin: 15px 0px 0px 90px;
+  margin: 40px 0px 0px 100px;
   border-radius: 5px;
 }
 
@@ -827,7 +824,7 @@ em {
   text-align: center;
   height: 35px;
   width: 200px;
-  margin: 15px 0px 0px 90px;
+  margin: 40px 0px 0px 100px;
   border-radius: 5px;
 }
 
@@ -835,14 +832,31 @@ em {
   background-color: rgba(97, 231, 236, 0.822);
   font-size: 16px;
 }
-***********************below
+
+.third-link {
+  font-size: 15px;
+  font-weight: bolder;
+  background-color: rgba(219, 230, 59, 0.822);
+  text-align: center;
+  height: 35px;
+  width: 200px;
+  margin: 40px 0px 0px 100px;
+  border-radius: 5px;
+}
+
+.third-link:hover {
+  background-color: rgba(243, 242, 165, 0.873);
+  font-size: 16px;
+}
+
+/***********************below
   is
   edit
   profile
   page
   css
   ***************/
-  #editProfile {
+#editProfile {
   background-color: aquamarine;
 }
 
