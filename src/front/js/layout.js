@@ -15,10 +15,10 @@ import { SearchPlantData } from "./pages/SearchPlantData";
 import { SinglePlantView } from "./pages/SinglePlantView";
 import { GrowthGallery } from "./pages/GrowthGallery";
 import { CalendarOverview } from "./pages/Calendar";
-import { GreenThumbGallery } from "./pages/GreenThumbGallery";
+// import { GreenThumbGallery } from "./pages/GreenThumbGallery";
 import { EditProfile } from "./pages/EditProfile";
 import { Dashboard } from "./pages/Dashboard";
-import { PlantUses } from "./pages/PlantUses";
+// import { PlantUses } from "./pages/PlantUses";
 import { ListFavorites } from "./pages/ListFavorites";
 import { ForgotPassword } from "./pages/ForgotPassword";
 import { PasswordReset } from "./pages/PasswordReset";
@@ -56,12 +56,12 @@ const Layout = () => {
             <Route exact path="/singleplantview" component={SinglePlantView} />
             <Route exact path="/growthgallery" component={GrowthGallery} />
             <Route exact path="/calendar" component={CalendarOverview} />
-            <Route
+            {/* <Route
               exact
               path="/greenthumbgallery"
               component={GreenThumbGallery}
-            />
-            <Route exact path="/plantuses" component={PlantUses} />
+            /> */}
+            {/* <Route exact path="/plantuses" component={PlantUses} /> */}
             <Route exact path="/single/:theid" component={Single} />
 
             <Route>

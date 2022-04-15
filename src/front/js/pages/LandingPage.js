@@ -136,7 +136,7 @@ export const LandingPage = () => {
                     <br></br>
                     <br></br>
                     <br></br>
-                    Just <Link to="/searchplantdata" className="link">CLICK HERE</Link>
+                    Just <Link to="/searchplantdata"><span className="link">CLICK HERE</span></Link>
                     <br></br>
                     and search plants by size, height and light options.
                   </p>

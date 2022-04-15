@@ -31,43 +31,43 @@ export const PlantCard = (props) => {
           </button>
 
         ) : (
-          <button className="btn heart-btn btn-sm">
-            <div className="dropdown">
-              <a
-                className="dropdown-toggle"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+          // <button className="btn heart-btn btn-sm">
+          <div className="dropdown btn btn-sm">
+            <a
+              className="dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i
+                className={
+                  props.onDelete
+                    ? "fas fa-heart heart text-danger"
+                    : "fas fa-heart heart"
+                }
               >
-                <i
-                  className={
-                    props.onDelete
-                      ? "fas fa-heart heart text-danger"
-                      : "fas fa-heart heart"
-                  }
-                >
-                  <br></br>
-                  Send to favorites list:</i>
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                {store.favoritesList.map((list, index) => {
-                  return (
-                    <li
-                      className="drop"
-                      key={index}
-                      onClick={() => {
-                        if (list == "MyPlants")
-                          actions.addMyPlant(list, props.plants);
-                        else actions.addFavoritePlantItem(list, props.plants);
-                      }}
-                    >
-                      {list}
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          </button>
+                <br></br>
+                Send to favorites list:</i>
+            </a>
+            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+              {store.favoritesList.map((list, index) => {
+                return (
+                  <li
+                    className="drop"
+                    key={index}
+                    onClick={() => {
+                      if (list == "MyPlants")
+                        actions.addMyPlant(list, props.plants);
+                      else actions.addFavoritePlantItem(list, props.plants);
+                    }}
+                  >
+                    {list}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          // </button>
         )}
 
       </div>

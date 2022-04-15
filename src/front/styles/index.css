@@ -60,6 +60,9 @@ body {
 }
 
 /************************************ LANDING PAGE ****************************************/
+.link {
+  color: red;
+}
 .landing-body {
   background-color: #fffddb;
   height: 675px;
